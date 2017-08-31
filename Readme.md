@@ -1,7 +1,7 @@
 ActiveEon Hub Front-end
 ========================
 
-hub.activeeon.com is a front-end for ActiveEon Hub, a collection of packages contributed by ActiveEon users and engineers.
+hub.activeeon.com is a front-end for ActiveEon Hub, a collection of packages.js contributed by ActiveEon users and engineers.
 
 It's a simple React app rendering the package index; there is no server-side to it at all, and the index is available for consumption as a JSON file.
 

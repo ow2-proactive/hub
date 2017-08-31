@@ -32,7 +32,7 @@
       },
       "slack": {
           "name": "Slack",
-          "short_description": "Integrate with Slack",
+          "short_description": "Integrate your workflows with Slack",
           "author": "ActiveEon's Team",
           "tags": ["Slack", "Chat", "Messaging", "Notification"],
           "repo_url": "https://github.com/StackStorm-Exchange/web",
