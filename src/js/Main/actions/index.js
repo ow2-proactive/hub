@@ -21,12 +21,12 @@ function parseJSON(response) {
 
 
 export const SELECT_TAG = 'SELECT_TAG';
-export const selectTag = (selection) => {
+export function selectTag(selection) {
     return {
         type: SELECT_TAG,
         selection: selection
     }
-};
+}
 
 export const REQUEST_PACKAGES = 'REQUEST_PACKAGES';
 export function requestPackages() {

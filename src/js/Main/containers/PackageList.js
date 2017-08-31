@@ -13,6 +13,17 @@ const mapStateToProps = (state, ownProps) => {
     Object.keys(state.packages.items).map((key, index) => {
         packages.push(state.packages.items[key]);
     });
+
+    if (state.selectedTag !== null) {
+        packages = packages.filter((pack) => {
+            if (pack.tags === undefined) {
+                console.log(4, pack);
+                return false;
+            }
+            return pack.tags.includes(state.selectedTag);
+        });
+    }
+
     packages.sort(function (a, b) {
         const nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase();
         if (nameA < nameB) //sort string ascending
