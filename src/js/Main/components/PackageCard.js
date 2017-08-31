@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Tag = ({name}) => (
-    <span className="badge badge-secondary m-1">{name}</span>
+const Tag = ({ name, onTagSelection }) => (
+    <a href="#"><span className="badge badge-secondary m-1" onClick={(event) => onTagSelection(event.target.innerHTML)}>{name}</span></a>
 );
 
-const PackageCard = ({ name, short_description, author, tags, repo_url, version }) => {
+const PackageCard = ({ name, short_description, author, tags, repo_url, version, onTagSelection }) => {
     let tagBadges = [];
     tags.forEach((tag) => {
-        tagBadges.push(<Tag key={tag} name={tag} />)
+        tagBadges.push(<Tag key={tag} name={tag} onTagSelection={onTagSelection} />)
     });
     return (
         <div className="col-3">

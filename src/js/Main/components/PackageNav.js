@@ -4,7 +4,7 @@ import PackageCard from './PackageCard'
 
 const TagItem = ({ tag, selectedTag, onTagSelection }) => {
     const href = "#"+tag;
-    if (tag === selectedTag) {
+    if (tag === selectedTag || (selectedTag === null && tag ==="All")) {
         return (
             <li className="nav-item">
                 <a className="nav-link active" href={href} onClick={(event) => onTagSelection(event.target.innerHTML)}>{tag}</a>

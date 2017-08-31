@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import { selectTag } from "../actions/index"
 import PackageCards from '../components/PackageCards'
 
 const mapStateToProps = (state, ownProps) => {
@@ -41,6 +42,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
+        onTagSelection: (value) => {
+            dispatch(selectTag(value));
+        }
     }
 };
 

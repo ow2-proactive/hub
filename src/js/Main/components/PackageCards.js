@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import PackageCard from './PackageCard'
 
-const PackageCards = ({ isFetching, items }) => {
+const PackageCards = ({ isFetching, items, onTagSelection }) => {
     if (isFetching) {
         return <p>Packages are loading...</p>
     }
     let cards = [];
     items.forEach((item) => {
         cards.push(
-            <PackageCard key={item.name} {...item} />
+            <PackageCard key={item.name} {...item} onTagSelection={onTagSelection} />
         )
     });
     return (
@@ -34,6 +34,7 @@ PackageCards.propTypes = {
             }).isRequired,
         }).isRequired,
     ).isRequired,
+    onTagSelection: PropTypes.func.isRequired
 };
 
 export default PackageCards
