@@ -5,6 +5,7 @@
     },
   "packages": {
       "ftpconnector": {
+          "slug": "ftpconnector",
           "name": "FTP Connector",
           "short_description": "Connect to an FTP, upload and download files",
           "author": "ActiveEon's Team",
@@ -18,6 +19,7 @@
           }
       },
       "emailnotifications": {
+          "slug": "emailnotifications",
           "name": "Email Notifications",
           "short_description": "Notify people for every meaningful action",
           "author": "ActiveEon's Team",
@@ -31,6 +33,7 @@
           }
       },
       "slack": {
+          "slug": "slack",
           "name": "Slack",
           "short_description": "Integrate your workflows with Slack",
           "author": "ActiveEon's Team",

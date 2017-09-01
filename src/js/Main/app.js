@@ -33,11 +33,13 @@ ReactDOM.render(
 // const state_architecture = {
 //     query: "a query",
 //     selectedTag: "a tag",
-//     packages.js: {
+//     selectedDownloadOptions: "a package",
+//     packages: {
 //         isFetching: true,
 //         receivedAt: 123456
-//         items: [
-//             {
+//         items: {
+//             "a_slug": {
+//                 "slug": "a_slug"
 //                 "name": "a name",
 //                 "short_description": "a short description",
 //                 "author": "an author",
@@ -59,6 +61,6 @@ ReactDOM.render(
 //                     }
 //                 }
 //             }
-//         ]
+//         }
 //     }
 // };
