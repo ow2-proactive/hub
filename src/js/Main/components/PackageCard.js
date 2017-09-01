@@ -20,7 +20,7 @@ const PackageCard = ({ name, short_description, author, tags, repo_url, version,
                     <p className="card-text">{tagBadges}</p>
                 </div>
                 <div className="card-footer">
-                    <small className="text-muted"><a href={repo_url} className="card-link">Repository</a></small>
+                    <small className="text-muted"><a href={repo_url} className="card-link"><img className="github-logo" src="./images/github-logo.png" alt="github logo"/></a></small>
                 </div>
             </div>
         </div>

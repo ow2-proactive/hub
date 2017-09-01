@@ -9,3 +9,7 @@ ul li.nav-item a.nav-link.active {
     -o-background-size: cover;
     background-size: cover;
 }
+
+.github-logo {
+    height: 18px;
+}
