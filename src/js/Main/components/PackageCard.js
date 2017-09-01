@@ -11,17 +11,20 @@ const PackageCard = ({ name, short_description, author, tags, repo_url, version,
         tagBadges.push(<Tag key={tag} name={tag} onTagSelection={onTagSelection} />)
     });
     return (
-        <div className="col-3">
+        <div className="">
             <div className="card">
                 <div className="card-body">
+                    <a href={repo_url} className="card-btn float-sm-right btn btn-sm btn-outline-secondary p-1 m-1" target="_blank"><img className="card-icon" src="./images/github-logo.png" alt="github logo"/></a>
+                    <a className="card-btn float-sm-right btn btn-sm btn-outline-secondary p-1 m-1"><img className="card-icon" src="./images/cloud-download.png" alt="download"/></a>
+
                     <h4 className="card-title">{name}</h4>
-                    <h6 className="card-subtitle mb-2 text-muted">{author} - {version}</h6>
                     <p className="card-text">{short_description}</p>
                     <p className="card-text">{tagBadges}</p>
+                    <p className="card-text text-muted"><small>{version}</small><small className="float-sm-right">{author}</small></p>
                 </div>
-                <div className="card-footer">
-                    <small className="text-muted"><a href={repo_url} className="card-link"><img className="github-logo" src="./images/github-logo.png" alt="github logo"/></a></small>
-                </div>
+                {/*<div className="card-footer">*/}
+                    {/*<small className="text-muted"><a href={repo_url} className="card-link btn btn-outline-secondary btn-sm"><img className="github-logo" src="./images/github-logo.png" alt="github logo"/></a></small>*/}
+                {/*</div>*/}
             </div>
         </div>
     )

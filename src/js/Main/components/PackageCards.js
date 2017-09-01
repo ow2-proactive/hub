@@ -14,7 +14,9 @@ const PackageCards = ({ isFetching, items, onTagSelection }) => {
     });
     return (
         <div className="row">
-            {cards}
+            <div className="card-columns">
+                {cards}
+            </div>
         </div>
     )
 };
