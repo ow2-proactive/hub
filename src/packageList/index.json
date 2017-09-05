@@ -4,13 +4,13 @@
         "hash": "123456abcdef"
     },
   "packages": {
-      "ftpconnector": {
-          "slug": "ftpconnector",
-          "name": "FTP Connector",
-          "short_description": "Connect to an FTP, upload and download files",
+      "jobanalysis": {
+          "slug": "jobanalysis",
+          "name": "Job Analysis",
+          "short_description": "Analyze job distribution and efficiency in a simple Gantt Chart",
           "author": "ActiveEon's Team",
-          "tags": ["Basics"],
-          "repo_url": "https://github.com/StackStorm-Exchange/web",
+          "tags": ["Monitoring", "Analysis"],
+          "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Addons",
           "version": "0.0.1",
           "content": {
               "workflows": {
@@ -18,31 +18,104 @@
               }
           }
       },
-      "emailnotifications": {
-          "slug": "emailnotifications",
-          "name": "Email Notifications",
-          "short_description": "Notify people for every meaningful action",
+      "cloudautomation": {
+          "slug": "cloudautomation",
+          "name": "ProActive Automation Samples",
+          "short_description": "A few samples for our ProActive Automation platform.",
           "author": "ActiveEon's Team",
-          "tags": ["Basics",  "Messaging", "Notification"],
-          "repo_url": "https://github.com/StackStorm-Exchange/web",
+          "tags": ["Samples",  "ProActive Automation", "AWS", "Clearwater", "HDFS", "OpenStack", "Spark", "Storm", "Swarm"],
+          "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Cloud-automation",
           "version": "0.0.1",
           "content": {
               "workflows": {
-                  "count": 1
+                  "count": 18
               }
           }
       },
-      "slack": {
-          "slug": "slack",
-          "name": "Slack",
-          "short_description": "Integrate your workflows with Slack",
+      "emails": {
+          "slug": "emails",
+          "name": "Email",
+          "short_description": "Send notification emails",
           "author": "ActiveEon's Team",
-          "tags": ["Slack", "Chat", "Messaging", "Notification"],
-          "repo_url": "https://github.com/StackStorm-Exchange/web",
+          "tags": ["Messaging", "Notification"],
+          "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Email",
           "version": "0.0.1",
           "content": {
               "workflows": {
-                "count": 4
+                "count": 2
+              }
+          }
+      },
+      "examples": {
+          "slug": "examples",
+          "name": "Examples",
+          "short_description": "A few samples to get started",
+          "author": "ActiveEon's Team",
+          "tags": ["Samples", "Basics", "Get started"],
+          "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Examples",
+          "version": "0.0.1",
+          "content": {
+              "workflows": {
+                  "count": 23
+              }
+          }
+      },
+      "var": {
+          "slug": "var",
+          "name": "Finance VaR",
+          "short_description": "Value at risk sample",
+          "author": "ActiveEon's Team",
+          "tags": ["Samples", "Finance", "VaR"],
+          "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Finance",
+          "version": "0.0.1",
+          "content": {
+              "workflows": {
+                  "count": 2
+              },
+              "dataspace": {
+                  "count": 6
+              }
+          }
+      },
+      "tensorflow": {
+          "slug": "tensorflow",
+          "name": "Tensorflow Orchestration",
+          "short_description": "Tensorflow orchestration with Docker",
+          "author": "ActiveEon's Team",
+          "tags": ["Samples", "Machine Learning", "Tensorflow"],
+          "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Machine_Learning",
+          "version": "0.0.1",
+          "content": {
+              "workflows": {
+                  "count": 9
+              }
+          }
+      },
+      "cloudwatch": {
+          "slug": "cloudwatch",
+          "name": "Cloud Watch",
+          "short_description": "Samples for event driven automation",
+          "author": "ActiveEon's Team",
+          "tags": ["Samples", "Cloud Watch", "Monitoring", "Notification"],
+          "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/PCW-rules",
+          "version": "0.0.1",
+          "content": {
+              "workflows": {
+                  "count": 2
+              }
+          }
+      },
+      "notification": {
+          "slug": "notification",
+          "name": "Notification",
+          "short_description": "Samples for web notification and validation",
+          "author": "ActiveEon's Team",
+          "tags": ["Samples", "Notification"],
+          "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/PCW-rules",
+          "version": "0.0.1",
+          "content": {
+              "workflows": {
+                  "count": 2
               }
           }
       }
