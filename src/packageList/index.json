@@ -23,7 +23,7 @@
           "name": "ProActive Automation Samples",
           "short_description": "A few samples for our ProActive Automation platform.",
           "author": "ActiveEon's Team",
-          "tags": ["Samples",  "ProActive Automation", "AWS", "Clearwater", "HDFS", "OpenStack", "Spark", "Storm", "Swarm", "Cloud Provider"],
+          "tags": ["Samples",  "ProActive Automation", "AWS", "Clearwater", "HDFS", "OpenStack", "Spark", "Storm", "Swarm", "Cloud Automation"],
           "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Cloud-automation",
           "version": "0.0.1",
           "content": {
