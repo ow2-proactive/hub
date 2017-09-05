@@ -15,7 +15,7 @@ const PackageCard = ({ slug, name, short_description, author, tags, repo_url, ve
             <div className="card">
                 <div className="card-body">
                     <a href={repo_url} className="card-btn float-sm-right btn btn-sm btn-outline-secondary p-1 m-1" target="_blank"><img className="card-icon" src="./images/github-logo.png" alt="github logo"/></a>
-                    <a onClick={() => onDownloadOptionsSelection(slug)} className="card-btn float-sm-right btn btn-sm btn-outline-secondary p-1 m-1"><img className="card-icon" src="./images/cloud-download.png" alt="download"/></a>
+                    <a href="#" onClick={(event) => { event.preventDefault(); onDownloadOptionsSelection(slug); } } className="card-btn float-sm-right btn btn-sm btn-outline-secondary p-1 m-1"><img className="card-icon" src="./images/cloud-download.png" alt="download"/></a>
 
                     <h4 className="card-title">{name}</h4>
                     <p className="card-text">{short_description}</p>
