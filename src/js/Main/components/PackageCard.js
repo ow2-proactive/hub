@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Tag = ({ name, onTagSelection }) => (
-    <a href="#"><span className="badge badge-secondary m-1" onClick={(event) => onTagSelection(event.target.innerHTML)}>{name}</span></a>
+    <a href="#"><span className="badge badge-secondary m-1" onClick={(event) => { event.preventDefault(); onTagSelection(event.target.innerHTML) }}>{name}</span></a>
 );
 
 const PackageCard = ({ slug, name, short_description, author, tags, repo_url, version, onTagSelection, onDownloadOptionsSelection }) => {

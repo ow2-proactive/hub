@@ -3,17 +3,16 @@ import PropTypes from 'prop-types'
 import PackageCard from './PackageCard'
 
 const TagItem = ({ tag, selectedTag, onTagSelection }) => {
-    const href = "#"+tag;
     if (tag === selectedTag || (selectedTag === null && tag ==="All")) {
         return (
             <li className="nav-item">
-                <a className="nav-link active" href={href} onClick={(event) => onTagSelection(event.target.innerHTML)}>{tag}</a>
+                <a className="nav-link active" href="#" onClick={(event) => { event.preventDefault(); onTagSelection(event.target.innerHTML) }}>{tag}</a>
             </li>
         );
     } else {
         return (
             <li className="nav-item">
-                <a className="nav-link" href={href} onClick={(event) => onTagSelection(event.target.innerHTML)}>{tag}</a>
+                <a className="nav-link" href="#" onClick={(event) => { event.preventDefault(); onTagSelection(event.target.innerHTML) }}>{tag}</a>
             </li>
         )
     }
