@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
         return null;
     }
 
-    const mainTags = ["All", "Staff pick", "Cloud Provider", "Monitoring", "Notification"];
+    const mainTags = ["All", "Get started", "Cloud Provider", "Machine Learning", "Finance", "Building blocks"];
 
     return {
         mainTags: mainTags,

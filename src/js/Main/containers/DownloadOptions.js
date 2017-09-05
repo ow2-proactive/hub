@@ -19,7 +19,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onCloseModal: (event) => {
-            event.preventDefault;
+            event.preventDefault();
             dispatch(closeDownloadOptions());
         }
     }
