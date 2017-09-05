@@ -29,16 +29,16 @@ const DownloadModal = ({ pack, showModal, onCloseModal }) => {
             <p>To upload onto your catalog, simply copy paste those lines in a bash task.</p>
             <pre>
                 <code>
-                    curl ------ <br />
-                    cp folder <br />
+                    sudo apt-get install git<br/>
+                    git clone {pack.repo_url}<br />
                     curl --- <br />
                 </code>
             </pre>
             <hr />
             <div className="row justify-content-md-center">
-                <button className="btn btn-outline-dark m-1">Copy script</button>
-                <button className="btn btn-outline-dark m-1">Go to Github repo</button>
-                <button className="btn btn-outline-dark m-1"onClick={onCloseModal}>Close Modal</button>
+                <a href="#" className="btn btn-outline-dark m-1">Copy script</a>
+                <a href={pack.repo_url} className="btn btn-outline-dark m-1" target="_blank">Go to Github repo</a>
+                <button className="btn btn-outline-dark m-1" onClick={onCloseModal}>Close Modal</button>
             </div>
         </Modal>
     )

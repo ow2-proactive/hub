@@ -1,5 +1,5 @@
 ul li.nav-item a.nav-link.active {
-    border-bottom: solid blue 2px;
+    border-bottom: solid #E86D1F 2px;
 }
 
 .background-image {
@@ -10,6 +10,11 @@ ul li.nav-item a.nav-link.active {
     background-size: cover;
 }
 
+.jumbotron {
+    min-height: 400px;
+    color: white;
+}
+
 .card-icon {
     height: 18px;
 }
@@ -17,4 +22,13 @@ ul li.nav-item a.nav-link.active {
 .card-btn {
     height: 1.8rem;
     width: 1.8rem;
+}
+
+a.nav-link {
+    color: #E86D1F;
+    /*color: #221F72;*/
+}
+
+h4 {
+    color: #221F72;
 }
