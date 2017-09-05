@@ -51,7 +51,7 @@
           "name": "Examples",
           "short_description": "A few samples to get started",
           "author": "ActiveEon's Team",
-          "tags": ["Samples", "Basics", "Get started"],
+          "tags": ["Samples", "Building block", "Get started"],
           "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Examples",
           "version": "0.0.1",
           "content": {
