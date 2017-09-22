@@ -3,22 +3,28 @@ import PropTypes from 'prop-types'
 import PackageCard from './PackageCard'
 
 const PackageCards = ({ isFetching, items, onTagSelection, onDownloadOptionsSelection }) => {
+
+
     if (isFetching) {
         return <p>Packages are loading...</p>
     }
+
     let cards = [];
     items.forEach((item) => {
         cards.push(
             <PackageCard key={item.slug} {...item} onTagSelection={onTagSelection} onDownloadOptionsSelection={onDownloadOptionsSelection} />
         )
     });
+
     return (
-        <div className="row">
+      <div>
+      <div className="row">
             <div className="card-columns">
                 {cards}
             </div>
         </div>
-    )
+        </div>
+      )
 };
 
 PackageCards.propTypes = {
@@ -38,6 +44,7 @@ PackageCards.propTypes = {
         }).isRequired,
     ).isRequired,
     onTagSelection: PropTypes.func.isRequired,
+    onSearch: PropTypes.func.isRequired,
     onDownloadOptionsSelection: PropTypes.func.isRequired
 };
 

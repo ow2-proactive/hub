@@ -3,7 +3,6 @@ import fetch from 'isomorphic-fetch';
 const packageJsonPath = "https://raw.githubusercontent.com/ow2-proactive/hub/master/src/packageList/index.json";
 
 function checkStatus(response) {
-    // console.log("checkStatus", response);
     if (response.status >= 200 && response.status < 300) {
         return response;
     } else {
@@ -14,7 +13,6 @@ function checkStatus(response) {
 }
 
 function parseJSON(response) {
-    // console.log("parseJson", response);
     return response.json();
 }
 
@@ -24,6 +22,14 @@ export const SELECT_TAG = 'SELECT_TAG';
 export function selectTag(selection) {
     return {
         type: SELECT_TAG,
+        selection: selection
+    }
+}
+
+export const SEARCH_INPUT = 'SEARCH_INPUT';
+export function searchInput(selection) {
+    return {
+        type: SEARCH_INPUT,
         selection: selection
     }
 }

@@ -1,11 +1,15 @@
 import React from 'react'
+import PackageSearchBar from '../containers/PackageSearchBar'
 import PackageFilterBar from '../containers/PackageFilterBar'
 import PackageList from '../containers/PackageList'
 import DownloadOptions from '../containers/DownloadOptions'
 
 const App = () => (
     <div>
-        <PackageFilterBar />
+        <div className="row">
+            <PackageSearchBar />
+            <PackageFilterBar />
+        </div>
         <PackageList />
         <DownloadOptions />
     </div>

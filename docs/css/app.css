@@ -19,6 +19,24 @@ ul li.nav-item a.nav-link.active {
     height: 18px;
 }
 
+.search-form {
+
+}
+
+.search-input {
+  border-radius: .25rem;
+  border: 1px solid rgba(0,0,0,.15);
+  width:100%;
+}
+
+input {
+
+}
+
+form {
+padding: .5rem 1rem
+}
+
 .card-btn {
     height: 1.8rem;
     width: 1.8rem;
