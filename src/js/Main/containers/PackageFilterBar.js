@@ -19,7 +19,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onTagSelection: (value) => {
             dispatch(selectTag(value));
-        }
+        },
+
     }
 };
 
