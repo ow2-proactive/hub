@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import PackageCard from './PackageCard'
 
-const PackageSearch = ({ items, onSearch, searchTerm }) => {
+const PackageSearch = ({ onSearch, searchTerm }) => {
   searchTerm = '';
 
     return (
@@ -24,7 +24,8 @@ const PackageSearch = ({ items, onSearch, searchTerm }) => {
     )
 };
 PackageSearch.propTypes = {
-    onSearch: PropTypes.func.isRequired
+    onSearch: PropTypes.func.isRequired,
+    searchTerm: PropTypes.string.isRequired
 };
 
 export default PackageSearch

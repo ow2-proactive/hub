@@ -39,13 +39,13 @@ const mapStateToProps = (state, ownProps) => {
             }
         });
     }
-    else {
-      console.log(state.searchTerm);
-      packages = packages.filter((pack) => {
-        return true;
-      }
-    );
-    }
+//    else {
+//      console.log(state.searchTerm);
+//      packages = packages.filter((pack) => {
+//        return true;
+//      }
+//    );
+//    }
 
 
 

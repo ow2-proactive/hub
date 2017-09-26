@@ -17,12 +17,10 @@ const PackageCards = ({ isFetching, items, onTagSelection, onDownloadOptionsSele
     });
 
     return (
-      <div>
       <div className="row">
             <div className="card-columns">
                 {cards}
             </div>
-        </div>
         </div>
       )
 };
