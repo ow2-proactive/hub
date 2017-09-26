@@ -34926,17 +34926,17 @@ var PackageSearch = function PackageSearch(_ref) {
 
   return _react2.default.createElement(
     'div',
-    { className: 'col-md-3 col-s-3' },
+    { className: 'col-md-2 col-s-2 ' },
     _react2.default.createElement(
       'form',
-      { className: 'search-form',
+      { className: 'search-form has-feedback',
         onChange: function onChange(e) {
           e.preventDefault();
           onSearch(searchTerm.value);
         }
       },
-      _react2.default.createElement('image', { className: 'glyphicon glyphicon-search' }),
-      _react2.default.createElement('input', { className: 'search-input', placeholder: 'Search', type: 'text',
+      _react2.default.createElement('i', { className: 'form-control-feedback glyphicon glyphicon-search' }),
+      _react2.default.createElement('input', { className: 'form-control', placeholder: 'Search', type: 'text',
         ref: function ref(node) {
           searchTerm = node;
         }
@@ -35069,7 +35069,7 @@ var PackageNav = function PackageNav(_ref2) {
     });
     return _react2.default.createElement(
         'ul',
-        { className: 'nav justify-content-end mb-4' },
+        { className: 'nav justify-content-end col-md-10 mb-4' },
         tagItems
     );
 };
