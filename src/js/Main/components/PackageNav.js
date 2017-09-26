@@ -29,7 +29,7 @@ const PackageNav = ({ mainTags, selectedTag, onTagSelection }) => {
         )
     });
     return (
-        <ul className="nav justify-content-end mb-4">
+        <ul className="nav justify-content-end col-md-10 mb-4">
             {tagItems}
         </ul>
     )
