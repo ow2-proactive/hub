@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="urn:proactive:jobdescriptor:3.8"
+     xsi:schemaLocation="urn:proactive:jobdescriptor:3.8 http://www.activeeon.com/public_content/schemas/proactive/jobdescriptor/3.8/schedulerjob.xsd"
+    name="IndexGenerator" projectName="Hub"
+    priority="normal"
+    onTaskError="continueJobExecution"
+     maxNumberOfExecution="2">
+  <taskFlow>
+    <task name="clone_repos_extract_metadata">
+      <description>
+        <![CDATA[ The simplest task, ran by a bash engine. ]]>
+      </description>
+      <scriptExecutable>
+        <script>
+          <code language="bash">
+            <![CDATA[
+echo "%%%%%%% Download repo"
+#wget https://github.com/ow2-proactive/proactive-examples/archive/master.zip
+curl -L -o master.zip "https://drive.google.com/a/activeeon.com/uc?export=download&id=0B-gcnxRKAyv6cmlDQXhKSnZWSDQ"
+unzip master.zip
+ls -lah
+
+echo "%%%%%%% Create raw_metadata.json" 
+echo "[" >> raw_metadata.json
+
+echo "%%%%%%% Merge Metadata" 
+cd proactive-examples-master
+count=0;
+for d in */ ; do
+	echo "Move to package $d"
+	if [ -f "$d/METADATA.json" ]
+    then
+        if [ $count -gt 0 ]
+        then
+        	echo "," >> ../raw_metadata.json
+        fi
+        echo '{ "folderName": "'$d'" },' >> ../raw_metadata.json
+        cat $d/METADATA.json >> ../raw_metadata.json
+        count=$((count+1))
+    fi
+done
+
+echo "%%%%%%% Display raw_metadata.json" 
+cd ..
+echo "]" >> raw_metadata.json
+cat raw_metadata.json
+]]>
+          </code>
+        </script>
+      </scriptExecutable>
+      <outputFiles>
+        <files  includes="raw_metadata.json" accessMode="transferToUserSpace"/>
+      </outputFiles>
+    </task>
+    <task name="create_index">
+      <depends>
+        <task ref="file_content_to_var"/>
+      </depends>
+      <scriptExecutable>
+        <script>
+          <code language="javascript">
+            <![CDATA[
+//print("raw_metadata: "+variables.get("raw_metadata"));
+
+raw_metadata_json = JSON.parse(variables.get("raw_metadata"));
+github_url = "https://github.com/ow2-proactive/proactive-examples/tree/master/";
+
+index = {};
+index["metadata"] = {};
+index["packages"] = {};
+index["metadata"]["generated_ts"] = Math.floor(Date.now() / 1000);
+folderName = "";
+
+raw_metadata_json.forEach(function(package) {
+    print("package: "+JSON.stringify(package));
+    if ( package["metadata"] !== undefined ) {
+      	slug = package["metadata"]["slug"];
+      	print("metadata are available ["+JSON.stringify(package["metadata"])+"], slug: ["+slug+"]");
+    	index["packages"][slug] = package["metadata"];
+      	index["packages"][slug]["repo_url"] = github_url+folderName.slice(0, -1)
+      	print("index.packages: "+JSON.stringify(index["packages"]));
+      	print("index.packages.slug: "+JSON.stringify(index["packages"][slug]));
+    }
+  	folderName = package["folderName"] === undefined ? "" : package["folderName"];
+});
+
+indexString = JSON.stringify(index);
+print("index: "+indexString);
+variables.put("packageIndex", indexString+"");
+]]>
+          </code>
+        </script>
+      </scriptExecutable>
+      <outputFiles>
+        <files  includes="index.json" accessMode="transferToUserSpace"/>
+      </outputFiles>
+    </task>
+    <task name="file_content_to_var">
+      <depends>
+        <task ref="clone_repos_extract_metadata"/>
+      </depends>
+      <inputFiles>
+        <files  includes="raw_metadata.json" accessMode="transferFromUserSpace"/>
+      </inputFiles>
+      <scriptExecutable>
+        <script>
+          <code language="groovy">
+            <![CDATA[
+String fileContents = new File('raw_metadata.json').text;
+variables.put("raw_metadata", fileContents);
+println("raw_metadata.json: "+fileContents);
+
+result=fileContents; // for preview
+]]>
+          </code>
+        </script>
+      </scriptExecutable>
+    </task>
+    <task name="write_index">
+      <depends>
+        <task ref="create_index"/>
+      </depends>
+      <scriptExecutable>
+        <script>
+          <code language="bash">
+            <![CDATA[
+echo $variables_packageIndex
+echo $variables_packageIndex >> index.json
+]]>
+          </code>
+        </script>
+      </scriptExecutable>
+      <outputFiles>
+        <files  includes="index.json" accessMode="transferToUserSpace"/>
+      </outputFiles>
+    </task>
+    <task name="preview_index">
+      <depends>
+        <task ref="write_index"/>
+      </depends>
+      <inputFiles>
+        <files  includes="index.json" accessMode="transferFromUserSpace"/>
+      </inputFiles>
+      <scriptExecutable>
+        <script>
+          <code language="groovy">
+            <![CDATA[
+String fileContents = new File('index.json').text;
+variables.put("raw_metadata", fileContents);
+println("raw_metadata.json: "+fileContents);
+
+result=fileContents; // for preview
+]]>
+          </code>
+        </script>
+      </scriptExecutable>
+    </task>
+  </taskFlow>
+</job>

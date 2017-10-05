@@ -15130,7 +15130,6 @@ function tabbable(element) {
 function findTabbableDescendants(element) {
   return [].slice.call(element.querySelectorAll('*'), 0).filter(tabbable);
 }
-module.exports = exports['default'];
 
 /***/ }),
 /* 224 */
@@ -15266,7 +15265,6 @@ var EE = _exenv2.default;
 var SafeHTMLElement = EE.canUseDOM ? window.HTMLElement : {};
 
 exports.default = SafeHTMLElement;
-module.exports = exports['default'];
 
 /***/ }),
 /* 227 */
@@ -35464,7 +35462,6 @@ var _Modal2 = _interopRequireDefault(_Modal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _Modal2.default;
-module.exports = exports['default'];
 
 /***/ }),
 /* 575 */
@@ -35647,7 +35644,6 @@ Modal.propTypes = {
   onRequestClose: _propTypes2.default.func,
   closeTimeoutMS: _propTypes2.default.number,
   ariaHideApp: _propTypes2.default.bool,
-  shouldFocusAfter: _propTypes2.default.bool,
   shouldCloseOnOverlayClick: _propTypes2.default.bool,
   parentSelector: _propTypes2.default.func,
   aria: _propTypes2.default.object,
@@ -35660,7 +35656,6 @@ Modal.defaultProps = {
   bodyOpenClassName: bodyOpenClassName,
   ariaHideApp: true,
   closeTimeoutMS: 0,
-  shouldFocusAfterRender: true,
   shouldCloseOnOverlayClick: true,
   parentSelector: function parentSelector() {
     return document.body;
@@ -35768,7 +35763,7 @@ var ModalPortal = function (_Component) {
     var _this = _possibleConstructorReturn(this, (ModalPortal.__proto__ || Object.getPrototypeOf(ModalPortal)).call(this, props));
 
     _this.setFocusAfterRender = function (focus) {
-      _this.focusAfterRender = _this.props.shouldFocusAfterRender && focus;
+      _this.focusAfterRender = focus;
     };
 
     _this.setOverlayRef = function (overlay) {
@@ -36049,7 +36044,6 @@ ModalPortal.propTypes = {
   onAfterOpen: _propTypes.PropTypes.func,
   onRequestClose: _propTypes.PropTypes.func,
   closeTimeoutMS: _propTypes.PropTypes.number,
-  shouldFocusAfterRender: _propTypes.PropTypes.bool,
   shouldCloseOnOverlayClick: _propTypes.PropTypes.bool,
   role: _propTypes.PropTypes.string,
   contentLabel: _propTypes.PropTypes.string,
@@ -36057,7 +36051,6 @@ ModalPortal.propTypes = {
   children: _propTypes.PropTypes.node
 };
 exports.default = ModalPortal;
-module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
@@ -36186,7 +36179,6 @@ function scopeTab(node, event) {
   var target = tabbable[event.shiftKey ? tabbable.length - 1 : 0];
   target.focus();
 }
-module.exports = exports['default'];
 
 /***/ }),
 /* 579 */
