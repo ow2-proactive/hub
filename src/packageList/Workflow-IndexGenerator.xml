@@ -17,10 +17,12 @@
           <code language="bash">
             <![CDATA[
 echo "%%%%%%% Download repo"
-#wget https://github.com/ow2-proactive/proactive-examples/archive/master.zip
-curl -L -o master.zip "https://drive.google.com/a/activeeon.com/uc?export=download&id=0B-gcnxRKAyv6cmlDQXhKSnZWSDQ"
+wget https://github.com/ow2-proactive/proactive-examples/archive/master.zip
+#curl -L -o master.zip "https://drive.google.com/a/activeeon.com/uc?export=download&id=0B-gcnxRKAyv6cmlDQXhKSnZWSDQ"
 unzip master.zip
 ls -lah
+echo "--"
+ls -lah proactive-examples-master
 
 echo "%%%%%%% Create raw_metadata.json" 
 echo "[" >> raw_metadata.json
