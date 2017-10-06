@@ -28,15 +28,23 @@ const mapStateToProps = (state, ownProps) => {
 
 /* Search function in: name & short_description*/
     if (state.searchTerm !== null) {
-      let searchTrimmed = state.searchTerm.trim();
-      console.log(searchTrimmed);
+        let searchTrimmed = state.searchTerm.trim();
+        // console.log(searchTrimmed);
         packages = packages.filter((pack) => {
             if (pack.name === undefined || pack.short_description === undefined) {
                 return false;
             }
             if (pack.name.search(new RegExp(searchTrimmed, "i")) !== -1 || pack.short_description.search(new RegExp(searchTrimmed, "i")) !== -1) {
-              return true;
+                return true;
             }
+            if (pack.tags !== undefined && pack.tags.length > 0) {
+                let isMatch = false;
+                pack.tags.forEach(tag => {
+                    isMatch = isMatch || tag.search(new RegExp(searchTrimmed, "i")) !== -1;
+                    return isMatch;
+                })
+            }
+            return false;
         });
     }
 //    else {
