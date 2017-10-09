@@ -6,16 +6,23 @@ import { createLogger } from 'redux-logger'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { fetchPackages } from './actions/index'
-import Main from './reducers'
+import MainReducer from './reducers'
 import App from './components/App';
+import createHistory from 'history/createBrowserHistory'
+import { Route } from 'react-router'
+import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
+
+const history = createHistory();
+const routerHistoryMiddleware = routerMiddleware(history);
 
 const loggerMiddleware = createLogger();
 
 let store = createStore(
-    Main,
+    MainReducer,
     applyMiddleware(
         thunkMiddleware,
-        loggerMiddleware
+        loggerMiddleware,
+        routerHistoryMiddleware
     )
 );
 
@@ -25,42 +32,11 @@ store
 
 ReactDOM.render(
     <Provider store={store} >
-        <App />
+        <ConnectedRouter history={history}>
+            <div>
+                <Route path="/" component={App}/>
+            </div>
+        </ConnectedRouter>
     </Provider>,
     document.getElementById('react-packages')
 );
-
-// const state_architecture = {
-//     query: "a query",
-//     selectedTag: "a tag",
-//     selectedDownloadOptions: "a package",
-//     packages: {
-//         isFetching: true,
-//         receivedAt: 123456
-//         items: {
-//             "a_slug": {
-//                 "slug": "a_slug"
-//                 "name": "a name",
-//                 "short_description": "a short description",
-//                 "author": "an author",
-//                 "tags": ["Basics", "Finance", "Monte Carlo"],
-//                 "repo_url": "https://github.com/StackStorm-Exchange/web",
-//                 "version": "0.0.1",
-//                 "content": {
-//                     "workflows": {
-//                         "count": 2
-//                     },
-//                     "dockerfile": {
-//                         "count": 1
-//                     },
-//                     "jar": {
-//                         "count": 2
-//                     },
-//                     "other_files": {
-//                         "count": 1
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// };
