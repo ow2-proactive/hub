@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PackageCard from './PackageCard'
 
 const PackageSearch = ({ onSearch, searchTerm }) => {
   searchTerm = '';
@@ -9,7 +8,7 @@ const PackageSearch = ({ onSearch, searchTerm }) => {
       <div className="col-md-2 col-s-2 ">
             <form className ="search-form has-feedback" action="javascript:void(-1)"
               onChange={e => {
-                e.preventDefault()
+                e.preventDefault();
                 onSearch(searchTerm.value)
               }}
               >
@@ -26,7 +25,7 @@ const PackageSearch = ({ onSearch, searchTerm }) => {
 };
 PackageSearch.propTypes = {
     onSearch: PropTypes.func.isRequired,
-    searchTerm: PropTypes.string.isRequired
+    searchTerm: PropTypes.string
 };
 
 export default PackageSearch
