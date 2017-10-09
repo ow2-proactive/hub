@@ -7,7 +7,7 @@ const PackageSearch = ({ onSearch, searchTerm }) => {
 
     return (
       <div className="col-md-2 col-s-2 ">
-            <form className ="search-form has-feedback"
+            <form className ="search-form has-feedback" action="javascript:void(-1)"
               onChange={e => {
                 e.preventDefault()
                 onSearch(searchTerm.value)
