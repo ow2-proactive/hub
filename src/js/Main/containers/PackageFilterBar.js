@@ -9,19 +9,16 @@ const mapStateToProps = (state, ownProps) => {
     }
 
     const mainTags = ["All", "Get started", "Cloud Automation", "Machine Learning", "Finance", "Analysis"];
+    const selectedTag = queryString.parse(location.search).tag === undefined ? null : queryString.parse(location.search).tag;
 
     return {
         mainTags: mainTags,
-        selectedTag: queryString.parse(location.search).tag,
+        selectedTag: selectedTag,
     }
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
-        // onTagSelection: (value) => {
-        //     dispatch(selectTag(value));
-        // },
-    }
+    return {}
 };
 
 const PackageFilterBar = connect(

@@ -34,7 +34,7 @@ ReactDOM.render(
     <Provider store={store} >
         <ConnectedRouter history={history}>
             <div>
-                <Route path="/" component={App}/>
+                <Route exact path="/" component={App}/>
             </div>
         </ConnectedRouter>
     </Provider>,

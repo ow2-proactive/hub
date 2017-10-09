@@ -5,10 +5,7 @@ import { Link } from 'react-router-dom'
 
 
 const Tag = ({ name, onTagSelection }) => (
-    <a href="#">
-        {/*<span className="badge badge-secondary m-1" onClick={(event) => { event.preventDefault(); onTagSelection(event.target.innerHTML) }}>{name}</span>*/}
-        <Link className="badge badge-secondary m-1" to={{ pathname: '/', search: queryString.stringify({ tag: name }) }}>{name}</Link>
-    </a>
+    <Link className="badge badge-secondary m-1" to={{ pathname: '/', search: queryString.stringify({ tag: name }) }}>{name}</Link>
 );
 
 const PackageCard = ({ slug, name, short_description, author, tags, repo_url, version, onTagSelection, onDownloadOptionsSelection }) => {

@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
         packages.push(state.packages.items[key]);
     });
 
-    const selectedTag = queryString.parse(location.search).tag;
+    const selectedTag = queryString.parse(location.search).tag === undefined ? null : queryString.parse(location.search).tag;
     if (selectedTag !== null && selectedTag !=="All") {
         packages = packages.filter((pack) => {
             if (pack.tags === undefined) {
@@ -66,12 +66,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        // onTagSelection: (value) => {
-        //     dispatch(selectTag(value));
-        // },
-        onSearch: (value) => {
-            dispatch(searchInput(value));
-        },
         onDownloadOptionsSelection: (value) => {
             dispatch(selectDownloadOptions(value))
         }

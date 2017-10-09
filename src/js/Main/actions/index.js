@@ -18,14 +18,6 @@ function parseJSON(response) {
 
 
 
-// export const SELECT_TAG = 'SELECT_TAG';
-// export function selectTag(selection) {
-//     return {
-//         type: SELECT_TAG,
-//         selection: selection
-//     }
-// }
-
 export const SEARCH_INPUT = 'SEARCH_INPUT';
 export function searchInput(selection) {
     return {
