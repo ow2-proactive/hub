@@ -37,14 +37,15 @@ const mapStateToProps = (state, ownProps) => {
             if (pack.name.search(new RegExp(searchTrimmed, "i")) !== -1 || pack.short_description.search(new RegExp(searchTrimmed, "i")) !== -1) {
                 return true;
             }
+            let isMatch = false;
             if (pack.tags !== undefined && pack.tags.length > 0) {
-                let isMatch = false;
                 pack.tags.forEach(tag => {
                     isMatch = isMatch || tag.search(new RegExp(searchTrimmed, "i")) !== -1;
                     return isMatch;
-                })
+                });
+                // console.log("pack ["+pack.name+"], tags: ["+pack.tags.toString()+"], isMatch: ["+isMatch+"]");
             }
-            return false;
+            return isMatch;
         });
     }
 //    else {

@@ -4,9 +4,6 @@ import { selectTag, searchInput } from "../actions/index"
 import PackageSearch from '../components/PackageSearch'
 
 const mapStateToProps = (state, ownProps) => {
-    if (state.packages === undefined) {
-        return null;
-    }
     return {
         searchTerm: state.searchTerm,
     }
