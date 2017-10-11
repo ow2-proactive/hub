@@ -58,3 +58,7 @@ a.nav-link {
 h4 {
     color: #221F72;
 }
+
+.border-bottom {
+    border-bottom: 1px solid #cccccc;
+}
