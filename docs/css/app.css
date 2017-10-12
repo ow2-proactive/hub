@@ -11,8 +11,12 @@ ul li.nav-item a.nav-link.active {
 }
 
 .jumbotron {
-    min-height: 400px;
+    min-height: 480px;
     color: white;
+}
+
+.jumbotron-fluid {
+    padding-top: 150px;
 }
 
 .card-icon {
@@ -27,7 +31,13 @@ ul li.nav-item a.nav-link.active {
 
 }
 
-input {
+.head-bar {
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  width:100%;
+  padding: .5rem 1rem;
+  align-items: center;
 
 }
 
@@ -47,4 +57,8 @@ a.nav-link {
 
 h4 {
     color: #221F72;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #cccccc;
 }
