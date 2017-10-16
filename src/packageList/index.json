@@ -1,6 +1,6 @@
 {
    "metadata":{
-      "generated_ts":1507739367
+      "generated_ts":1508158240
    },
    "packages":{
       "cloudautomation-aws":{
@@ -178,6 +178,24 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/HDFSOrchestration"
       },
+      "imageanalysis":{
+         "slug":"imageanalysis",
+         "name":"Image Analysis",
+         "short_description":"Image analysis with deep learning on Docker",
+         "author":"ActiveEon's Team",
+         "tags":[
+            "Samples",
+            "Machine Learning",
+            "Tensorflow",
+            "Big Data",
+            "Analytics",
+            "Image Processing",
+            "Computer Vision",
+            "Deep Learning"
+         ],
+         "version":"1.0",
+         "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/ImageAnalysis"
+      },
       "jobanalysis":{
          "slug":"jobanalysis",
          "name":"Job Analysis",
@@ -189,6 +207,52 @@
          ],
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/JobAnalysis"
+      },
+      "loganalysis":{
+         "slug":"loganalysis",
+         "name":"Log Analysis",
+         "short_description":"Log analysis and anomaly detection on logs with Docker",
+         "author":"ActiveEon's Team",
+         "tags":[
+            "Samples",
+            "Machine Learning",
+            "Log Analysis",
+            "Big Data",
+            "Analytics",
+            "Anomaly Detection",
+            "Intrusion Detection"
+         ],
+         "version":"1.0",
+         "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/LogAnalysis"
+      },
+      "mlbasics":{
+         "slug":"mlbasics",
+         "name":"Basic Machine Learning",
+         "short_description":"Example of basic machine learning workflows on docker.",
+         "author":"ActiveEon's Team",
+         "tags":[
+            "Samples",
+            "Machine Learning",
+            "Big Data",
+            "Analytics"
+         ],
+         "version":"1.0",
+         "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/MLBasics"
+      },
+      "mlnodesource":{
+         "slug":"mlnodesource",
+         "name":"Machine Learning NodeSource",
+         "short_description":"Machine learning nodesource creation and removal with Docker",
+         "author":"ActiveEon's Team",
+         "tags":[
+            "Samples",
+            "Machine Learning",
+            "NodeSource",
+            "Big Data",
+            "Analytics"
+         ],
+         "version":"1.0",
+         "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/MLNodeSource"
       },
       "cloudautomation-openstack":{
          "slug":"cloudautomation-openstack",
@@ -259,20 +323,21 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/Storm"
       },
-      "tensorflow":{
-         "slug":"tensorflow",
-         "name":"Tensorflow Orchestration",
-         "short_description":"Tensorflow orchestration with Docker",
+      "textanalysis":{
+         "slug":"textanalysis",
+         "name":"Text Analysis",
+         "short_description":"Text analysis with machine learning and deep learning on Docker",
          "author":"ActiveEon's Team",
          "tags":[
             "Samples",
             "Machine Learning",
-            "Tensorflow",
+            "Text Analysis",
             "Big Data",
-            "Analytics"
+            "Analytics",
+            "Deep Learning"
          ],
          "version":"1.0",
-         "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/Tensorflow"
+         "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/TextAnalysis"
       },
       "cloudwatch":{
          "slug":"cloudwatch",
