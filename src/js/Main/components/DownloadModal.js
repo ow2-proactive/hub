@@ -72,9 +72,6 @@ DownloadModal.propTypes = {
         tags: PropTypes.arrayOf(PropTypes.string).isRequired,
         repo_url: PropTypes.string.isRequired,
         version: PropTypes.string.isRequired,
-        content: PropTypes.shape({
-
-        }).isRequired,
     }),
     onCloseModal: PropTypes.func.isRequired,
 };

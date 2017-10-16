@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import { selectTag } from '../actions/index'
 import PackageNav from '../components/PackageNav'
+import queryString from 'query-string'
 
 const mapStateToProps = (state, ownProps) => {
     if (state.packages === undefined) {
@@ -8,20 +9,16 @@ const mapStateToProps = (state, ownProps) => {
     }
 
     const mainTags = ["All", "Get started", "Cloud Automation", "Machine Learning", "Finance", "Analysis"];
+    const selectedTag = queryString.parse(location.search).tag === undefined ? null : queryString.parse(location.search).tag;
 
     return {
         mainTags: mainTags,
-        selectedTag: state.selectedTag,
+        selectedTag: selectedTag,
     }
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
-        onTagSelection: (value) => {
-            dispatch(selectTag(value));
-        },
-
-    }
+    return {}
 };
 
 const PackageFilterBar = connect(

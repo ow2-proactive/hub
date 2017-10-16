@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { selectTag, searchInput, selectDownloadOptions } from "../actions/index"
 import PackageCards from '../components/PackageCards'
-
+import queryString from 'query-string'
 
 const mapStateToProps = (state, ownProps) => {
     if (state.packages === undefined) {
@@ -16,20 +16,20 @@ const mapStateToProps = (state, ownProps) => {
         packages.push(state.packages.items[key]);
     });
 
-    if (state.selectedTag !== null) {
+    const selectedTag = queryString.parse(location.search).tag === undefined ? null : queryString.parse(location.search).tag;
+    if (selectedTag !== null && selectedTag !=="All") {
         packages = packages.filter((pack) => {
             if (pack.tags === undefined) {
-
                 return false;
             }
-            return pack.tags.includes(state.selectedTag);
+            return pack.tags.includes(selectedTag);
         });
     }
 
 /* Search function in: name & short_description*/
     if (state.searchTerm !== null) {
         let searchTrimmed = state.searchTerm.trim();
-        // console.log(searchTrimmed);
+        // console.log("searchTrimmed: ["+searchTrimmed+"]");
         packages = packages.filter((pack) => {
             if (pack.name === undefined || pack.short_description === undefined) {
                 return false;
@@ -48,15 +48,6 @@ const mapStateToProps = (state, ownProps) => {
             return isMatch;
         });
     }
-//    else {
-//      console.log(state.searchTerm);
-//      packages = packages.filter((pack) => {
-//        return true;
-//      }
-//    );
-//    }
-
-
 
     packages.sort(function (a, b) {
         const nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase();
@@ -75,12 +66,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onTagSelection: (value) => {
-            dispatch(selectTag(value));
-        },
-        onSearch: (value) => {
-            dispatch(searchInput(value));
-        },
         onDownloadOptionsSelection: (value) => {
             dispatch(selectDownloadOptions(value))
         }

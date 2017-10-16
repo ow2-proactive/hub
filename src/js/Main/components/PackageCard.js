@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import queryString from 'query-string'
+import { Link } from 'react-router-dom'
+
 
 const Tag = ({ name, onTagSelection }) => (
-    <a href="#"><span className="badge badge-secondary m-1" onClick={(event) => { event.preventDefault(); onTagSelection(event.target.innerHTML) }}>{name}</span></a>
+    <Link className="badge badge-secondary m-1" to={{ pathname: '/', search: queryString.stringify({ tag: name }) }}>{name}</Link>
 );
 
 const PackageCard = ({ slug, name, short_description, author, tags, repo_url, version, onTagSelection, onDownloadOptionsSelection }) => {
