@@ -1,26 +1,26 @@
-{
-   "metadata":{
-      "generated_ts":1508158240
+{  
+   "metadata":{  
+      "generated_ts":1508878041
    },
-   "packages":{
-      "cloudautomation-aws":{
+   "packages":{  
+      "cloudautomation-aws":{  
          "slug":"cloudautomation-aws",
          "name":"CloudAutomation AWS",
          "short_description":"Lifecycle management workflows for AWS",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Cloud Automation",
             "AWS"
          ],
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/AWS"
       },
-      "clearwater":{
+      "clearwater":{  
          "slug":"clearwater",
          "name":"CloudAutomation Clearwater",
          "short_description":"Lifecycle management workflows for Clearwater",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Cloud Automation",
             "Clearwater",
             "Big Data",
@@ -29,24 +29,24 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/Clearwater"
       },
-      "cloudautomation-template":{
+      "cloudautomation-template":{  
          "slug":"cloudautomation-template",
          "name":"CloudAutomation Template",
          "short_description":"Lifecycle management workflow templates for Cloud Automation",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Cloud Automation",
             "Template"
          ],
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/CloudAutomationTemplate"
       },
-      "cnes":{
+      "cnes":{  
          "slug":"cnes",
          "name":"Space Agency",
          "short_description":"Use third party service while using many ProActive features",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Orchestration",
             "Samples",
             "Docker",
@@ -55,12 +55,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/CNES"
       },
-      "cron":{
+      "cron":{  
          "slug":"cron",
          "name":"Jobs Planning & CRON",
          "short_description":"Plan jobs on a regular basis with advanced controls",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Building blocks",
             "Cron",
             "Job planning"
@@ -68,12 +68,28 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/Cron"
       },
-      "dockerbasics":{
+      "datavisualization":{  
+         "slug":"datavisualization",
+         "name":"Data Visualization",
+         "short_description":"Data visualization with Visdom on Docker",
+         "author":"ActiveEon's Team",
+         "tags":[  
+            "Samples",
+            "Machine Learning",
+            "Data Visualization",
+            "Big Data",
+            "Analytics",
+            "Deep Learning"
+         ],
+         "version":"1.0",
+         "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/DataVisualization"
+      },
+      "dockerbasics":{  
          "slug":"dockerbasics",
          "name":"Docker",
          "short_description":"Use docker environment within a task",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "Building blocks",
             "Docker"
@@ -81,12 +97,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/DockerBasics"
       },
-      "dockerswarm":{
+      "dockerswarm":{  
          "slug":"dockerswarm",
          "name":"Docker Swarm",
          "short_description":"Lifecycle management and config workflows for Docker Swarm",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Cloud Automation",
             "Docker",
             "Swarm"
@@ -94,24 +110,24 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/DockerSwarm"
       },
-      "emails":{
+      "emails":{  
          "slug":"emails",
          "name":"Email",
          "short_description":"Notification emails",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Messaging",
             "Notification"
          ],
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/Email"
       },
-      "filefoldermanagement":{
+      "filefoldermanagement":{  
          "slug":"filefoldermanagement",
          "name":"File & Folder Management",
          "short_description":"A few samples to mainpulate file, folders, directories and set triggers",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "Building blocks",
             "File",
@@ -121,12 +137,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/FileFolderManagement"
       },
-      "finance-var":{
+      "finance-var":{  
          "slug":"finance-var",
          "name":"Finance VaR",
          "short_description":"Value at risk sample",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "Finance",
             "VaR"
@@ -134,12 +150,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/FinanceMonteCarlo"
       },
-      "get-started":{
+      "get-started":{  
          "slug":"get-started",
          "name":"Get Started",
          "short_description":"A few samples to get started",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "Building blocks",
             "Get started"
@@ -147,12 +163,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/GetStarted"
       },
-      "cloudautomation-hdfs":{
+      "cloudautomation-hdfs":{  
          "slug":"cloudautomation-hdfs",
          "name":"CloudAutomation HDFS",
          "short_description":"Lifecycle management workflows for HDFS",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Cloud Automation",
             "HDFS",
             "Big Data",
@@ -162,12 +178,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/HDFS"
       },
-      "hdfsorchestration":{
+      "hdfsorchestration":{  
          "slug":"hdfsorchestration",
          "name":"HDFS Orchestration",
          "short_description":"Use HDFS from ProActive",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Building blocks",
             "HDFS",
             "Orchestration",
@@ -178,12 +194,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/HDFSOrchestration"
       },
-      "imageanalysis":{
+      "imageanalysis":{  
          "slug":"imageanalysis",
          "name":"Image Analysis",
          "short_description":"Image analysis with deep learning on Docker",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "Machine Learning",
             "Tensorflow",
@@ -196,24 +212,24 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/ImageAnalysis"
       },
-      "jobanalysis":{
+      "jobanalysis":{  
          "slug":"jobanalysis",
          "name":"Job Analysis",
          "short_description":"Analyze job distribution and efficiency in a simple Gantt Chart",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Monitoring",
             "Analysis"
          ],
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/JobAnalysis"
       },
-      "loganalysis":{
+      "loganalysis":{  
          "slug":"loganalysis",
          "name":"Log Analysis",
          "short_description":"Log analysis and anomaly detection on logs with Docker",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "Machine Learning",
             "Log Analysis",
@@ -225,12 +241,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/LogAnalysis"
       },
-      "mlbasics":{
+      "mlbasics":{  
          "slug":"mlbasics",
          "name":"Basic Machine Learning",
          "short_description":"Example of basic machine learning workflows on docker.",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "Machine Learning",
             "Big Data",
@@ -239,12 +255,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/MLBasics"
       },
-      "mlnodesource":{
+      "mlnodesource":{  
          "slug":"mlnodesource",
          "name":"Machine Learning NodeSource",
          "short_description":"Machine learning nodesource creation and removal with Docker",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "Machine Learning",
             "NodeSource",
@@ -254,24 +270,24 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/MLNodeSource"
       },
-      "cloudautomation-openstack":{
+      "cloudautomation-openstack":{  
          "slug":"cloudautomation-openstack",
          "name":"CloudAutomation OpenStack",
          "short_description":"Lifecycle management workflows for OpenStack",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Cloud Automation",
             "OpenStack"
          ],
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/OpenStack"
       },
-      "remotevisualization":{
+      "remotevisualization":{  
          "slug":"remotevisualization",
          "name":"Remote Visualization & Result Display",
          "short_description":"Visualize remote desktop and display results",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "Building blocks",
             "Monirotin",
@@ -280,12 +296,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/RemoteVisualization"
       },
-      "cloudautomation-spark":{
+      "cloudautomation-spark":{  
          "slug":"cloudautomation-spark",
          "name":"CloudAutomation Spark",
          "short_description":"Lifecycle management workflows for Spark",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Cloud Automation",
             "Spark",
             "Big Data",
@@ -294,12 +310,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/Spark"
       },
-      "sparkorchestration":{
+      "sparkorchestration":{  
          "slug":"sparkorchestration",
          "name":"Spark Orchestration",
          "short_description":"Orchestrate Spark jobs from ProActive",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Building blocks",
             "Spark",
             "Orchestration",
@@ -309,12 +325,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/SparkOrchestration"
       },
-      "cloudautomation-storm":{
+      "cloudautomation-storm":{  
          "slug":"cloudautomation-storm",
          "name":"CloudAutomation Storm",
          "short_description":"Lifecycle management workflows for Storm",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Cloud Automation",
             "Storm",
             "Big Data",
@@ -323,12 +339,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/Storm"
       },
-      "textanalysis":{
+      "textanalysis":{  
          "slug":"textanalysis",
          "name":"Text Analysis",
          "short_description":"Text analysis with machine learning and deep learning on Docker",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "Machine Learning",
             "Text Analysis",
@@ -339,12 +355,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/TextAnalysis"
       },
-      "cloudwatch":{
+      "cloudwatch":{  
          "slug":"cloudwatch",
          "name":"Cloud Watch",
          "short_description":"Samples for event driven automation",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "Cloud Watch",
             "Monitoring",
@@ -353,12 +369,12 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/TriggerTemplate"
       },
-      "twitter":{
+      "twitter":{  
          "slug":"twitter",
          "name":"Twitter",
          "short_description":"Use Twitter API from ProActive",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
             "R",
             "Twitter"
@@ -366,14 +382,15 @@
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/TwitterApi"
       },
-      "notification":{
+      "notification":{  
          "slug":"notification",
          "name":"Notification",
          "short_description":"Samples for web notification and validation",
          "author":"ActiveEon's Team",
-         "tags":[
+         "tags":[  
             "Samples",
-            "Notification"
+            "Notification",
+            "Webhook"
          ],
          "version":"1.0",
          "repo_url":"https://github.com/ow2-proactive/proactive-examples/tree/master/WebNotification"
