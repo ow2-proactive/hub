@@ -68,6 +68,14 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onDownloadOptionsSelection: (value) => {
             dispatch(selectDownloadOptions(value))
+        },
+        onFilterClick: (event, tag) => {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Filter',
+                eventAction: 'Tag Selection',
+                eventLabel: tag
+            });
         }
     }
 };

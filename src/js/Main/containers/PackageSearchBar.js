@@ -12,6 +12,12 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onSearch: (value) => {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Filter',
+                eventAction: 'Search',
+                eventLabel: value
+            });
             dispatch(searchInput(value));
         }
     }

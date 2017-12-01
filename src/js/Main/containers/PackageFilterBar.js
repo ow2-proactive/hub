@@ -18,7 +18,16 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    return {}
+    return {
+        onFilterClick: (event, tag) => {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Filter',
+                eventAction: 'Tag Selection',
+                eventLabel: tag
+            });
+        }
+    }
 };
 
 const PackageFilterBar = connect(

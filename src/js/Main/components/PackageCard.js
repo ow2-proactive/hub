@@ -4,14 +4,14 @@ import queryString from 'query-string'
 import { Link } from 'react-router-dom'
 
 
-const Tag = ({ name, onTagSelection }) => (
-    <Link className="badge badge-secondary m-1" to={{ pathname: '/', search: queryString.stringify({ tag: name }) }}>{name}</Link>
+const Tag = ({ name, onTagSelection, onClick }) => (
+    <Link className="badge badge-secondary m-1" to={{ pathname: '/', search: queryString.stringify({ tag: name }) }} onClick={(event) => onClick(event, name)}>{name}</Link>
 );
 
-const PackageCard = ({ slug, name, short_description, author, tags, repo_url, version, onTagSelection, onDownloadOptionsSelection }) => {
+const PackageCard = ({ slug, name, short_description, author, tags, repo_url, version, onTagSelection, onDownloadOptionsSelection, onFilterClick }) => {
     let tagBadges = [];
     tags.forEach((tag) => {
-        tagBadges.push(<Tag key={tag} name={tag} onTagSelection={onTagSelection} />)
+        tagBadges.push(<Tag key={tag} name={tag} onTagSelection={onTagSelection} onClick={onFilterClick} />)
     });
     return (
         <div className="">
