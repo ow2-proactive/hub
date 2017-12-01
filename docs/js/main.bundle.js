@@ -39657,12 +39657,8 @@ var PackageCards = function PackageCards(_ref) {
 
     return _react2.default.createElement(
         'div',
-        { className: 'row' },
-        _react2.default.createElement(
-            'div',
-            { className: 'card-columns' },
-            cards
-        )
+        { className: 'card-columns' },
+        cards
     );
 };
 
@@ -40811,9 +40807,9 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	};
 
 	if (true) {
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
+		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {
 			return ExecutionEnvironment;
-		}.call(exports, __webpack_require__, exports, module),
+		}).call(exports, __webpack_require__, exports, module),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	} else if (typeof module !== 'undefined' && module.exports) {
 		module.exports = ExecutionEnvironment;
