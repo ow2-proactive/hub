@@ -25,7 +25,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         onClickGithubLink: (event, repoLink) => {
             ga('send', {
                 hitType: 'event',
-                eventCategory: 'Outbound Link',
+                eventCategory: 'Hub Outbound Link',
                 eventAction: 'Click',
                 eventLabel: repoLink
             });

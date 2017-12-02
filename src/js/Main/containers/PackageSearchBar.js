@@ -14,7 +14,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         onSearch: (value) => {
             ga('send', {
                 hitType: 'event',
-                eventCategory: 'Filter',
+                eventCategory: 'Hub Filter',
                 eventAction: 'Search',
                 eventLabel: value
             });

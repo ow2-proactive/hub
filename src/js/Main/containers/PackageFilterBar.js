@@ -22,7 +22,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         onFilterClick: (event, tag) => {
             ga('send', {
                 hitType: 'event',
-                eventCategory: 'Filter',
+                eventCategory: 'Hub Filter',
                 eventAction: 'Tag Selection',
                 eventLabel: tag
             });

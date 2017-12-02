@@ -69,7 +69,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         onDownloadOptionsSelection: (value) => {
             ga('send', {
                 hitType: 'event',
-                eventCategory: 'Download',
+                eventCategory: 'Hub Download',
                 eventAction: 'Package',
                 eventLabel: value
             });
@@ -78,7 +78,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         onFilterClick: (event, tag) => {
             ga('send', {
                 hitType: 'event',
-                eventCategory: 'Filter',
+                eventCategory: 'Hub Filter',
                 eventAction: 'Tag Selection',
                 eventLabel: tag
             });
@@ -86,7 +86,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         onClickOutboundLink: (event, repoLink) => {
             ga('send', {
                 hitType: 'event',
-                eventCategory: 'Outbound Link',
+                eventCategory: 'Hub Outbound Link',
                 eventAction: 'Click',
                 eventLabel: repoLink
             });
