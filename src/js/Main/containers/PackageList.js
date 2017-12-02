@@ -82,6 +82,14 @@ const mapDispatchToProps = (dispatch, ownProps) => {
                 eventAction: 'Tag Selection',
                 eventLabel: tag
             });
+        },
+        onClickOutboundLink: (event, repoLink) => {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Outbound Link',
+                eventAction: 'Click',
+                eventLabel: repoLink
+            });
         }
     }
 };

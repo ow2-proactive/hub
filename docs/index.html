@@ -113,9 +113,9 @@
                 <div class="modal-body">
                     Want to create a new package for ProActive? Here are a few steps to get started: <br /><br />
                     <ol>
-                        <li>Read the <a href="https://github.com/ow2-proactive/hub-packages" target="_blank">Create and Contribute</a> documentation page.</li> <!-- TODO: Complete the link -->
+                        <li>Read the <a href="https://github.com/ow2-proactive/hub-packages" target="_blank" onclick=onClickOutboundLink(event)>Create and Contribute</a> documentation page.</li> <!-- TODO: Complete the link -->
                         <li>Take a look at the sample package and some examples.</li>
-                        <li>Use our <a href="https://github.com/ow2-proactive/hub-packages/tree/master/package-sample" target="_blank">package template</a> on GitHub as a structure reference.</li>
+                        <li>Use our <a href="https://github.com/ow2-proactive/hub-packages/tree/master/package-sample" target="_blank" onclick=onClickOutboundLink(event) >package template</a> on GitHub as a structure reference.</li>
                     </ol>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                         Do no wait, just send a pull request to our repository on GitHub:
                     </p>
                     <div class="text-center">
-                        <a href="https://github.com/ow2-proactive/hub-packages" class="btn btn-outline-primary" target="_blank">ActiveEon Hub Repo</a>
+                        <a href="https://github.com/ow2-proactive/hub-packages" class="btn btn-outline-primary" target="_blank" onclick=onClickOutboundLink(event)>ActiveEon Hub Repo</a>
                     </div>
                 </div>
             </div>
@@ -166,6 +166,15 @@
                 hitType: 'event',
                 eventCategory: 'Contribute',
                 eventAction: 'Submit package'
+            });
+        }
+
+        function onClickOutboundLink(event) {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Outbound Link',
+                eventAction: 'Click',
+                eventLabel: event.target.href
             });
         }
     </script>

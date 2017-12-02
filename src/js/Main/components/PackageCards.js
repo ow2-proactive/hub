@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import PackageCard from './PackageCard'
 
-const PackageCards = ({ isFetching, items, onDownloadOptionsSelection, onFilterClick }) => {
+const PackageCards = ({ isFetching, items, onDownloadOptionsSelection, onFilterClick, onClickOutboundLink }) => {
 
 
     if (isFetching) {
@@ -12,7 +12,10 @@ const PackageCards = ({ isFetching, items, onDownloadOptionsSelection, onFilterC
     let cards = [];
     items.forEach((item) => {
         cards.push(
-            <PackageCard key={item.slug} {...item} onDownloadOptionsSelection={onDownloadOptionsSelection} onFilterClick={onFilterClick} />
+            <PackageCard key={item.slug} {...item}
+                         onDownloadOptionsSelection={onDownloadOptionsSelection}
+                         onFilterClick={onFilterClick}
+                         onClickOutboundLink={onClickOutboundLink} />
         )
     });
 
@@ -37,7 +40,8 @@ PackageCards.propTypes = {
         }).isRequired,
     ).isRequired,
     onDownloadOptionsSelection: PropTypes.func.isRequired,
-    onFilterClick: PropTypes.func.isRequired
+    onFilterClick: PropTypes.func.isRequired,
+    onClickOutboundLink: PropTypes.func.isRequired
 };
 
 export default PackageCards

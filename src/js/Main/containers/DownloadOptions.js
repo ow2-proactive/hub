@@ -21,6 +21,14 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         onCloseModal: (event) => {
             event.preventDefault();
             dispatch(closeDownloadOptions());
+        },
+        onClickGithubLink: (event, repoLink) => {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Outbound Link',
+                eventAction: 'Click',
+                eventLabel: repoLink
+            });
         }
     }
 };

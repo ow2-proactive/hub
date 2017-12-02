@@ -25,7 +25,7 @@ function onClickCopy(event, txt) {
     }
 }
 
-const DownloadModal = ({ pack, showModal, onCloseModal }) => {
+const DownloadModal = ({ pack, showModal, onCloseModal, onClickGithubLink }) => {
     if (!showModal) {
         return null;
     }
@@ -55,7 +55,7 @@ const DownloadModal = ({ pack, showModal, onCloseModal }) => {
                 <CopyToClipboard text={code}>
                     <a href="#" className="btn btn-outline-dark m-1">Copy script</a>
                 </CopyToClipboard>
-                <a href={pack.repo_url} className="btn btn-outline-dark m-1" target="_blank">Go to Github repo</a>
+                <a href={pack.repo_url} className="btn btn-outline-dark m-1" target="_blank" onClick={(event) => onClickGithubLink(event, pack.repo_url)}>Go to Github repo</a>
                 <a href="#" className="btn btn-outline-dark m-1" onClick={onCloseModal}>Close Modal</a>
             </div>
         </Modal>
@@ -74,6 +74,7 @@ DownloadModal.propTypes = {
         version: PropTypes.string.isRequired,
     }),
     onCloseModal: PropTypes.func.isRequired,
+    onClickGithubLink: PropTypes.func.isRequired,
 };
 
 
