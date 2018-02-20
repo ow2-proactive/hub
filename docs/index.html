@@ -12,8 +12,10 @@
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-31966922-1', 'auto');
+        ga('create', 'UA-31966922-1', 'auto', {allowLinker: true});
         ga('send', 'pageview', location.pathname);
+        ga('require', 'linker');
+        ga('linker:autoLink', ['activeeon.com']);
     </script>
     <!-- End Google Analytics -->
 
