@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_ts": 1512496293
+    "generated_ts": 1523555255
   },
   "packages": {
     "cloudautomation-aws": {
@@ -14,6 +14,48 @@
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/AWS"
+    },
+    "azure-cognitive-services": {
+      "slug": "azure-cognitive-services",
+      "name": "Azure Cognitive Services",
+      "short_description": "Azure Cognitive Services",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Azure",
+        "Azure Cognitive Services",
+        "Cognitive",
+        "Cognitive Services",
+        "Machine Learning",
+        "Deep Learning"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/AzureCognitiveServices"
+    },
+    "big-data": {
+      "slug": "big-data",
+      "name": "Big Data",
+      "short_description": "Basic big data tasks",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Big Data",
+        "Data Streaming",
+        "Kafka",
+        "Zookeeper"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/BigData"
+    },
+    "calendars": {
+      "slug": "calendars",
+      "name": "Calendars Definitions",
+      "short_description": "Calendars Definitions",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Calendars",
+        "Calendars Definitions"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Calendars"
     },
     "clearwater": {
       "slug": "clearwater",
@@ -68,6 +110,37 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Cron"
     },
+    "databricks": {
+      "slug": "databricks",
+      "name": "Databricks",
+      "short_description": "Azure Databricks services",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Azure",
+        "Databricks",
+        "Cloud",
+        "Spark",
+        "DBFS"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Databricks"
+    },
+    "dataconnectors": {
+      "slug": "dataconnectors",
+      "name": "DataConnectors",
+      "short_description": "Data Connectors",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Data Connectors",
+        "SQL",
+        "NoSQL",
+        "Cloud Storage",
+        "File",
+        "ERP"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/DataConnectors"
+    },
     "big-data-streaming-example": {
       "slug": "big-data-streaming-example",
       "name": "Big Data Kafka-Storm-Visdom Dataflow",
@@ -100,6 +173,36 @@
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/DataVisualization"
+    },
+    "deeplearning": {
+      "slug": "deeplearning",
+      "name": "Deep Learning",
+      "short_description": "Deep learning tasks",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Machine Learning",
+        "Deep Learning",
+        "Computer Vision",
+        "Natural Language Processing",
+        "Image Analysis",
+        "Text Analysis"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/DeepLearning"
+    },
+    "deeplearningworkflows": {
+      "slug": "deeplearningworkflows",
+      "name": "Deep Learning Workflows",
+      "short_description": "Deep Learning Workflows",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Deep Learning",
+        "Cognitive Services",
+        "Machine Learning",
+        "Artificial Intelligence"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/DeepLearningWorkflows"
     },
     "dockerbasics": {
       "slug": "dockerbasics",
@@ -154,18 +257,20 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/FileFolderManagement"
     },
-    "finance-var": {
-      "slug": "finance-var",
-      "name": "Finance VaR",
-      "short_description": "Value at risk sample",
+    "finance": {
+      "slug": "finance",
+      "name": "Finance",
+      "short_description": "Samples in computational finance",
       "author": "ActiveEon's Team",
       "tags": [
         "Samples",
         "Finance",
-        "VaR"
+        "VaR",
+        "Pricing",
+        "Black-Scholes"
       ],
       "version": "1.0",
-      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/FinanceMonteCarlo"
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Finance"
     },
     "get-started": {
       "slug": "get-started",
