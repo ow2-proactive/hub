@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_ts": 1530083087
+    "generated_ts": 1530113584
   },
   "packages": {
     "cloudautomation-aws": {
@@ -511,6 +511,18 @@
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/MachineLearningH2O"
+    },
+    "machining": {
+      "slug": "machining",
+      "name": "Machining",
+      "short_description": "Machining workflows.",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Machining process",
+        "Optimization"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Machining"
     },
     "mlbasics": {
       "slug": "mlbasics",
