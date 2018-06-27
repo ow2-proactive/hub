@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_ts": 1523555255
+    "generated_ts": 1530083087
   },
   "packages": {
     "cloudautomation-aws": {
@@ -71,6 +71,19 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Clearwater"
     },
+    "cloud-automation-client": {
+      "slug": "cloud-automation-client",
+      "name": "Cloud automation client",
+      "short_description": "Requirements for cloud automation communication",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Cloud automation",
+        "Client",
+        "PCA"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/CloudAutomationClient"
+    },
     "cloudautomation-template": {
       "slug": "cloudautomation-template",
       "name": "CloudAutomation Template",
@@ -109,6 +122,23 @@
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Cron"
+    },
+    "database-services": {
+      "slug": "database-services",
+      "name": "Data Visualization",
+      "short_description": "Database services to automate database deployment and use",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Samples",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Database",
+        "SQL",
+        "NoSQL"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/DatabaseServices"
     },
     "databricks": {
       "slug": "databricks",
@@ -230,6 +260,33 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/DockerSwarm"
     },
+    "elasticsearch": {
+      "slug": "elasticsearch",
+      "name": "Elasticsearch Service",
+      "short_description": "Lifecycle management workflow of Elasticsearch Server for Cloud Automation",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Cloud Automation",
+        "Elasticsearch"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Elasticsearch"
+    },
+    "elk": {
+      "slug": "elk",
+      "name": "ELK Stack",
+      "short_description": "ELK (Elasticsearch, Logstash, and Kibana) Stack",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Samples",
+        "ELK",
+        "Elasticsearch",
+        "Logstash",
+        "Kibana"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/ELK"
+    },
     "emails": {
       "slug": "emails",
       "name": "Email",
@@ -284,6 +341,18 @@
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/GetStarted"
+    },
+    "h2o": {
+      "slug": "h2o",
+      "name": "H2O Service",
+      "short_description": "Lifecycle management workflow of H2O Server for Cloud Automation",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Cloud Automation",
+        "H2O"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/H2O"
     },
     "hadooporchestration": {
       "slug": "hadooporchestration",
@@ -375,6 +444,18 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Kafka"
     },
+    "kibana": {
+      "slug": "kibana",
+      "name": "Kibana Service",
+      "short_description": "Lifecycle management workflow of Kibana Server for Cloud Automation",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Cloud Automation",
+        "Kibana"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Kibana"
+    },
     "loganalysis": {
       "slug": "loganalysis",
       "name": "Log Analysis",
@@ -392,6 +473,18 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/LogAnalysis"
     },
+    "logstash": {
+      "slug": "logstash",
+      "name": "Logstash Service",
+      "short_description": "Lifecycle management workflow of Logstash Server for Cloud Automation",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Cloud Automation",
+        "Logstash"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Logstash"
+    },
     "machinelearning": {
       "slug": "machinelearning",
       "name": "Machine Learning",
@@ -405,6 +498,19 @@
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/MachineLearning"
+    },
+    "machinelearningh2o": {
+      "slug": "machinelearningh2o",
+      "name": "Machine Learning H2O",
+      "short_description": "Machine Learning with H2O",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Samples",
+        "Machine Learning",
+        "H2O"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/MachineLearningH2O"
     },
     "mlbasics": {
       "slug": "mlbasics",
@@ -435,6 +541,46 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/MLNodeSource"
     },
+    "MongoDB": {
+      "slug": "MongoDB",
+      "name": "MongoDB Service",
+      "short_description": "Lifecycle management workflow of MongoDB Server for Cloud Automation",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Cloud Automation",
+        "MongoDB",
+        "Database",
+        "NoSQL"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/MongoDB"
+    },
+    "MySQL": {
+      "slug": "MySQL",
+      "name": "MySQL Service",
+      "short_description": "Lifecycle management workflow of MySQL Server for Cloud Automation",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Cloud Automation",
+        "MySQL",
+        "Database",
+        "SQL"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/MySQL"
+    },
+    "nodesources": {
+      "slug": "nodesources",
+      "name": "Node Sources",
+      "short_description": "Node Sources Definitions",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Node Sources",
+        "Node Sources Definitions"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/NodeSources"
+    },
     "cloudautomation-openstack": {
       "slug": "cloudautomation-openstack",
       "name": "CloudAutomation OpenStack",
@@ -446,6 +592,34 @@
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/OpenStack"
+    },
+    "cloudwatch": {
+      "slug": "cloudwatch",
+      "name": "Cloud Watch",
+      "short_description": "Samples for event driven automation",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Samples",
+        "Cloud Watch",
+        "Monitoring",
+        "Notification"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/PCWRules"
+    },
+    "PostgreSQL": {
+      "slug": "PostgreSQL",
+      "name": "PostgreSQL Service",
+      "short_description": "Lifecycle management workflow of PostgreSQL Server for Cloud Automation",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Cloud Automation",
+        "PostgreSQL",
+        "Database",
+        "SQL"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/PostgreSQL"
     },
     "remotevisualization": {
       "slug": "remotevisualization",
@@ -460,6 +634,19 @@
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/RemoteVisualization"
+    },
+    "cloudautomation-reserve_nodes": {
+      "slug": "cloudautomation-reserve_nodes",
+      "name": "CloudAutomation Reserve nodes",
+      "short_description": "Manage nodes",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Nodes",
+        "Reserve",
+        "Free"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/ReserveNodes"
     },
     "scripts": {
       "slug": "scripts",
@@ -515,6 +702,19 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Storm"
     },
+    "synchronization-examples": {
+      "slug": "synchronization-examples",
+      "name": "Synchronization Examples",
+      "short_description": "Workflow examples which use the Synchronization API",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Synchronization",
+        "API",
+        "Critical Section"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Synchronization"
+    },
     "textanalysis": {
       "slug": "textanalysis",
       "name": "Text Analysis",
@@ -530,20 +730,6 @@
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/TextAnalysis"
-    },
-    "cloudwatch": {
-      "slug": "cloudwatch",
-      "name": "Cloud Watch",
-      "short_description": "Samples for event driven automation",
-      "author": "ActiveEon's Team",
-      "tags": [
-        "Samples",
-        "Cloud Watch",
-        "Monitoring",
-        "Notification"
-      ],
-      "version": "1.0",
-      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/TriggerTemplate"
     },
     "twitter": {
       "slug": "twitter",
