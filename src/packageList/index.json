@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_ts": 1530113584
+    "generated_ts": 1531235770
   },
   "packages": {
     "cloudautomation-aws": {
@@ -56,6 +56,21 @@
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Calendars"
+    },
+    "cfd": {
+      "slug": "cfd",
+      "name": "CFD",
+      "short_description": "Computational fluid dynamics",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "CFD",
+        "LaBS",
+        "solver",
+        "Paraview",
+        "PostLaBS"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/CFD"
     },
     "clearwater": {
       "slug": "clearwater",
