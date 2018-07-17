@@ -31,9 +31,8 @@ const DownloadModal = ({ pack, showModal, onCloseModal, onClickGithubLink }) => 
     }
     const contentLabel = pack.name+" Download Options";
     const code =
-        "sudo apt-get install git\n" +
-        "git clone "+pack.repo_url+"\n" +
-        "curl --- ";
+        // "pwd \n"+
+        "./bin/proactive-client -pkg "+pack.repo_url;
     return (
         <Modal
             isOpen={showModal}
@@ -44,19 +43,20 @@ const DownloadModal = ({ pack, showModal, onCloseModal, onClickGithubLink }) => 
                 <span aria-hidden="true">&times;</span>
             </button>
             <h4>{pack.name}</h4>
-            <p>To upload onto your catalog, simply copy paste those lines in a bash task.</p>
+            <p>To upload onto your catalog, go onto your server <em>ProActive Home Directory</em> and copy paste those lines.</p>
             <pre>
                 <code>
                     {code}
                 </code>
             </pre>
+            <p>For more information or examples on how to install packages, please refer to our <a target="_blank" href="https://www.activeeon.com/public_content/documentation/latest/user/ProActiveUserGuide.html#_install_proactive_packages">technical documentation</a></p>
             <hr />
             <div className="row justify-content-md-center">
                 <CopyToClipboard text={code}>
-                    <a href="#" className="btn btn-outline-dark m-1">Copy script</a>
+                    <a href="#" className="btn btn-info m-1">Copy script</a>
                 </CopyToClipboard>
-                <a href={pack.repo_url} className="btn btn-outline-dark m-1" target="_blank" onClick={(event) => onClickGithubLink(event, pack.repo_url)}>Go to Github repo</a>
-                <a href="#" className="btn btn-outline-dark m-1" onClick={onCloseModal}>Close Modal</a>
+                {/* <a href={pack.repo_url} className="btn btn-outline-dark m-1" target="_blank" onClick={(event) => onClickGithubLink(event, pack.repo_url)}>Go to Github repo</a> */}
+                <a href="#" className="btn btn-outline-info m-1" onClick={onCloseModal}>Close Modal</a>
             </div>
         </Modal>
     )

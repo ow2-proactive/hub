@@ -39949,7 +39949,9 @@ var DownloadModal = function DownloadModal(_ref) {
         return null;
     }
     var contentLabel = pack.name + " Download Options";
-    var code = "sudo apt-get install git\n" + "git clone " + pack.repo_url + "\n" + "curl --- ";
+    var code =
+    // "pwd \n"+
+    "./bin/proactive-client -pkg " + pack.repo_url;
     return _react2.default.createElement(
         _reactModal2.default,
         {
@@ -39974,7 +39976,13 @@ var DownloadModal = function DownloadModal(_ref) {
         _react2.default.createElement(
             'p',
             null,
-            'To upload onto your catalog, simply copy paste those lines in a bash task.'
+            'To upload onto your catalog, go onto your server ',
+            _react2.default.createElement(
+                'em',
+                null,
+                'ProActive Home Directory'
+            ),
+            ' and copy paste those lines.'
         ),
         _react2.default.createElement(
             'pre',
@@ -39983,6 +39991,16 @@ var DownloadModal = function DownloadModal(_ref) {
                 'code',
                 null,
                 code
+            )
+        ),
+        _react2.default.createElement(
+            'p',
+            null,
+            'For more information or examples on how to install packages, please refer to our ',
+            _react2.default.createElement(
+                'a',
+                { target: '_blank', href: 'https://www.activeeon.com/public_content/documentation/latest/user/ProActiveUserGuide.html#_install_proactive_packages' },
+                'technical documentation'
             )
         ),
         _react2.default.createElement('hr', null),
@@ -39994,20 +40012,13 @@ var DownloadModal = function DownloadModal(_ref) {
                 { text: code },
                 _react2.default.createElement(
                     'a',
-                    { href: '#', className: 'btn btn-outline-dark m-1' },
+                    { href: '#', className: 'btn btn-info m-1' },
                     'Copy script'
                 )
             ),
             _react2.default.createElement(
                 'a',
-                { href: pack.repo_url, className: 'btn btn-outline-dark m-1', target: '_blank', onClick: function onClick(event) {
-                        return onClickGithubLink(event, pack.repo_url);
-                    } },
-                'Go to Github repo'
-            ),
-            _react2.default.createElement(
-                'a',
-                { href: '#', className: 'btn btn-outline-dark m-1', onClick: onCloseModal },
+                { href: '#', className: 'btn btn-outline-info m-1', onClick: onCloseModal },
                 'Close Modal'
             )
         )
