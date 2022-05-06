@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_ts": 1651765287
+    "generated_ts": 1651832097
   },
   "packages": {
     "applicationconnectors": {
@@ -16,7 +16,6 @@
         "SSIS package",
         "IBM InfoSphere DataStage",
         "LDAP",
-        "IBM InfoSphere DataStage",
         "Centreon",
         "ServiceNow"
       ],
@@ -602,6 +601,10 @@
       "name": "Infrastructures",
       "short_description": "Infrastructures Definitions",
       "author": "ActiveEon's Team",
+      "tags": [
+        "Resource Manager",
+        "Nodes"
+      ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Infrastructures"
     },
@@ -908,6 +911,11 @@
       "name": "Policies",
       "short_description": "Node Sources Policies",
       "author": "ActiveEon's Team",
+      "tags": [
+        "Policies",
+        "Recovery",
+        "Nodes"
+      ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Policies"
     },
@@ -1051,6 +1059,11 @@
       "name": "triggers",
       "short_description": "Triggers",
       "author": "ActiveEon's Team",
+      "tags": [
+        "Triggers",
+        "Date",
+        "File"
+      ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Triggers"
     },
