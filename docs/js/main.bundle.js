@@ -38686,7 +38686,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
         return null;
     }
 
-    var mainTags = ["All", "Get started", "Cloud Automation", "Machine Learning", "Finance", "Analysis"];
+    var mainTags = ["All", "Get started", "Machine Learning", "Finance", "Analysis"];
     var selectedTag = _queryString2.default.parse(location.search).tag === undefined ? null : _queryString2.default.parse(location.search).tag;
 
     return {

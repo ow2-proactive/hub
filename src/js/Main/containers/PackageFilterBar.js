@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => {
         return null;
     }
 
-    const mainTags = ["All", "Get started", "Cloud Automation", "Machine Learning", "Finance", "Analysis"];
+    const mainTags = ["All", "Get started", "Machine Learning", "Finance", "Analysis"];
     const selectedTag = queryString.parse(location.search).tag === undefined ? null : queryString.parse(location.search).tag;
 
     return {
