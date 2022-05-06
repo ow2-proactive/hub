@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="urn:proactive:jobdescriptor:3.8"
-     xsi:schemaLocation="urn:proactive:jobdescriptor:3.8 http://www.activeeon.com/public_content/schemas/proactive/jobdescriptor/3.8/schedulerjob.xsd"
-    name="IndexGenerator" projectName="Hub"
-    priority="normal"
-    onTaskError="continueJobExecution"
-     maxNumberOfExecution="2">
+  xmlns="urn:proactive:jobdescriptor:3.13" xsi:schemaLocation="urn:proactive:jobdescriptor:3.13 http://www.activeeon.com/public_content/schemas/proactive/jobdescriptor/3.13/schedulerjob.xsd"  name="IndexGenerator" projectName="Hub" priority="normal" onTaskError="continueJobExecution"  maxNumberOfExecution="2"  >
   <taskFlow>
-    <task name="clone_repos_extract_metadata">
+    <task name="clone_repos_and_gather_all_metadata" 
+    
+    
+    
+    
+    fork="true">
       <description>
-        <![CDATA[ The simplest task, ran by a bash engine. ]]>
+        <![CDATA[ This workflow generates from the proactive-examples master branch, the index.json file required to populate the Activeeon hub web site. ]]>
       </description>
       <scriptExecutable>
         <script>
@@ -24,27 +24,35 @@ ls -lah
 echo "--"
 ls -lah proactive-examples-master
 
-echo "%%%%%%% Create raw_metadata.json" 
+echo "%%%%%%% Create raw_metadata.json"
 echo "[" >> raw_metadata.json
 
-echo "%%%%%%% Merge Metadata" 
+echo "%%%%%%% Merge Metadata"
 cd proactive-examples-master
 count=0;
 for d in */ ; do
 	echo "Move to package $d"
 	if [ -f "$d/METADATA.json" ]
     then
-        if [ $count -gt 0 ]
+
+		if [ $count -gt 0 ]
         then
         	echo "," >> ../raw_metadata.json
         fi
-        echo '{ "folderName": "'$d'" },' >> ../raw_metadata.json
-        cat $d/METADATA.json >> ../raw_metadata.json
+
+		foldername_section=$(echo '{ "folderName": "'$d'" }')
+		metadata_section=$(cat $d/METADATA.json)
+
+		echo -n $foldername_section >> ../raw_metadata.json
+		echo "," >> ../raw_metadata.json
+		echo -n $metadata_section >> ../raw_metadata.json
+
         count=$((count+1))
+
     fi
 done
 
-echo "%%%%%%% Display raw_metadata.json" 
+echo "%%%%%%% Display raw_metadata.json"
 cd ..
 echo "]" >> raw_metadata.json
 cat raw_metadata.json
@@ -55,17 +63,62 @@ cat raw_metadata.json
       <outputFiles>
         <files  includes="raw_metadata.json" accessMode="transferToUserSpace"/>
       </outputFiles>
+      <metadata>
+        <positionTop>
+            166.4749984741211
+        </positionTop>
+        <positionLeft>
+            509.5
+        </positionLeft>
+      </metadata>
     </task>
-    <task name="create_index">
+    <task name="from_metadata_file_to_variables" 
+    
+    
+    
+    
+    fork="true">
       <depends>
-        <task ref="file_content_to_var"/>
+        <task ref="clone_repos_and_gather_all_metadata"/>
+      </depends>
+      <inputFiles>
+        <files  includes="raw_metadata.json" accessMode="transferFromUserSpace"/>
+      </inputFiles>
+      <scriptExecutable>
+        <script>
+          <code language="groovy">
+            <![CDATA[
+String fileContents = new File('raw_metadata.json').text;
+variables.put("raw_metadata", fileContents);
+println("raw_metadata.json: "+fileContents);
+
+result=fileContents; // for preview
+]]>
+          </code>
+        </script>
+      </scriptExecutable>
+      <metadata>
+        <positionTop>
+            293.4749984741211
+        </positionTop>
+        <positionLeft>
+            509.5
+        </positionLeft>
+      </metadata>
+    </task>
+    <task name="create_index_json" 
+    
+    
+    
+    
+    fork="true">
+      <depends>
+        <task ref="from_metadata_file_to_variables"/>
       </depends>
       <scriptExecutable>
         <script>
           <code language="javascript">
             <![CDATA[
-//print("raw_metadata: "+variables.get("raw_metadata"));
-
 raw_metadata_json = JSON.parse(variables.get("raw_metadata"));
 github_url = "https://github.com/ow2-proactive/proactive-examples/tree/master/";
 
@@ -88,76 +141,71 @@ raw_metadata_json.forEach(function(package) {
   	folderName = package["folderName"] === undefined ? "" : package["folderName"];
 });
 
-indexString = JSON.stringify(index);
-print("index: "+indexString);
-variables.put("packageIndex", indexString+"");
+index_json = JSON.stringify(index);
+print("index: " + index_json);
+variables.put("index_json", index_json + "");
 ]]>
           </code>
         </script>
       </scriptExecutable>
-      <outputFiles>
-        <files  includes="index.json" accessMode="transferToUserSpace"/>
-      </outputFiles>
+      <metadata>
+        <positionTop>
+            421.4749984741211
+        </positionTop>
+        <positionLeft>
+            509.5
+        </positionLeft>
+      </metadata>
     </task>
-    <task name="file_content_to_var">
+    <task name="preview_index_json" 
+    
+    
+    
+    
+    fork="true">
       <depends>
-        <task ref="clone_repos_extract_metadata"/>
+        <task ref="create_index_json"/>
       </depends>
-      <inputFiles>
-        <files  includes="raw_metadata.json" accessMode="transferFromUserSpace"/>
-      </inputFiles>
       <scriptExecutable>
         <script>
           <code language="groovy">
             <![CDATA[
-String fileContents = new File('raw_metadata.json').text;
-variables.put("raw_metadata", fileContents);
-println("raw_metadata.json: "+fileContents);
-
-result=fileContents; // for preview
+def index_json = variables.get("index_json")
+variables.put("raw_metadata", index_json)
+result = index_json
 ]]>
           </code>
         </script>
       </scriptExecutable>
-    </task>
-    <task name="write_index">
-      <depends>
-        <task ref="create_index"/>
-      </depends>
-      <scriptExecutable>
-        <script>
-          <code language="bash">
-            <![CDATA[
-echo $variables_packageIndex
-echo $variables_packageIndex >> index.json
-]]>
-          </code>
-        </script>
-      </scriptExecutable>
-      <outputFiles>
-        <files  includes="index.json" accessMode="transferToUserSpace"/>
-      </outputFiles>
-    </task>
-    <task name="preview_index">
-      <depends>
-        <task ref="write_index"/>
-      </depends>
-      <inputFiles>
-        <files  includes="index.json" accessMode="transferFromUserSpace"/>
-      </inputFiles>
-      <scriptExecutable>
-        <script>
-          <code language="groovy">
-            <![CDATA[
-String fileContents = new File('index.json').text;
-variables.put("raw_metadata", fileContents);
-println("raw_metadata.json: "+fileContents);
-
-result=fileContents; // for preview
-]]>
-          </code>
-        </script>
-      </scriptExecutable>
+      <metadata>
+        <positionTop>
+            549.4749984741211
+        </positionTop>
+        <positionLeft>
+            509.5
+        </positionLeft>
+      </metadata>
     </task>
   </taskFlow>
+  <metadata>
+    <visualization>
+      <![CDATA[ <html>
+    <head>
+    <link rel="stylesheet" href="/studio/styles/studio-standalone.css">
+        <style>
+        #workflow-designer {
+            left:0 !important;
+            top:0 !important;
+            width:2257px;
+            height:2579px;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="workflow-visualization-view"><div id="workflow-visualization" style="position:relative;top:-161.4749984741211px;left:-504.5px"><div class="task _jsPlumb_endpoint_anchor_ ui-draggable active-task" id="jsPlumb_1_160" style="top: 166.475px; left: 509.5px;"><a class="task-name" data-toggle="tooltip" data-placement="right" title="This workflow generates from the proactive-examples master branch, the index.json file required to populate the Activeeon hub web site."><img src="/studio/images/LinuxBash.png" width="20px">&nbsp;<span class="name">clone_repos_and_gather_all_metadata</span></a></div><div class="task ui-draggable _jsPlumb_endpoint_anchor_" id="jsPlumb_1_163" style="top: 293.475px; left: 509.5px;"><a class="task-name" data-toggle="tooltip" data-placement="right" title="This task has no description"><img src="/studio/images/Groovy.png" width="20px">&nbsp;<span class="name">from_metadata_file_to_variables</span></a></div><div class="task ui-draggable _jsPlumb_endpoint_anchor_" id="jsPlumb_1_166" style="top: 421.475px; left: 509.5px;"><a class="task-name" data-toggle="tooltip" data-placement="right" title="This task has no description"><img src="/studio/images/Javascript.png" width="20px">&nbsp;<span class="name">create_index_json</span></a></div><div class="task ui-draggable _jsPlumb_endpoint_anchor_" id="jsPlumb_1_169" style="top: 549.475px; left: 509.5px;"><a class="task-name" data-toggle="tooltip" data-placement="right" title="This task has no description"><img src="/studio/images/Groovy.png" width="20px">&nbsp;<span class="name">preview_index_json</span></a></div><svg style="position:absolute;left:589.5px;top:205.5px" width="36" height="89" pointer-events="none" position="absolute" version="1.1" xmlns="http://www.w3.org/1999/xhtml" class="_jsPlumb_connector "><path d="M 0 88 C -10 38 25 50 15 0 " transform="translate(10.5,0.5)" pointer-events="visibleStroke" version="1.1" xmlns="http://www.w3.org/1999/xhtml" fill="none" stroke="#666" style=""></path><path pointer-events="all" version="1.1" xmlns="http://www.w3.org/1999/xhtml" d="M-1.5508800000000005,66.303232 L9.739006151742196,48.37173817821538 L1.575805362924103,52.656846447727325 L-3.9073794005304716,45.245052815291274 L-1.5508800000000005,66.303232" class="" stroke="#666" fill="#666" transform="translate(10.5,0.5)"></path><path pointer-events="all" version="1.1" xmlns="http://www.w3.org/1999/xhtml" d="M-1.5508800000000005,66.303232 L9.739006151742196,48.37173817821538 L1.575805362924103,52.656846447727325 L-3.9073794005304716,45.245052815291274 L-1.5508800000000005,66.303232" class="" stroke="#666" fill="#666" transform="translate(10.5,0.5)"></path></svg><svg style="position:absolute;left:557.5px;top:333.5px" width="53" height="89" pointer-events="none" position="absolute" version="1.1" xmlns="http://www.w3.org/1999/xhtml" class="_jsPlumb_connector "><path d="M 0 88 C -10 38 42 50 32 0 " transform="translate(10.5,0.5)" pointer-events="visibleStroke" version="1.1" xmlns="http://www.w3.org/1999/xhtml" fill="none" stroke="#666" style=""></path><path pointer-events="all" version="1.1" xmlns="http://www.w3.org/1999/xhtml" d="M0.030728499999998188,65.8307285 L14.774168177308704,50.61130057114672 L5.903020643917183,53.12182669943169 L2.065266376740391,44.73900842722954 L0.030728499999998188,65.8307285" class="" stroke="#666" fill="#666" transform="translate(10.5,0.5)"></path><path pointer-events="all" version="1.1" xmlns="http://www.w3.org/1999/xhtml" d="M0.030728499999998188,65.8307285 L14.774168177308704,50.61130057114672 L5.903020643917183,53.12182669943169 L2.065266376740391,44.73900842722954 L0.030728499999998188,65.8307285" class="" stroke="#666" fill="#666" transform="translate(10.5,0.5)"></path></svg><svg style="position:absolute;left:557.5px;top:461.5px" width="24" height="89" pointer-events="none" position="absolute" version="1.1" xmlns="http://www.w3.org/1999/xhtml" class="_jsPlumb_connector "><path d="M 3 88 C 13 38 -10 50 0 0 " transform="translate(10.5,0.5)" pointer-events="visibleStroke" version="1.1" xmlns="http://www.w3.org/1999/xhtml" fill="none" stroke="#666" style=""></path><path pointer-events="all" version="1.1" xmlns="http://www.w3.org/1999/xhtml" d="M5.571843749999999,66.78168750000002 L11.211873765446198,46.35645649947359 L4.630943452167807,52.813340903872785 L-2.7564728306810355,47.297356797305774 L5.571843749999999,66.78168750000002" class="" stroke="#666" fill="#666" transform="translate(10.5,0.5)"></path><path pointer-events="all" version="1.1" xmlns="http://www.w3.org/1999/xhtml" d="M5.571843749999999,66.78168750000002 L11.211873765446198,46.35645649947359 L4.630943452167807,52.813340903872785 L-2.7564728306810355,47.297356797305774 L5.571843749999999,66.78168750000002" class="" stroke="#666" fill="#666" transform="translate(10.5,0.5)"></path></svg><div class="_jsPlumb_endpoint source-endpoint dependency-source-endpoint connected _jsPlumb_endpoint_anchor_ ui-draggable ui-droppable _jsPlumb_endpoint_connected" style="position: absolute; height: 20px; width: 20px; left: 605px; top: 196px;"><svg style="position:absolute;left:0px;top:0px" width="20" height="20" pointer-events="all" position="absolute" version="1.1" xmlns="http://www.w3.org/1999/xhtml"><circle cx="10" cy="10" r="10" version="1.1" xmlns="http://www.w3.org/1999/xhtml" fill="#666" stroke="none" style=""></circle></svg></div><div class="_jsPlumb_endpoint source-endpoint dependency-source-endpoint connected _jsPlumb_endpoint_anchor_ ui-draggable ui-droppable _jsPlumb_endpoint_connected" style="position: absolute; height: 20px; width: 20px; left: 590px; top: 324px;"><svg style="position:absolute;left:0px;top:0px" width="20" height="20" pointer-events="all" position="absolute" version="1.1" xmlns="http://www.w3.org/1999/xhtml"><circle cx="10" cy="10" r="10" version="1.1" xmlns="http://www.w3.org/1999/xhtml" fill="#666" stroke="none" style=""></circle></svg></div><div class="_jsPlumb_endpoint target-endpoint dependency-target-endpoint _jsPlumb_endpoint_anchor_ ui-draggable ui-droppable _jsPlumb_endpoint_connected" style="position: absolute; height: 20px; width: 20px; left: 590px; top: 284px;"><svg style="position:absolute;left:0px;top:0px" width="20" height="20" pointer-events="all" position="absolute" version="1.1" xmlns="http://www.w3.org/1999/xhtml"><circle cx="10" cy="10" r="10" version="1.1" xmlns="http://www.w3.org/1999/xhtml" fill="#666" stroke="none" style=""></circle></svg></div><div class="_jsPlumb_endpoint source-endpoint dependency-source-endpoint connected _jsPlumb_endpoint_anchor_ ui-draggable ui-droppable _jsPlumb_endpoint_connected" style="position: absolute; height: 20px; width: 20px; left: 558px; top: 452px;"><svg style="position:absolute;left:0px;top:0px" width="20" height="20" pointer-events="all" position="absolute" version="1.1" xmlns="http://www.w3.org/1999/xhtml"><circle cx="10" cy="10" r="10" version="1.1" xmlns="http://www.w3.org/1999/xhtml" fill="#666" stroke="none" style=""></circle></svg></div><div class="_jsPlumb_endpoint target-endpoint dependency-target-endpoint _jsPlumb_endpoint_anchor_ ui-draggable ui-droppable _jsPlumb_endpoint_connected" style="position: absolute; height: 20px; width: 20px; left: 558px; top: 412px;"><svg style="position:absolute;left:0px;top:0px" width="20" height="20" pointer-events="all" position="absolute" version="1.1" xmlns="http://www.w3.org/1999/xhtml"><circle cx="10" cy="10" r="10" version="1.1" xmlns="http://www.w3.org/1999/xhtml" fill="#666" stroke="none" style=""></circle></svg></div><div class="_jsPlumb_endpoint source-endpoint dependency-source-endpoint connected _jsPlumb_endpoint_anchor_ ui-draggable ui-droppable" style="position: absolute; height: 20px; width: 20px; left: 561px; top: 580px;"><svg style="position:absolute;left:0px;top:0px" width="20" height="20" pointer-events="all" position="absolute" version="1.1" xmlns="http://www.w3.org/1999/xhtml"><circle cx="10" cy="10" r="10" version="1.1" xmlns="http://www.w3.org/1999/xhtml" fill="#666" stroke="none" style=""></circle></svg></div><div class="_jsPlumb_endpoint target-endpoint dependency-target-endpoint _jsPlumb_endpoint_anchor_ ui-draggable ui-droppable _jsPlumb_endpoint_connected" style="position: absolute; height: 20px; width: 20px; left: 561px; top: 540px;"><svg style="position:absolute;left:0px;top:0px" width="20" height="20" pointer-events="all" position="absolute" version="1.1" xmlns="http://www.w3.org/1999/xhtml"><circle cx="10" cy="10" r="10" version="1.1" xmlns="http://www.w3.org/1999/xhtml" fill="#666" stroke="none" style=""></circle></svg></div></div></div>
+    </body>
+</html>
+ ]]>
+    </visualization>
+  </metadata>
 </job>
