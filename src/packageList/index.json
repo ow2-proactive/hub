@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_ts": 1651832097
+    "generated_ts": 1652425031
   },
   "packages": {
     "applicationconnectors": {
@@ -36,14 +36,15 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/AutoML"
     },
-    "cloudautomation-aws": {
-      "slug": "cloudautomation-aws",
-      "name": "CloudAutomation AWS",
-      "short_description": "Lifecycle management workflows for AWS",
+    "aws-ec2": {
+      "slug": "aws-ec2",
+      "name": "AWS EC2",
+      "short_description": "Lifecycle management workflows for AWS EC2",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
-        "AWS"
+        "AWS",
+        "Cloud"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/AWS"
@@ -66,8 +67,8 @@
     },
     "big-data": {
       "slug": "big-data",
-      "name": "Big Data",
-      "short_description": "Basic big data tasks",
+      "name": "BIG Data",
+      "short_description": "Basic BIG Data tasks",
       "author": "ActiveEon's Team",
       "tags": [
         "Big Data",
@@ -93,16 +94,16 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Calendars"
     },
-    "Cassandra": {
-      "slug": "Cassandra",
-      "name": "Cassandra Service",
-      "short_description": "Lifecycle management workflow of Cassandra service for Service Automation",
+    "apache-cassandra": {
+      "slug": "apache-cassandra",
+      "name": "Apache Cassandra",
+      "short_description": "Lifecycle management workflow of Apache Cassandra service for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "Docker",
         "Cassandra",
-        "Database",
+        "Data Base",
         "NoSQL"
       ],
       "version": "1.0",
@@ -116,7 +117,7 @@
       "tags": [
         "Service Automation",
         "Clearwater",
-        "Big Data",
+        "BIG Data",
         "Analytics"
       ],
       "version": "1.0",
@@ -162,15 +163,16 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/CNES"
     },
-    "cocoannotator": {
-      "slug": "cocoannotator",
+    "coco-annotator": {
+      "slug": "coco-annotator",
       "name": "COCO Annotator",
       "short_description": "Lifecycle management workflow of COCO Annotator for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "COCO Annotator",
-        "Data Annotation"
+        "Data Annotation",
+        "Artificial Intelligence"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/COCOAnnotator"
@@ -214,16 +216,16 @@
         "MongoDB",
         "Cassandra",
         "Elasticsearch",
-        "Database",
+        "Data Base",
         "SQL",
         "NoSQL"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/DatabaseServices"
     },
-    "databricks": {
-      "slug": "databricks",
-      "name": "Databricks",
+    "azure-databricks": {
+      "slug": "azure-databricks",
+      "name": "Azure Databricks",
       "short_description": "Azure Databricks services",
       "author": "ActiveEon's Team",
       "tags": [
@@ -231,7 +233,9 @@
         "Databricks",
         "Cloud",
         "Spark",
-        "DBFS"
+        "DBFS",
+        "BIG Data",
+        "Artificial Intelligence"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Databricks"
@@ -267,11 +271,11 @@
     },
     "big-data-streaming-example": {
       "slug": "big-data-streaming-example",
-      "name": "Big Data Kafka-Storm-Visdom Dataflow",
+      "name": "BIG Data Kafka-Storm-Visdom Dataflow",
       "short_description": "Data Stream Processing using Kafka-Storm-Visdom",
       "author": "ActiveEon's Team",
       "tags": [
-        "Big Data",
+        "BIG Data",
         "Streaming",
         "Dataflow",
         "Zookeeper",
@@ -291,7 +295,7 @@
         "Samples",
         "Machine Learning",
         "Data Visualization",
-        "Big Data",
+        "BIG Data",
         "Analytics",
         "Deep Learning"
       ],
@@ -323,7 +327,8 @@
         "Deep Learning",
         "Cognitive Services",
         "Machine Learning",
-        "Artificial Intelligence"
+        "Artificial Intelligence",
+        "Cloud"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/DeepLearningWorkflows"
@@ -342,16 +347,18 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Demo"
     },
-    "Docker": {
-      "slug": "Docker",
-      "name": "Docker Service",
+    "docker": {
+      "slug": "docker",
+      "name": "Docker",
       "short_description": "Lifecycle management workflow of any PSA Docker service for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "Docker",
         "Container",
-        "Image"
+        "Image",
+        "Cloud",
+        "Container & VM"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Docker"
@@ -369,27 +376,31 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/DockerBasics"
     },
-    "dockerswarm": {
-      "slug": "dockerswarm",
+    "docker-swarm": {
+      "slug": "docker-swarm",
       "name": "Docker Swarm",
       "short_description": "Lifecycle management and config workflows for Docker Swarm",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "Docker",
-        "Swarm"
+        "Swarm",
+        "BIG Data",
+        "Container & VM"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/DockerSwarm"
     },
     "elasticsearch": {
       "slug": "elasticsearch",
-      "name": "Elasticsearch Service",
+      "name": "Elasticsearch",
       "short_description": "Lifecycle management workflow of Elasticsearch Server for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
-        "Elasticsearch"
+        "Elasticsearch",
+        "BIG Data",
+        "Data Base"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Elasticsearch"
@@ -462,7 +473,7 @@
         "Black-Scholes",
         "Risk",
         "Solvency",
-        "BÃ¢le"
+        "B\u00e2le"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Finance"
@@ -497,15 +508,15 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/GetStarted"
     },
-    "Greenplum": {
-      "slug": "Greenplum",
-      "name": "Greenplum Service",
+    "greenplum": {
+      "slug": "greenplum",
+      "name": "Greenplum",
       "short_description": "Lifecycle management workflow of Greenplum Server for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "Greenplum",
-        "Database",
+        "Data Base",
         "SQL"
       ],
       "version": "1.0",
@@ -513,56 +524,85 @@
     },
     "h2o": {
       "slug": "h2o",
-      "name": "H2O Service",
+      "name": "H2O",
       "short_description": "Lifecycle management workflow of H2O Server for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
-        "H2O"
+        "H2O",
+        "Artificial Intelligence"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/H2O"
     },
-    "cloudautomation-hbase": {
-      "slug": "cloudautomation-hbase",
-      "name": "CloudAutomation Hbase",
-      "short_description": "Lifecycle management workflows for Hbase",
+    "apache-hbase": {
+      "slug": "apache-hbase",
+      "name": "Apache HBase",
+      "short_description": "Lifecycle management workflows for Apache HBase",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Service Automation",
+        "HBase",
+        "BIG Data",
+        "Analytics"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Hbase"
+    },
+    "apache-hbase-orchestration": {
+      "slug": "apache-hbase-orchestration",
+      "name": "Apache HBase Orchestration",
+      "short_description": "Orchestrate Apache HBase jobs from ProActive",
       "author": "ActiveEon's Team",
       "tags": [
         "Building blocks",
-        "Hbase",
+        "HBase",
         "Orchestration",
-        "Big Data",
+        "BIG Data",
         "Analytics"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/HbaseOrchestration"
     },
-    "cloudautomation-hdfs": {
-      "slug": "cloudautomation-hdfs",
-      "name": "CloudAutomation HDFS",
+    "apache-hdfs": {
+      "slug": "apache-hdfs",
+      "name": "Apache HDFS",
       "short_description": "Lifecycle management workflows for HDFS",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "HDFS",
-        "Big Data",
+        "BIG Data",
         "Analytics",
         "Hadoop"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/HDFS"
     },
-    "cloudautomation-hive": {
-      "slug": "cloudautomation-hive",
-      "name": "CloudAutomation hive",
-      "short_description": "Lifecycle management workflows for hive",
+    "apache-hive": {
+      "slug": "apache-hive",
+      "name": "Apache Hive",
+      "short_description": "Lifecycle management workflows for Apache Hive",
+      "author": "ActiveEon's Team",
+      "tags": [
+        "Service Automation",
+        "Hive",
+        "BIG Data",
+        "Analytics"
+      ],
+      "version": "1.0",
+      "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Hive"
+    },
+    "apache-hive-orchestration": {
+      "slug": "apache-hive-orchestration",
+      "name": "Apache Hive Orchestration",
+      "short_description": "Orchestrate Apache Hive jobs from ProActive",
       "author": "ActiveEon's Team",
       "tags": [
         "Building blocks",
         "Hive",
         "Orchestration",
-        "Big Data",
+        "BIG Data",
         "Analytics"
       ],
       "version": "1.0",
@@ -577,21 +617,23 @@
         "molecule",
         "Gromacs",
         "VMD",
-        "visualization"
+        "Visualization"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/HPC"
     },
-    "Informatica workflow example": {
-      "slug": "Informatica workflow example",
-      "name": "Informatica workflow example",
-      "short_description": "Informatica workflow example",
+    "Informatica": {
+      "slug": "Informatica",
+      "name": "Informatica",
+      "short_description": "Informatica workflow examples",
       "author": "ActiveEon's Team",
       "tags": [
         "Informatica",
         "API",
         "Application",
-        "Data"
+        "Data",
+        "Cloud",
+        "ETL & ELT"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Informatica"
@@ -646,30 +688,33 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/JobExecTimeWorkflows"
     },
-    "JupyterLab": {
-      "slug": "JupyterLab",
-      "name": "JupyterLab Service",
+    "jupyter-lab": {
+      "slug": "jupyter-lab",
+      "name": "Jupyter Lab",
       "short_description": "Lifecycle management workflow of JupyterLab service for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "JupyterLab",
         "Python",
-        "Data Science"
+        "Data Science",
+        "Cloud",
+        "Artificial Intelligence"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/JupyterLab"
     },
-    "cloudautomation-kafka": {
-      "slug": "cloudautomation-kafka",
-      "name": "CloudAutomation Kafka",
-      "short_description": "Lifecycle management workflows for Kafka",
+    "apache-kafka": {
+      "slug": "apache-kafka",
+      "name": "Apache Kafka",
+      "short_description": "Lifecycle management workflows for Apache Kafka",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "Kafka",
-        "Big Data",
-        "Data Streaming"
+        "BIG Data",
+        "Data Streaming",
+        "Artificial Intelligence"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Kafka"
@@ -688,13 +733,15 @@
     },
     "knime": {
       "slug": "knime",
-      "name": "knime",
+      "name": "Knime",
       "short_description": "Lifecycle management workflow of Knime for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "Knime",
-        "Data Preparation"
+        "Data Preparation",
+        "Artificial Intelligence",
+        "Visualization"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Knime"
@@ -708,7 +755,7 @@
         "Samples",
         "Machine Learning",
         "Log Analysis",
-        "Big Data",
+        "BIG Data",
         "Analytics",
         "Anomaly Detection",
         "Intrusion Detection"
@@ -766,7 +813,7 @@
       "tags": [
         "Samples",
         "Machine Learning",
-        "Big Data",
+        "BIG Data",
         "Analytics"
       ],
       "version": "1.0",
@@ -780,7 +827,8 @@
       "tags": [
         "Samples",
         "Machine Learning",
-        "H2O"
+        "H2O",
+        "Artificial Intelligence"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/MachineLearningH2O"
@@ -793,7 +841,7 @@
       "tags": [
         "Samples",
         "Machine Learning",
-        "Big Data",
+        "BIG Data",
         "Analytics"
       ],
       "version": "1.0",
@@ -825,29 +873,29 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/ModelAsService"
     },
-    "MongoDB": {
-      "slug": "MongoDB",
-      "name": "MongoDB Service",
+    "mongodb": {
+      "slug": "mongodb",
+      "name": "MongoDB",
       "short_description": "Lifecycle management workflow of MongoDB Server for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "MongoDB",
-        "Database",
+        "Data Base",
         "NoSQL"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/MongoDB"
     },
-    "MySQL": {
-      "slug": "MySQL",
-      "name": "MySQL Service",
+    "mysql": {
+      "slug": "mysql",
+      "name": "MySQL",
       "short_description": "Lifecycle management workflow of MySQL Server for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "MySQL",
-        "Database",
+        "Data Base",
         "SQL"
       ],
       "version": "1.0",
@@ -873,20 +921,22 @@
       "tags": [
         "Service Automation",
         "OpenRefine",
-        "Data Preparation"
+        "Data Preparation",
+        "Cloud",
+        "Artificial Intelligence"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/OpenRefine"
     },
-    "Oracle": {
-      "slug": "Oracle",
-      "name": "Oracle Service",
+    "oracle": {
+      "slug": "oracle",
+      "name": "Oracle",
       "short_description": "Lifecycle management workflow of Oracle Server for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "Oracle",
-        "Database",
+        "Data Base",
         "SQL"
       ],
       "version": "1.0",
@@ -919,15 +969,15 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Policies"
     },
-    "PostgreSQL": {
-      "slug": "PostgreSQL",
-      "name": "PostgreSQL Service",
+    "postgresql": {
+      "slug": "postgresql",
+      "name": "PostgreSQL",
       "short_description": "Lifecycle management workflow of PostgreSQL Server for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "PostgreSQL",
-        "Database",
+        "Data Base",
         "SQL"
       ],
       "version": "1.0",
@@ -972,58 +1022,61 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Signal"
     },
-    "cloudautomation-spark": {
-      "slug": "cloudautomation-spark",
-      "name": "CloudAutomation Spark",
-      "short_description": "Lifecycle management workflows for Spark",
+    "apache-spark": {
+      "slug": "apache-spark",
+      "name": "Apache Spark",
+      "short_description": "Lifecycle management workflows for Apache Spark",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "Spark",
-        "Big Data",
-        "Analytics"
+        "BIG Data",
+        "Analytics",
+        "Artificial Intelligence"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Spark"
     },
-    "sparkorchestration": {
-      "slug": "sparkorchestration",
-      "name": "Spark Orchestration",
-      "short_description": "Orchestrate Spark jobs from ProActive",
+    "apache-spark-orchestration": {
+      "slug": "apache-spark-orchestration",
+      "name": "Apache Spark Orchestration",
+      "short_description": "Orchestrate Apache Spark jobs from ProActive",
       "author": "ActiveEon's Team",
       "tags": [
         "Building blocks",
         "Spark",
         "Orchestration",
-        "Big Data",
-        "Analytics"
+        "BIG Data",
+        "Analytics",
+        "Artificial Intelligence"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/SparkOrchestration"
     },
-    "SSH": {
-      "slug": "SSH",
-      "name": "SSH service via web browser",
+    "ssh": {
+      "slug": "ssh",
+      "name": "SSH",
       "short_description": "SSH terminal via web browser",
       "author": "ActiveEon's Team",
       "tags": [
         "SSH",
         "Terminal",
         "Web Browser",
-        "Wetty"
+        "Wetty",
+        "Data Connectors"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/SSH"
     },
-    "cloudautomation-storm": {
-      "slug": "cloudautomation-storm",
-      "name": "CloudAutomation Storm",
-      "short_description": "Lifecycle management workflows for Storm",
+    "apache-storm": {
+      "slug": "apache-storm",
+      "name": "Apache Storm",
+      "short_description": "Lifecycle management workflows for Apache Storm",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "Storm",
-        "Big Data",
+        "BIG Data",
         "Analytics"
       ],
       "version": "1.0",
@@ -1042,14 +1095,16 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Synchronization"
     },
-    "Tensorboard": {
-      "slug": "Tensorboard",
-      "name": "Tensorboard Service",
+    "tensorboard": {
+      "slug": "tensorboard",
+      "name": "TensorBoard",
       "short_description": "Lifecycle management workflow of Tensorboard Server for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
-        "Tensorboard"
+        "TensorBoard",
+        "Artificial Intelligence",
+        "Visualization"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Tensorboard"
@@ -1069,27 +1124,28 @@
     },
     "visdom": {
       "slug": "visdom",
-      "name": "Visdom Service",
+      "name": "Visdom",
       "short_description": "Lifecycle management workflow of Visdom Server for Service Automation",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "Visdom",
-        "Data Visualization"
+        "Visualization"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Visdom"
     },
-    "vmware": {
-      "slug": "vmware",
-      "name": "vmware",
+    "vmware-vsphere": {
+      "slug": "vmware-vsphere",
+      "name": "VMware VSphere",
       "short_description": "ProActive task templates and workflow examples for VMware management",
       "author": "ActiveEon's Team",
       "tags": [
         "VM",
         "VMware",
         "Vsphere",
-        "PowerCLI"
+        "PowerCLI",
+        "Container & VM"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/VMware"
@@ -1107,44 +1163,44 @@
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/WebNotification"
     },
-    "cloudautomation-YARN": {
-      "slug": "cloudautomation-YARN",
-      "name": "CloudAutomation YARN",
-      "short_description": "Lifecycle management workflows for YARN",
+    "apache-hadoop-yarn": {
+      "slug": "apache-hadoop-yarn",
+      "name": "Apache Hadoop YARN",
+      "short_description": "Lifecycle management workflows for Apache Hadoop YARN",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "YARN",
-        "Big Data",
+        "BIG Data",
         "Analytics"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/YARN"
     },
-    "cloudautomation-yarn": {
-      "slug": "cloudautomation-yarn",
-      "name": "CloudAutomation yarn",
-      "short_description": "Lifecycle management workflows for YARN",
+    "apache-hadoop-yarn-orchestration": {
+      "slug": "apache-hadoop-yarn-orchestration",
+      "name": "Apache Hadoop YARN Orchestration",
+      "short_description": "Orchestrate Apache Hadoop YARN jobs from ProActive",
       "author": "ActiveEon's Team",
       "tags": [
         "Building blocks",
         "Yarn",
         "Orchestration",
-        "Big Data",
+        "BIG Data",
         "Analytics"
       ],
       "version": "1.0",
       "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/YarnOrchestration"
     },
-    "cloudautomation-zookeeper": {
-      "slug": "cloudautomation-zookeeper",
-      "name": "CloudAutomation Zookeeper",
+    "zookeeper": {
+      "slug": "zookeeper",
+      "name": "Zookeeper",
       "short_description": "Lifecycle management workflows for Zookeeper",
       "author": "ActiveEon's Team",
       "tags": [
         "Service Automation",
         "Zookeeper",
-        "Big Data",
+        "BIG Data",
         "Coordination Server"
       ],
       "version": "1.0",

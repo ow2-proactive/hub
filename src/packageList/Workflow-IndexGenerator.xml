@@ -106,7 +106,7 @@ result=fileContents; // for preview
         </positionLeft>
       </metadata>
     </task>
-    <task name="create_index_json" 
+    <task name="create_index_json"
     
     
     
@@ -157,11 +157,11 @@ variables.put("index_json", index_json + "");
         </positionLeft>
       </metadata>
     </task>
-    <task name="preview_index_json" 
-    
-    
-    
-    
+    <task name="preview_index_json"
+
+
+
+
     fork="true">
       <depends>
         <task ref="create_index_json"/>
@@ -170,9 +170,12 @@ variables.put("index_json", index_json + "");
         <script>
           <code language="groovy">
             <![CDATA[
-def index_json = variables.get("index_json")
-variables.put("raw_metadata", index_json)
-result = index_json
+import groovy.json.JsonOutput
+
+def pretty_index_json = JsonOutput.prettyPrint(variables.get("index_json"))
+
+variables.put("raw_metadata", pretty_index_json)
+result = pretty_index_json
 ]]>
           </code>
         </script>

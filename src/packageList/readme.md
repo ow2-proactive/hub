@@ -10,7 +10,6 @@ The method below is explaining how to use a pre-built workflow to generate the f
 2. Download the file called *Workflow-IndexGenerator.xml*
 3. Import the xml file into [ProActive](https://try.activeeon.com/studio)
 4. Execute the job
-5. Preview the output of the task called: *preview_index*
-6. Format json ([tool](https://duckduckgo.com/?q=format+json))
-7. Update the *index.json* file
-8. Check on [hub.activeeon.com](http://hub.activeeon.com/) that everything is updated
+5. Preview the output of the task called: *preview_index_json*
+6. Update the *index.json* file
+7. Check on [hub.activeeon.com](http://hub.activeeon.com/) that everything is updated
