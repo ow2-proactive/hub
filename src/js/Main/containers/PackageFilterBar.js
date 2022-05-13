@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => {
         return null;
     }
 
-    const mainTags = ["All", "Artificial Intelligence", "BIG Data", "CI/CD, Versioning", "Cloud", "Container & VM", "Data Base", "ERP", "ETL & ELT", "File Transfer", "GPU, FPGA", "HPC", "ITSM/SEIM", "Languages", "Monitoring / Automation", "Security", "Visualization, simulation", "Other"];
+    const mainTags = ["All", "Artificial Intelligence", "BIG Data", "CI/CD, Versioning", "Cloud", "Container & VM", "Data Base", "ERP", "ETL & ELT", "File Transfer", "GPU, FPGA", "HPC", "ITSM/SEIM", "Languages", "Monitoring / Automation", "Security", "Visualization, simulation"];
     const selectedTag = queryString.parse(location.search).tag === undefined ? null : queryString.parse(location.search).tag;
 
     return {

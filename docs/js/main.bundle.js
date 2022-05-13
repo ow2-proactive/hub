@@ -38686,7 +38686,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
         return null;
     }
 
-    var mainTags = ["All", "Artificial Intelligence", "BIG Data", "CI/CD, Versioning", "Cloud", "Container & VM", "Data Base", "ERP", "ETL & ELT", "File Transfer", "GPU, FPGA", "HPC", "ITSM/SEIM", "Languages", "Monitoring / Automation", "Security", "Visualization, simulation", "Other"];
+    var mainTags = ["All", "Artificial Intelligence", "BIG Data", "CI/CD, Versioning", "Cloud", "Container & VM", "Data Base", "ERP", "ETL & ELT", "File Transfer", "GPU, FPGA", "HPC", "ITSM/SEIM", "Languages", "Monitoring / Automation", "Security", "Visualization, simulation"];
     var selectedTag = _queryString2.default.parse(location.search).tag === undefined ? null : _queryString2.default.parse(location.search).tag;
 
     return {
