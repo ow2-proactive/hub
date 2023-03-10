@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-03-09T11:34:33.162"
+        "date": "2023-03-10T14:33:45.475"
     },
     "packages": {
         "ApplicationConnectors": {
@@ -2352,6 +2352,34 @@
                             ]
                         },
                         "file": "resources/catalog/Send_Signal_To_Job.xml"
+                    },
+                    {
+                        "name": "Submit_Many_Jobs_And_Wait",
+                        "metadata": {
+                            "kind": "Workflow/standard",
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "tags": [
+                                "Controls",
+                                "Get started",
+                                "Building blocks"
+                            ]
+                        },
+                        "file": "resources/catalog/Submit_Many_Jobs_And_Wait.xml"
+                    },
+                    {
+                        "name": "Submit_Many_Jobs_No_Wait",
+                        "metadata": {
+                            "kind": "Workflow/standard",
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "tags": [
+                                "Controls",
+                                "Get started",
+                                "Building blocks"
+                            ]
+                        },
+                        "file": "resources/catalog/Submit_Many_Jobs_No_Wait.xml"
                     }
                 ]
             }
@@ -9528,12 +9556,22 @@
                     "Machine Learning",
                     "Auto Sklearn",
                     "Analytics",
+                    "Deep Learning",
                     "Input",
                     "Samples",
                     "Cross-validation",
                     "Model explainability",
                     "Classification",
-                    "AutoML"
+                    "Data Visualization",
+                    "AutoML",
+                    "Visdom"
+                ]
+            },
+            "dataspace": {
+                "target": "global",
+                "files": [
+                    "resources/dataspace/predict_electricity_load.csv",
+                    "resources/dataspace/train_electricity_load.csv"
                 ]
             },
             "test": {
@@ -9799,6 +9837,24 @@
                             ]
                         },
                         "file": "resources/catalog/Train_Multiple_Regression_Models_On_GPU.xml"
+                    },
+                    {
+                        "name": "Forecasting_Power_Consumption_With_Time_Series",
+                        "metadata": {
+                            "kind": "Workflow/standard",
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "tags": [
+                                "Samples",
+                                "Big Data",
+                                "Data Visualization",
+                                "Visdom",
+                                "Machine Learning",
+                                "Analytics",
+                                "Deep Learning"
+                            ]
+                        },
+                        "file": "resources/catalog/Forecasting_Power_Consumption_With_Time_Series.xml"
                     }
                 ]
             }

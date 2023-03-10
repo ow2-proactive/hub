@@ -38686,7 +38686,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
         return null;
     }
 
-    var mainTags = ["All", "Artificial Intelligence", "BIG Data", "CI/CD, Versioning", "Cloud", "Container & VM", "Data Base", "ERP", "ETL & ELT", "File Transfer", "GPU, FPGA", "HPC", "ITSM/SEIM", "Languages", "Monitoring / Automation", "Security", "Visualization, simulation"];
+    var mainTags = ["All", "Artificial Intelligence", "Big Data", "Service Automation", "Visualization"];
     var selectedTag = _queryString2.default.parse(location.search).tag === undefined ? null : _queryString2.default.parse(location.search).tag;
 
     return {
@@ -39558,42 +39558,46 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
         packages.push(state.packages.items[key]);
     });
 
+    /* Filter by tag via the tag link */
     var selectedTag = _queryString2.default.parse(location.search).tag === undefined ? null : _queryString2.default.parse(location.search).tag;
     if (selectedTag !== null && selectedTag !== "All") {
         packages = packages.filter(function (pack) {
-            if (pack.tags === undefined) {
+            if (pack.metadata.tags === undefined) {
                 return false;
             }
-            return pack.tags.includes(selectedTag);
+            return pack.metadata.tags.includes(selectedTag);
         });
     }
 
-    /* Search function in: name & short_description*/
+    /* Filter by name or short_description or tag via the search bar*/
     if (state.searchTerm !== null) {
         var searchTrimmed = state.searchTerm.trim();
         // console.log("searchTrimmed: ["+searchTrimmed+"]");
         packages = packages.filter(function (pack) {
-            if (pack.name === undefined || pack.short_description === undefined) {
-                return false;
-            }
-            if (pack.name.search(new RegExp(searchTrimmed, "i")) !== -1 || pack.short_description.search(new RegExp(searchTrimmed, "i")) !== -1) {
+
+            if (pack.metadata.name !== undefined && pack.metadata.name.search(new RegExp(searchTrimmed, "i")) !== -1) {
                 return true;
             }
-            var isMatch = false;
-            if (pack.tags !== undefined && pack.tags.length > 0) {
-                pack.tags.forEach(function (tag) {
-                    isMatch = isMatch || tag.search(new RegExp(searchTrimmed, "i")) !== -1;
-                    return isMatch;
-                });
-                // console.log("pack ["+pack.name+"], tags: ["+pack.tags.toString()+"], isMatch: ["+isMatch+"]");
+            if (pack.metadata.short_description !== undefined && pack.metadata.short_description.search(new RegExp(searchTrimmed, "i")) !== -1) {
+                return true;
             }
-            return isMatch;
+            if (pack.metadata.tags !== undefined) {
+                for (var i = 0; i < pack.metadata.tags.length; i++) {
+                    if (pack.metadata.tags[i].search(new RegExp(searchTrimmed, "i")) !== -1) {
+                        return true;
+                    }
+                }
+                return false;
+                // console.log("pack ["+pack.metadata.name+"], tags: ["+pack.metadata.tags.toString()+"], isMatch: ["+isMatch+"]");
+            }
+            return false;
         });
     }
 
+    /* Sort packages */
     packages.sort(function (a, b) {
-        var nameA = a.name.toLowerCase(),
-            nameB = b.name.toLowerCase();
+        var nameA = a.metadata.name.toLowerCase(),
+            nameB = b.metadata.name.toLowerCase();
         if (nameA < nameB) //sort string ascending
             return -1;
         if (nameA > nameB) return 1;
@@ -39685,7 +39689,7 @@ var PackageCards = function PackageCards(_ref) {
 
     var cards = [];
     items.forEach(function (item) {
-        cards.push(_react2.default.createElement(_PackageCard2.default, _extends({ key: item.slug }, item, {
+        cards.push(_react2.default.createElement(_PackageCard2.default, _extends({ key: item.metadata.slug }, item, {
             onDownloadOptionsSelection: onDownloadOptionsSelection,
             onFilterClick: onFilterClick,
             onClickOutboundLink: onClickOutboundLink })));
@@ -39701,13 +39705,28 @@ var PackageCards = function PackageCards(_ref) {
 PackageCards.propTypes = {
     isFetching: _propTypes2.default.bool.isRequired,
     items: _propTypes2.default.arrayOf(_propTypes2.default.shape({
-        slug: _propTypes2.default.string.isRequired,
-        name: _propTypes2.default.string.isRequired,
-        short_description: _propTypes2.default.string.isRequired,
-        author: _propTypes2.default.string.isRequired,
-        tags: _propTypes2.default.arrayOf(_propTypes2.default.string).isRequired,
-        repo_url: _propTypes2.default.string.isRequired,
-        version: _propTypes2.default.string.isRequired
+        metadata: _propTypes2.default.shape({
+            slug: _propTypes2.default.string.isRequired,
+            name: _propTypes2.default.string.isRequired,
+            short_description: _propTypes2.default.string.isRequired,
+            author: _propTypes2.default.string.isRequired,
+            tags: _propTypes2.default.arrayOf(_propTypes2.default.string),
+            repo_url: _propTypes2.default.string.isRequired,
+            version: _propTypes2.default.string.isRequired
+        }).isRequired,
+        catalog: _propTypes2.default.shape({
+            bucket: _propTypes2.default.string.isRequired,
+            userGroup: _propTypes2.default.string.isRequired,
+            objects: _propTypes2.default.arrayOf(_propTypes2.default.shape({
+                name: _propTypes2.default.string.isRequired,
+                metadata: _propTypes2.default.shape({
+                    kind: _propTypes2.default.string.isRequired,
+                    commitMessage: _propTypes2.default.string.isRequired,
+                    contentType: _propTypes2.default.string.isRequired,
+                    tags: _propTypes2.default.arrayOf(_propTypes2.default.string)
+                }).isRequired
+            }).isRequired)
+        }).isRequired
     }).isRequired).isRequired,
     onDownloadOptionsSelection: _propTypes2.default.func.isRequired,
     onFilterClick: _propTypes2.default.func.isRequired,
@@ -39770,9 +39789,11 @@ var PackageCard = function PackageCard(_ref2) {
         onClickOutboundLink = _ref2.onClickOutboundLink;
 
     var tagBadges = [];
-    tags.forEach(function (tag) {
-        tagBadges.push(_react2.default.createElement(Tag, { key: tag, name: tag, onTagSelection: onTagSelection, onClick: onFilterClick }));
-    });
+    if (tags != undefined) {
+        tags.forEach(function (tag) {
+            tagBadges.push(_react2.default.createElement(Tag, { key: tag, name: tag, onTagSelection: onTagSelection, onClick: onFilterClick }));
+        });
+    }
     return _react2.default.createElement(
         'div',
         { className: '' },

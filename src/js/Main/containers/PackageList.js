@@ -16,41 +16,45 @@ const mapStateToProps = (state, ownProps) => {
         packages.push(state.packages.items[key]);
     });
 
+    /* Filter by tag via the tag link */
     const selectedTag = queryString.parse(location.search).tag === undefined ? null : queryString.parse(location.search).tag;
     if (selectedTag !== null && selectedTag !=="All") {
         packages = packages.filter((pack) => {
-            if (pack.tags === undefined) {
+            if (pack.metadata.tags === undefined) {
                 return false;
             }
-            return pack.tags.includes(selectedTag);
+            return pack.metadata.tags.includes(selectedTag);
         });
     }
 
-/* Search function in: name & short_description*/
+    /* Filter by name or short_description or tag via the search bar*/
     if (state.searchTerm !== null) {
         let searchTrimmed = state.searchTerm.trim();
         // console.log("searchTrimmed: ["+searchTrimmed+"]");
         packages = packages.filter((pack) => {
-            if (pack.name === undefined || pack.short_description === undefined) {
-                return false;
-            }
-            if (pack.name.search(new RegExp(searchTrimmed, "i")) !== -1 || pack.short_description.search(new RegExp(searchTrimmed, "i")) !== -1) {
+
+            if (pack.metadata.name !== undefined && pack.metadata.name.search(new RegExp(searchTrimmed, "i")) !== -1) {
                 return true;
             }
-            let isMatch = false;
-            if (pack.tags !== undefined && pack.tags.length > 0) {
-                pack.tags.forEach(tag => {
-                    isMatch = isMatch || tag.search(new RegExp(searchTrimmed, "i")) !== -1;
-                    return isMatch;
-                });
-                // console.log("pack ["+pack.name+"], tags: ["+pack.tags.toString()+"], isMatch: ["+isMatch+"]");
+            if (pack.metadata.short_description !== undefined && pack.metadata.short_description.search(new RegExp(searchTrimmed, "i")) !== -1) {
+                return true;
             }
-            return isMatch;
+            if (pack.metadata.tags !== undefined) {
+                for (let i = 0; i < pack.metadata.tags.length; i++) {
+                    if (pack.metadata.tags[i].search(new RegExp(searchTrimmed, "i")) !== -1){
+                        return true;
+                    }
+                }
+                return false;
+                // console.log("pack ["+pack.metadata.name+"], tags: ["+pack.metadata.tags.toString()+"], isMatch: ["+isMatch+"]");
+            }
+            return false;
         });
     }
 
+    /* Sort packages */
     packages.sort(function (a, b) {
-        const nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase();
+        const nameA = a.metadata.name.toLowerCase(), nameB = b.metadata.name.toLowerCase();
         if (nameA < nameB) //sort string ascending
             return -1;
         if (nameA > nameB)
