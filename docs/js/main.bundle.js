@@ -39655,8 +39655,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _react = __webpack_require__(9);
 
 var _react2 = _interopRequireDefault(_react);
@@ -39689,10 +39687,17 @@ var PackageCards = function PackageCards(_ref) {
 
     var cards = [];
     items.forEach(function (item) {
-        cards.push(_react2.default.createElement(_PackageCard2.default, _extends({ key: item.metadata.slug }, item, {
+        cards.push(_react2.default.createElement(_PackageCard2.default, { key: item.metadata.slug,
+            slug: item.metadata.slug,
+            name: item.metadata.name,
+            short_description: item.metadata.short_description,
+            author: item.metadata.author,
+            tags: item.metadata.tags,
+            repo_url: item.metadata.repo_url,
+            version: item.metadata.version,
             onDownloadOptionsSelection: onDownloadOptionsSelection,
             onFilterClick: onFilterClick,
-            onClickOutboundLink: onClickOutboundLink })));
+            onClickOutboundLink: onClickOutboundLink }));
     });
 
     return _react2.default.createElement(

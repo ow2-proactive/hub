@@ -21,10 +21,10 @@ To update this latter according to a specific proactive-example directory:
 
 ### Update the project
 
-1. Download the latest version of the hub: git clone https://github.com/ow2-proactive/hub
-2. Download relevant Javascript packages with: npm install
-3. Update the relevant javascript files in /src/js
-4. Update production Javascript with: npm run build
+1. Download the latest version of the hub *> git clone https://github.com/ow2-proactive/hub*
+2. Download relevant Javascript packages with *> npm install*
+3. Update the relevant javascript files in *src/js*
+4. Update production Javascript with *> npm run build*
 5. Push back to the repo
 
 When developing, if multiple edit are done, the command npm run dev will ensure any change will be update to the production javascript.

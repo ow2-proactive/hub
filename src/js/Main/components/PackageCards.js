@@ -12,10 +12,17 @@ const PackageCards = ({ isFetching, items, onDownloadOptionsSelection, onFilterC
     let cards = [];
     items.forEach((item) => {
         cards.push(
-            <PackageCard key={item.metadata.slug} {...item}
-                         onDownloadOptionsSelection={onDownloadOptionsSelection}
-                         onFilterClick={onFilterClick}
-                         onClickOutboundLink={onClickOutboundLink} />
+            <PackageCard key={item.metadata.slug}
+                        slug={item.metadata.slug}
+                        name={item.metadata.name}
+                        short_description={item.metadata.short_description}
+                        author={item.metadata.author}
+                        tags={item.metadata.tags}
+                        repo_url={item.metadata.repo_url}
+                        version={item.metadata.version}
+                        onDownloadOptionsSelection={onDownloadOptionsSelection}
+                        onFilterClick={onFilterClick}
+                        onClickOutboundLink={onClickOutboundLink} />
         )
     });
 
