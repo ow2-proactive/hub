@@ -10,9 +10,11 @@ const Tag = ({ name, onTagSelection, onClick }) => (
 
 const PackageCard = ({ slug, name, short_description, author, tags, repo_url, version, onTagSelection, onDownloadOptionsSelection, onFilterClick, onClickOutboundLink }) => {
     let tagBadges = [];
-    tags.forEach((tag) => {
-        tagBadges.push(<Tag key={tag} name={tag} onTagSelection={onTagSelection} onClick={onFilterClick} />)
-    });
+    if (tags != undefined){
+        tags.forEach((tag) => {
+            tagBadges.push(<Tag key={tag} name={tag} onTagSelection={onTagSelection} onClick={onFilterClick} />)
+        });
+    }
     return (
         <div className="">
             <div className="card">
