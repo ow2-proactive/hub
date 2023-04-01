@@ -6,17 +6,11 @@ hub.activeeon.com is a front-end for ActiveEon Hub, a collection of packages.js 
 It's a simple React app rendering the package index; there is no server-side to it at all, and the index is available for consumption as a JSON file.
 
 
-### Update the card list in the hub portal
+### Update manually the index.json file
 
-The [Activeeon Hub](http://hub.activeeon.com/) fetch at each refresh the content of src/packageList/index.json.
-To update this latter according to a specific proactive-example directory:
+The [Activeeon Hub](http://hub.activeeon.com/) relies on a index.json file reflecting the proactive-examples package files hierarchy to displays the package cards. This json file can be manually generated in the current directory following this command:
 
-1. Download *src/packageList/Generate_index_json.groovy*
-2. Move it to the machine hosting the targeted proactive-example directory
-3. Edit it by setting the *proactiveExamplesFolder* variable to the right path
-4. Execute it *> groovy Generate_index_json.groovy*
-5. Update *src/packageList/index.json* with the new index.json file generated in the current directory
-7. Check on [hub.activeeon.com](http://hub.activeeon.com/) that everything is updated
+*> groovy src/packageList/Generate_index_json.groovy </path/to/proactive-examples/directory/>*
 
 
 ### Update the project
@@ -32,14 +26,14 @@ When developing, if multiple edit are done, the command npm run dev will ensure 
 
 ### Notable files
 
-*docs/index.html*: Main html containing the structure of the page
-*src/packageList/Index.json*: List all the packages with meta-data (see relevant section for the structure)
-*src/js/Main/containers/PackageFilterBar.js*: Tag list that build the menu
-*src/js/Main*: All the javascript files used for React
-*src/js/Main/actions/index.js*: List all the actions React can take
-*src/js/Main/components*: All the files used to display information
-*src/js/Main/containers*: All the files used to connect the state of the app to the components
-*src/js/Main/reducer*: All the files used to perform changes when actions are received
-*docs/css*: All the css files
-*docs/images*: All the images in use
-*docs/js*: All the javascript files in use and the compiled javascript file
+- *docs/index.html*: Main html containing the structure of the page
+- *src/packageList/Index.json*: List all the packages with meta-data (see relevant section for the structure)
+- *src/js/Main/containers/PackageFilterBar.js*: Tag list that build the menu
+- *src/js/Main*: All the javascript files used for React
+- *src/js/Main/actions/index.js*: List all the actions React can take
+- *src/js/Main/components*: All the files used to display information
+- *src/js/Main/containers*: All the files used to connect the state of the app to the components
+- *src/js/Main/reducer*: All the files used to perform changes when actions are received
+- *docs/css*: All the css files
+- *docs/images*: All the images in use
+- *docs/js*: All the javascript files in use and the compiled javascript file
