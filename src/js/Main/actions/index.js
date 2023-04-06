@@ -1,4 +1,21 @@
-import packageJson from './../../../packageList/index.json';
+import fetch from 'isomorphic-fetch';
+
+const packageJsonPath = "https://raw.githubusercontent.com/ow2-proactive/hub/master/src/packageList/index.json";
+
+function checkStatus(response) {
+    if (response.status >= 200 && response.status < 300) {
+        return response;
+    } else {
+        const error = new Error(response.statusText);
+        error.response = response;
+        throw error;
+    }
+}
+
+function parseJSON(response) {
+    return response.json();
+}
+
 
 
 export const SEARCH_INPUT = 'SEARCH_INPUT';
@@ -28,7 +45,16 @@ export function receivePackages(json) {
 export function fetchPackages() {
     return function (dispatch) {
         dispatch(requestPackages());
-        return Promise.resolve(dispatch(receivePackages(packageJson)));
+        return fetch(packageJsonPath)
+            .then(
+                response => checkStatus(response),
+                error => console.log('An error occured.', error)
+            )
+            .then((response) => parseJSON(response))
+            .then(json => {
+                    dispatch(receivePackages(json));
+                }
+            )
     }
 }
 
