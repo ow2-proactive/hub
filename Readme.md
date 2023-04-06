@@ -6,20 +6,23 @@ hub.activeeon.com is a front-end for ActiveEon Hub, a collection of packages.js 
 It's a simple React app rendering the package index; there is no server-side to it at all, and the index is available for consumption as a JSON file.
 
 
-### Update manually the index.json file
+### Update the hub package tiles
 
-The [Activeeon Hub](http://hub.activeeon.com/) relies on a index.json file reflecting the proactive-examples package files hierarchy to displays the package cards. This json file can be manually generated in the current directory following this command:
+The [Activeeon Hub](https://hub.activeeon.com/) displays the ProActive package tiles, based on a index.json file reflecting all the files hierarchy of a proactive-examples project directory.
+This json file can be manually generated following this command:
 
 *> groovy src/packageList/Generate_index_json.groovy </path/to/proactive-examples/directory/>*
 
+To update https://hub.activeeon.com/, the index.json file must be pushed to the github repository *https://github.com/ow2-proactive/hub*
 
-### Update the project
+
+### Update the hub website
 
 1. Download the latest version of the hub *> git clone https://github.com/ow2-proactive/hub*
 2. Download relevant Javascript packages with *> npm install*
 3. Update the relevant javascript files in *src/js*
 4. Update production Javascript with *> npm run build*
-5. Push back to the repo
+5. Push updates to the hub github repository
 
 When developing, if multiple edit are done, the command npm run dev will ensure any change will be update to the production javascript.
 
