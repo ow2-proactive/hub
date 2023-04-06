@@ -8,11 +8,12 @@ const mapStateToProps = (state, ownProps) => {
             showModal: false,
         }
     }
-    console.log(state.selectedDownloadOptions !== null, state.packages.items[state.selectedDownloadOptions], state.selectedDownloadOptions);
 
+    const asArray = Object.entries(state.packages.items);
+    const filteredBySelectedDownloadOptions = asArray.filter(([key, value]) => value.metadata.slug === state.selectedDownloadOptions);
     return {
         showModal: state.selectedDownloadOptions !== null,
-        pack: state.packages.items[state.selectedDownloadOptions],
+        pack: Object.fromEntries(filteredBySelectedDownloadOptions)
     }
 };
 

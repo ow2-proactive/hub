@@ -9,16 +9,15 @@ def getExtension(fileName){
     return fileName.lastIndexOf('.').with {it != -1 ? fileName.substring(it+1):''}
 }
 
-// Download proactive-example zip
-//"wget https://github.com/ow2-proactive/proactive-examples/archive/master.zip".execute().waitForProcessOutput(System.out, System.err)
+if (args.length != 1) {
+    println "Incorrect number of arguments, expected 1, received " + args.length;
+    return;
+}
+def proactiveExamplesFolder = new File(args[0])
 
-// Unzip it
-//"unzip master.zip".execute().waitForProcessOutput(System.out, System.err)
 
 // Iterate over metadata json files
 def githubURL = "https://github.com/ow2-proactive/proactive-examples/tree/master/"
-//def proactiveExamplesFolder = new File("./proactive-examples-master");
-def proactiveExamplesFolder = new File("C:/Users/Michael/IdeaProjects/proactive-examples");
 def jsonSlurper = new JsonSlurper()
 def xmlParser = new XmlParser()
 def indexJsonMap = [:]
