@@ -29,10 +29,10 @@ const DownloadModal = ({ pack, showModal, onCloseModal, onClickGithubLink }) => 
     if (!showModal) {
         return null;
     }
-    const contentLabel = pack.name+" Download Options";
+    const contentLabel = pack.metadata.name+" Download Options";
     const code =
         // "pwd \n"+
-        "./bin/proactive-client -pkg "+pack.repo_url;
+        "./bin/proactive-client -pkg "+ pack.metadata.repo_url;
     return (
         <Modal
             isOpen={showModal}
@@ -42,7 +42,7 @@ const DownloadModal = ({ pack, showModal, onCloseModal, onClickGithubLink }) => 
             <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={onCloseModal}>
                 <span aria-hidden="true">&times;</span>
             </button>
-            <h4>{pack.name}</h4>
+            <h4>{pack.metadata.name}</h4>
             <p>To upload onto your catalog, go onto your server <em>ProActive Home Directory</em> and copy paste those lines.</p>
             <pre>
                 <code>
@@ -55,7 +55,7 @@ const DownloadModal = ({ pack, showModal, onCloseModal, onClickGithubLink }) => 
                 <CopyToClipboard text={code}>
                     <a href="#" className="btn btn-info m-1">Copy script</a>
                 </CopyToClipboard>
-                {/* <a href={pack.repo_url} className="btn btn-outline-dark m-1" target="_blank" onClick={(event) => onClickGithubLink(event, pack.repo_url)}>Go to Github repo</a> */}
+                {/* <a href={pack.metadata.repo_url} className="btn btn-outline-dark m-1" target="_blank" onClick={(event) => onClickGithubLink(event, pack.metadata.repo_url)}>Go to Github repo</a> */}
                 <a href="#" className="btn btn-outline-info m-1" onClick={onCloseModal}>Close Modal</a>
             </div>
         </Modal>

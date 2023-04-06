@@ -39396,7 +39396,7 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
     });
     return {
         showModal: state.selectedDownloadOptions !== null,
-        pack: Object.fromEntries(filteredBySelectedDownloadOptions)
+        pack: filteredBySelectedDownloadOptions[Object.keys(filteredBySelectedDownloadOptions)[0]][1]
     };
 };
 
@@ -39481,10 +39481,10 @@ var DownloadModal = function DownloadModal(_ref) {
     if (!showModal) {
         return null;
     }
-    var contentLabel = pack.name + " Download Options";
+    var contentLabel = pack.metadata.name + " Download Options";
     var code =
     // "pwd \n"+
-    "./bin/proactive-client -pkg " + pack.repo_url;
+    "./bin/proactive-client -pkg " + pack.metadata.repo_url;
     return _react2.default.createElement(
         _reactModal2.default,
         {
@@ -39504,7 +39504,7 @@ var DownloadModal = function DownloadModal(_ref) {
         _react2.default.createElement(
             'h4',
             null,
-            pack.name
+            pack.metadata.name
         ),
         _react2.default.createElement(
             'p',
