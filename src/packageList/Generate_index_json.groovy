@@ -2,7 +2,17 @@ import java.time.LocalDateTime
 import groovy.json.JsonSlurper
 import groovy.io.FileType
 import groovy.json.JsonOutput
-import groovy.xml.XmlParser
+
+// For local execution of jenkins compatibility
+def XmlParserClass
+try {
+    XmlParserClass = "groovy.xml.XmlParser" as Class
+} catch (Exception ex) {
+    XmlParserClass = "groovy.util.XmlParser" as Class
+}
+
+def xmlParser = XmlParserClass.newInstance()
+
 
 
 def getExtension(fileName){
@@ -19,7 +29,6 @@ def proactiveExamplesFolder = new File(args[0])
 // Iterate over metadata json files
 def githubURL = "https://github.com/ow2-proactive/proactive-examples/tree/master/"
 def jsonSlurper = new JsonSlurper()
-def xmlParser = new XmlParser()
 def indexJsonMap = [:]
 
 // Add index metadata
