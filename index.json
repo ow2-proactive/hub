@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-04-13T12:52:10.281"
+        "date": "2023-04-13T16:12:02.097"
     },
     "packages": {
         "SSHCommunication": {
@@ -7714,7 +7714,9 @@
                     "resources/dataspace/libsapjco3.jnilib",
                     "resources/dataspace/libsapjco3.so",
                     "resources/dataspace/opencsv-4.1.jar",
-                    "resources/dataspace/script.usql"
+                    "resources/dataspace/script.usql",
+                    "resources/dataspace/aws-java-sdk-fat-1.11.228.jar",
+                    "resources/dataspace/azure-storage-blob-fat-10.0.3-Preview.jar"
                 ],
                 "target": "global"
             },
