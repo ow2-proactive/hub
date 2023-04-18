@@ -13,7 +13,7 @@ const PackageSearch = ({ onSearch, searchTerm }) => {
               }}
               >
               <i className="form-control-feedback glyphicon glyphicon-search"/>
-              <input className="form-control" placeholder="Search" type="text"
+              <input title="Contains" className="form-control" placeholder="Search" type="text"
                 ref={node => {
                   searchTerm = node
                 }}

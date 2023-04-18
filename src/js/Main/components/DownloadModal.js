@@ -43,7 +43,7 @@ const DownloadModal = ({ pack, showModal, onCloseModal, onClickGithubLink }) => 
                 <span aria-hidden="true">&times;</span>
             </button>
             <h4>{pack.metadata.name}</h4>
-            <p>To upload onto your catalog, go onto your server <em>ProActive Home Directory</em> and copy paste those lines.</p>
+            <p>To upload onto your catalog, go onto your server <em>ProActive Home Directory</em> and execute the following command</p>
             <pre>
                 <code>
                     {code}
