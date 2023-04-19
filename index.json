@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-04-19T09:09:45.009"
+        "date": "2023-04-19T09:26:41.361"
     },
     "packages": {
         "HPC": {
@@ -10843,7 +10843,7 @@
                         "name": "MLOps_Model_Server_Application_Inference"
                     },
                     {
-                        "file": "resources/catalog/MLOps_Model_Server_Application_Performance_Analyser.xml",
+                        "file": "resources/catalog/MLOps_Model_Server_Application_Performance_Analyzer.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
