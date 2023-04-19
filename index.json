@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-04-18T16:23:27.645"
+        "date": "2023-04-19T09:09:45.009"
     },
     "packages": {
         "HPC": {
@@ -10854,7 +10854,7 @@
                                 "Triton"
                             ]
                         },
-                        "name": "MLOps_Model_Server_Application_Performance_Analyser"
+                        "name": "MLOps_Model_Server_Application_Performance_Analyzer"
                     }
                 ],
                 "userGroup": "public-objects"
