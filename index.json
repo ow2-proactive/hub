@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-04-19T09:26:41.361"
+        "date": "2023-04-21T09:06:15.317"
     },
     "packages": {
         "HPC": {
@@ -10808,25 +10808,6 @@
                             ]
                         },
                         "name": "MLOps_Model_Server_Inference_Test"
-                    },
-                    {
-                        "file": "resources/catalog/MLOps_Model_Server_Inference_Test_Continuous.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "MLOps",
-                                "Model Deployment",
-                                "Triton",
-                                "Dashboard",
-                                "Service",
-                                "Model Monitoring",
-                                "Service Automation",
-                                "Model Management"
-                            ]
-                        },
-                        "name": "MLOps_Model_Server_Inference_Test_Continuous"
                     },
                     {
                         "file": "resources/catalog/MLOps_Model_Server_Application_Inference.xml",
