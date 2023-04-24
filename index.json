@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-04-21T09:06:15.317"
+        "date": "2023-04-24T08:36:10.816"
     },
     "packages": {
         "HPC": {
@@ -9269,6 +9269,25 @@
                             ]
                         },
                         "name": "Docker_Swarm_HDFS_Spark_Service"
+                    },
+                    {
+                        "file": "resources/catalog/Docker_Swarm_HDFS_Spark_Terminate_Service.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Swarm",
+                                "Docker",
+                                "Artificial Intelligence",
+                                "Big Data",
+                                "HDFS",
+                                "Spark",
+                                "Service Automation",
+                                "Analytics"
+                            ]
+                        },
+                        "name": "Docker_Swarm_HDFS_Spark_Terminate_Service"
                     },
                     {
                         "file": "resources/catalog/Docker_Swarm_HDFS_Zookeeper_Hbase_Service.xml",
