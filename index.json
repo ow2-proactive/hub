@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-04-27T15:35:40.515"
+        "date": "2023-04-27T22:01:19.025"
     },
     "packages": {
         "HPC": {
@@ -7816,6 +7816,72 @@
                     "Visualization",
                     "Service Automation",
                     "Visdom"
+                ],
+                "version": "1.0"
+            }
+        },
+        "AWSLambdaFunction": {
+            "catalog": {
+                "bucket": "it-application-connectors",
+                "objects": [
+                    {
+                        "file": "resources/catalog/AWS_Lambda_Invoke_Function.xml",
+                        "metadata": {
+                            "commitMessage": "first version",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "AWS Lambda",
+                                "Function",
+                                "Serverless Computing",
+                                "Invoke"
+                            ]
+                        },
+                        "name": "AWS_Lambda_Invoke_Function"
+                    },
+                    {
+                        "file": "resources/catalog/AWS_Lambda_Get_Function.xml",
+                        "metadata": {
+                            "commitMessage": "first version",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "AWS Lambda",
+                                "Function",
+                                "Serverless Computing"
+                            ]
+                        },
+                        "name": "AWS_Lambda_Get_Function"
+                    },
+                    {
+                        "file": "resources/catalog/AWS_Lambda_Get_Alias.xml",
+                        "metadata": {
+                            "commitMessage": "first version",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "AWS Lambda",
+                                "Alias",
+                                "Serverless Computing"
+                            ]
+                        },
+                        "name": "AWS_Lambda_Get_Alias"
+                    }
+                ],
+                "userGroup": "public-objects"
+            },
+            "metadata": {
+                "author": "ActiveEon's Team",
+                "name": "AWS Lambda Function",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/AWSLambdaFunction",
+                "short_description": "AWS Lambda Function Connectors",
+                "slug": "aws lambda function",
+                "tags": [
+                    "AWS Lambda",
+                    "Serverless Computing",
+                    "Function",
+                    "Alias",
+                    "Invoke"
                 ],
                 "version": "1.0"
             }
