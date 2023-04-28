@@ -5,6 +5,8 @@ hub.activeeon.com is a front-end for ActiveEon Hub, a collection of packages.js 
 
 It's a simple React app rendering the package index; there is no server-side to it at all, and the index is available for consumption as a JSON file.
 
+This website relies on GitHub Pages and is directly hosted from this GitHub repository (URL redirected from ow2-proactive.github.io).
+
 
 ### Update the hub package tiles
 
