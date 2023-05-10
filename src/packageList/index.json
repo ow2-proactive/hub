@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-05-09T16:08:37.392"
+        "date": "2023-05-10T09:47:30.838"
     },
     "packages": {
         "HPC": {
@@ -5129,14 +5129,14 @@
                         "name": "check_env_regexp"
                     },
                     {
-                        "file": "resources/catalog/check_node_source_name.groovy",
+                        "file": "resources/catalog/check_node_source_name_var.groovy",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "text/x-groovy",
                             "kind": "Script/selection",
                             "projectName": "Selection Scripts"
                         },
-                        "name": "check_node_source_name"
+                        "name": "check_node_source_name_var"
                     },
                     {
                         "file": "resources/catalog/check_gpu_exists.py",
