@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-06-08T18:41:18.400"
+        "date": "2023-06-10T13:41:16.545"
     },
     "packages": {
         "HPC": {
@@ -76,7 +76,8 @@
             "dataspace": {
                 "files": [
                     "resources/dataspace/molecule.gro",
-                    "resources/dataspace/molecule_topology.tpr"
+                    "resources/dataspace/molecule_topology.tpr",
+                    "resources/dataspace/Azure_CycleCloud/CycleCloud_ARM.json"
                 ],
                 "target": "global"
             },
