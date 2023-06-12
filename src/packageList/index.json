@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-06-12T08:32:23.355"
+        "date": "2023-06-12T16:52:30.468"
     },
     "packages": {
         "HPC": {
@@ -2335,6 +2335,58 @@
                     "Machine Learning",
                     "Samples",
                     "Analytics"
+                ],
+                "version": "1.0"
+            }
+        },
+        "RabbitMQ": {
+            "catalog": {
+                "bucket": "service-automation",
+                "objects": [
+                    {
+                        "file": "resources/catalog/RabbitMQ.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/psa",
+                            "tags": [
+                                "RabbitMQ",
+                                "AMQP",
+                                "Message Broker",
+                                "Service Automation"
+                            ]
+                        },
+                        "name": "RabbitMQ"
+                    },
+                    {
+                        "file": "resources/catalog/Finish_RabbitMQ.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/psa",
+                            "tags": [
+                                "RabbitMQ",
+                                "AMQP",
+                                "Message Broker",
+                                "Service Automation"
+                            ]
+                        },
+                        "name": "Finish_RabbitMQ"
+                    }
+                ],
+                "userGroup": "public-objects"
+            },
+            "metadata": {
+                "author": "ActiveEon's Team",
+                "name": "RabbitMQ",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/RabbitMQ",
+                "short_description": "Deployment and lifecycle management workflows for RabbitMQ",
+                "slug": "rabbitmq",
+                "tags": [
+                    "RabbitMQ",
+                    "Service Automation",
+                    "AMQP",
+                    "Message Broker"
                 ],
                 "version": "1.0"
             }
