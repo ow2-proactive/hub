@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-06-10T13:41:16.545"
+        "date": "2023-06-12T08:22:43.185"
     },
     "packages": {
         "HPC": {
@@ -8890,34 +8890,6 @@
                 "bucket": "data-big-data",
                 "objects": [
                     {
-                        "file": "resources/catalog/Zookeeper_Start_Or_Bind_Service.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Zookeeper",
-                                "Big Data",
-                                "Data Streaming"
-                            ]
-                        },
-                        "name": "Zookeeper_Start_Or_Bind_Service"
-                    },
-                    {
-                        "file": "resources/catalog/Zookeeper_Terminate_Service.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Zookeeper",
-                                "Big Data",
-                                "Data Streaming"
-                            ]
-                        },
-                        "name": "Zookeeper_Terminate_Service"
-                    },
-                    {
                         "file": "resources/catalog/Kafka_Start_Or_Bind_Service.xml",
                         "metadata": {
                             "commitMessage": "First commit",
@@ -8988,129 +8960,6 @@
                         "name": "Kafka_Terminate_Service"
                     },
                     {
-                        "file": "resources/catalog/Azure_Authenticate.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Azure",
-                                "Big Data",
-                                "Data Streaming"
-                            ]
-                        },
-                        "name": "Azure_Authenticate"
-                    },
-                    {
-                        "file": "resources/catalog/Azure_HDInsight_Create_Resource_Group.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Azure",
-                                "Big Data",
-                                "Data Streaming",
-                                "HDInsight"
-                            ]
-                        },
-                        "name": "Azure_HDInsight_Create_Resource_Group"
-                    },
-                    {
-                        "file": "resources/catalog/Azure_HDInsight_Delete_Resource_Group.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Azure",
-                                "Big Data",
-                                "Data Streaming",
-                                "HDInsight"
-                            ]
-                        },
-                        "name": "Azure_HDInsight_Delete_Resource_Group"
-                    },
-                    {
-                        "file": "resources/catalog/Azure_HDInsight_Spark_Deploy.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Azure",
-                                "Big Data",
-                                "Data Streaming",
-                                "HDInsight"
-                            ]
-                        },
-                        "name": "Azure_HDInsight_Spark_Deploy"
-                    },
-                    {
-                        "file": "resources/catalog/Azure_HDInsight_Spark_Check_Deployment.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Azure",
-                                "Big Data",
-                                "Data Streaming",
-                                "Spark",
-                                "HDInsight"
-                            ]
-                        },
-                        "name": "Azure_HDInsight_Spark_Check_Deployment"
-                    },
-                    {
-                        "file": "resources/catalog/Azure_HDInsight_Spark_Get_Cluster_Info.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Azure",
-                                "Big Data",
-                                "Data Streaming",
-                                "Spark",
-                                "HDInsight"
-                            ]
-                        },
-                        "name": "Azure_HDInsight_Spark_Get_Cluster_Info"
-                    },
-                    {
-                        "file": "resources/catalog/Azure_HDInsight_Spark_Delete_Cluster.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Azure",
-                                "Big Data",
-                                "Data Streaming",
-                                "Spark",
-                                "HDInsight"
-                            ]
-                        },
-                        "name": "Azure_HDInsight_Spark_Delete_Cluster"
-                    },
-                    {
-                        "file": "resources/catalog/Azure_HDInsight_Spark_Delete_Deployment.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Azure",
-                                "Big Data",
-                                "Data Streaming",
-                                "Spark",
-                                "HDInsight"
-                            ]
-                        },
-                        "name": "Azure_HDInsight_Spark_Delete_Deployment"
-                    },
-                    {
                         "file": "resources/catalog/Azure_HDInsight_Spark_Submit_Application.xml",
                         "metadata": {
                             "commitMessage": "First commit",
@@ -9126,44 +8975,12 @@
                         "name": "Azure_HDInsight_Spark_Submit_Application"
                     },
                     {
-                        "file": "resources/catalog/Parse_Update_Json_From_Catalog.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Azure",
-                                "Big Data",
-                                "Data Streaming",
-                                "Spark",
-                                "HDInsight"
-                            ]
-                        },
-                        "name": "Parse_Update_Json_From_Catalog"
-                    },
-                    {
-                        "file": "resources/catalog/Parse_Update_Json_From_Global_Space.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Azure",
-                                "Big Data",
-                                "Data Streaming",
-                                "Spark",
-                                "HDInsight"
-                            ]
-                        },
-                        "name": "Parse_Update_Json_From_Global_Space"
-                    },
-                    {
                         "file": "resources/catalog/Azure_HDInsight_Spark_ARM_Template.json",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/json",
                             "kind": "script/pre",
-                            "projectName": "07. Azure HDInsight Spark ARM"
+                            "projectName": "07. Azure HDInsight Spark"
                         },
                         "name": "Azure_HDInsight_Spark_ARM_Template"
                     },
@@ -9424,6 +9241,15 @@
                             ]
                         },
                         "name": "Azure_Send_Message_To_Event_Hub"
+                    },
+                    {
+                        "file": "resources/catalog/RabbitMQ_Fake_Wkw.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard"
+                        },
+                        "name": "RabbitMQ_Fake_Wkw"
                     }
                 ],
                 "userGroup": "public-objects"
