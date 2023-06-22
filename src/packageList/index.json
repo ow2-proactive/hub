@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-06-21T14:19:29.231"
+        "date": "2023-06-22T08:28:40.045"
     },
     "packages": {
         "HPC": {
@@ -1013,6 +1013,45 @@
                     "Edge",
                     "Get started",
                     "Building blocks"
+                ],
+                "version": "1.0"
+            }
+        },
+        "YARNOrchestration": {
+            "catalog": {
+                "bucket": "data-big-data",
+                "objects": [
+                    {
+                        "file": "resources/catalog/Java_YARN_Pi.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Orchestration",
+                                "Big Data",
+                                "YARN",
+                                "Building blocks",
+                                "Analytics"
+                            ]
+                        },
+                        "name": "Java_YARN_Pi"
+                    }
+                ],
+                "userGroup": "public-objects"
+            },
+            "metadata": {
+                "author": "ActiveEon's Team",
+                "name": "Apache Hadoop YARN Orchestration",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/YARNOrchestration",
+                "short_description": "Orchestrate Apache Hadoop YARN jobs from ProActive",
+                "slug": "apache-hadoop-yarn-orchestration",
+                "tags": [
+                    "Orchestration",
+                    "Big Data",
+                    "YARN",
+                    "Building blocks",
+                    "Analytics"
                 ],
                 "version": "1.0"
             }
@@ -2503,6 +2542,58 @@
                 "version": "1.0"
             }
         },
+        "HBase": {
+            "catalog": {
+                "bucket": "service-automation",
+                "objects": [
+                    {
+                        "file": "resources/catalog/HBase.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/psa",
+                            "tags": [
+                                "Big Data",
+                                "Service Automation",
+                                "Analytics",
+                                "HBase"
+                            ]
+                        },
+                        "name": "HBase"
+                    },
+                    {
+                        "file": "resources/catalog/Finish_HBase.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/psa",
+                            "tags": [
+                                "Big Data",
+                                "Service Automation",
+                                "Analytics",
+                                "HBase"
+                            ]
+                        },
+                        "name": "Finish_HBase"
+                    }
+                ],
+                "userGroup": "public-objects"
+            },
+            "metadata": {
+                "author": "ActiveEon's Team",
+                "name": "Apache HBase",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/HBase",
+                "short_description": "Lifecycle management workflows for Apache HBase",
+                "slug": "apache-hbase",
+                "tags": [
+                    "Big Data",
+                    "Service Automation",
+                    "Analytics",
+                    "HBase"
+                ],
+                "version": "1.0"
+            }
+        },
         "Kafka": {
             "catalog": {
                 "bucket": "service-automation",
@@ -2899,6 +2990,99 @@
                     "Visualization",
                     "Service Automation",
                     "Artificial Intelligence"
+                ],
+                "version": "1.0"
+            }
+        },
+        "HBaseOrchestration": {
+            "catalog": {
+                "bucket": "data-big-data",
+                "objects": [
+                    {
+                        "file": "resources/catalog/HBase_Exec_Java_File.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Orchestration",
+                                "Big Data",
+                                "Building blocks",
+                                "Analytics",
+                                "HBase"
+                            ]
+                        },
+                        "name": "HBase_Exec_Java_File"
+                    },
+                    {
+                        "file": "resources/catalog/HBase_Load_Csv_From_HDFS.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Orchestration",
+                                "Big Data",
+                                "Building blocks",
+                                "Analytics",
+                                "HBase"
+                            ]
+                        },
+                        "name": "HBase_Load_Csv_From_HDFS"
+                    },
+                    {
+                        "file": "resources/catalog/Run_HBase_Shell_Commands.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Orchestration",
+                                "Big Data",
+                                "Building blocks",
+                                "Analytics",
+                                "HBase"
+                            ]
+                        },
+                        "name": "Run_HBase_Shell_Commands"
+                    },
+                    {
+                        "file": "resources/catalog/Phoenix_HBase_Sql_Queries.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Orchestration",
+                                "Big Data",
+                                "Building blocks",
+                                "Analytics",
+                                "HBase"
+                            ]
+                        },
+                        "name": "Phoenix_HBase_Sql_Queries"
+                    }
+                ],
+                "userGroup": "public-objects"
+            },
+            "dataspace": {
+                "files": [
+                    "resources/dataspace/HelloHBase.java"
+                ],
+                "target": "global"
+            },
+            "metadata": {
+                "author": "ActiveEon's Team",
+                "name": "Apache HBase Orchestration",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/HBaseOrchestration",
+                "short_description": "Orchestrate Apache HBase jobs from ProActive",
+                "slug": "apache-hbase-orchestration",
+                "tags": [
+                    "Orchestration",
+                    "Big Data",
+                    "Building blocks",
+                    "Analytics",
+                    "HBase"
                 ],
                 "version": "1.0"
             }
@@ -8012,45 +8196,6 @@
                 "version": "1.0"
             }
         },
-        "YarnOrchestration": {
-            "catalog": {
-                "bucket": "data-big-data",
-                "objects": [
-                    {
-                        "file": "resources/catalog/Yarn_Pi_Example.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Orchestration",
-                                "Big Data",
-                                "YARN",
-                                "Building blocks",
-                                "Analytics"
-                            ]
-                        },
-                        "name": "Yarn_Pi_Example"
-                    }
-                ],
-                "userGroup": "public-objects"
-            },
-            "metadata": {
-                "author": "ActiveEon's Team",
-                "name": "Apache Hadoop YARN Orchestration",
-                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/YarnOrchestration",
-                "short_description": "Orchestrate Apache Hadoop YARN jobs from ProActive",
-                "slug": "apache-hadoop-yarn-orchestration",
-                "tags": [
-                    "Orchestration",
-                    "Big Data",
-                    "YARN",
-                    "Building blocks",
-                    "Analytics"
-                ],
-                "version": "1.0"
-            }
-        },
         "DockerBasics": {
             "catalog": {
                 "bucket": "basic-examples",
@@ -9133,7 +9278,7 @@
                         "name": "Iterative_ETL"
                     },
                     {
-                        "file": "resources/catalog/Docker_Swarm_HDFS_Zookeeper_Hbase_Service.xml",
+                        "file": "resources/catalog/Docker_Swarm_HDFS_Zookeeper_HBase_Service.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
@@ -9149,7 +9294,26 @@
                                 "HBase"
                             ]
                         },
-                        "name": "Docker_Swarm_HDFS_Zookeeper_Hbase_Service"
+                        "name": "Docker_Swarm_HDFS_Zookeeper_HBase_Service"
+                    },
+                    {
+                        "file": "resources/catalog/Docker_Swarm_HDFS_Zookeeper_HBase_Terminate_Service.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Swarm",
+                                "Docker",
+                                "Zookeeper",
+                                "Big Data",
+                                "HDFS",
+                                "Service Automation",
+                                "Analytics",
+                                "HBase"
+                            ]
+                        },
+                        "name": "Docker_Swarm_HDFS_Zookeeper_HBase_Terminate_Service"
                     },
                     {
                         "file": "resources/catalog/Docker_Swarm_HDFS_YARN_Hive_Service.xml",
@@ -9228,7 +9392,7 @@
                         "name": "Docker_Swarm_HDFS_Spark_Terminate_Service"
                     },
                     {
-                        "file": "resources/catalog/Docker_Swarm_HDFS_Zookeeper_Hbase_Service.xml",
+                        "file": "resources/catalog/Docker_Swarm_HDFS_Zookeeper_HBase_Service.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
@@ -9244,7 +9408,7 @@
                                 "HBase"
                             ]
                         },
-                        "name": "Docker_Swarm_HDFS_Zookeeper_Hbase_Service"
+                        "name": "Docker_Swarm_HDFS_Zookeeper_HBase_Service"
                     },
                     {
                         "file": "resources/catalog/Azure_Create_Event_Hub.xml",
@@ -10462,99 +10626,6 @@
                     "Get started",
                     "Samples",
                     "Building blocks"
-                ],
-                "version": "1.0"
-            }
-        },
-        "HbaseOrchestration": {
-            "catalog": {
-                "bucket": "data-big-data",
-                "objects": [
-                    {
-                        "file": "resources/catalog/Hbase_Exec_Java_File.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Orchestration",
-                                "Big Data",
-                                "Building blocks",
-                                "Analytics",
-                                "HBase"
-                            ]
-                        },
-                        "name": "Hbase_Exec_Java_File"
-                    },
-                    {
-                        "file": "resources/catalog/Hbase_Load_Csv_From_HDFS.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Orchestration",
-                                "Big Data",
-                                "Building blocks",
-                                "Analytics",
-                                "HBase"
-                            ]
-                        },
-                        "name": "Hbase_Load_Csv_From_HDFS"
-                    },
-                    {
-                        "file": "resources/catalog/Run_HBase_Shell_Commands.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Orchestration",
-                                "Big Data",
-                                "Building blocks",
-                                "Analytics",
-                                "HBase"
-                            ]
-                        },
-                        "name": "Run_HBase_Shell_Commands"
-                    },
-                    {
-                        "file": "resources/catalog/Phoenix_Hbase_Sql_Queries.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Orchestration",
-                                "Big Data",
-                                "Building blocks",
-                                "Analytics",
-                                "HBase"
-                            ]
-                        },
-                        "name": "Phoenix_Hbase_Sql_Queries"
-                    }
-                ],
-                "userGroup": "public-objects"
-            },
-            "dataspace": {
-                "files": [
-                    "resources/dataspace/HelloHBase.java"
-                ],
-                "target": "global"
-            },
-            "metadata": {
-                "author": "ActiveEon's Team",
-                "name": "Apache HBase Orchestration",
-                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/HbaseOrchestration",
-                "short_description": "Orchestrate Apache HBase jobs from ProActive",
-                "slug": "apache-hbase-orchestration",
-                "tags": [
-                    "Orchestration",
-                    "Big Data",
-                    "Building blocks",
-                    "Analytics",
-                    "HBase"
                 ],
                 "version": "1.0"
             }
@@ -12190,58 +12261,6 @@
                 "slug": "policies",
                 "tags": [
                     
-                ],
-                "version": "1.0"
-            }
-        },
-        "Hbase": {
-            "catalog": {
-                "bucket": "service-automation",
-                "objects": [
-                    {
-                        "file": "resources/catalog/Hbase.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/psa",
-                            "tags": [
-                                "Big Data",
-                                "Service Automation",
-                                "Analytics",
-                                "HBase"
-                            ]
-                        },
-                        "name": "HBase"
-                    },
-                    {
-                        "file": "resources/catalog/Finish_Hbase.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/psa",
-                            "tags": [
-                                "Big Data",
-                                "Service Automation",
-                                "Analytics",
-                                "HBase"
-                            ]
-                        },
-                        "name": "Finish_HBase"
-                    }
-                ],
-                "userGroup": "public-objects"
-            },
-            "metadata": {
-                "author": "ActiveEon's Team",
-                "name": "Apache HBase",
-                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Hbase",
-                "short_description": "Lifecycle management workflows for Apache HBase",
-                "slug": "apache-hbase",
-                "tags": [
-                    "Big Data",
-                    "Service Automation",
-                    "Analytics",
-                    "HBase"
                 ],
                 "version": "1.0"
             }
