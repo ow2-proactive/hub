@@ -1,74 +1,70 @@
 {
     "metadata": {
-        "date": "2023-06-22T08:28:40.045"
+        "date": "2023-06-29T12:49:31.940"
     },
     "packages": {
         "HPC": {
             "catalog": {
-                "bucket": "hpc-clusters",
+                "bucket": "hpc-remote-visualization",
                 "objects": [
                     {
-                        "file": "resources/catalog/Azure_CycleCloud_Deploy.xml",
+                        "file": "resources/catalog/Gromacs_VMD_Molecule_Simulation.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
                             "tags": [
-                                "Azure",
-                                "Slurm",
-                                "HPC",
-                                "CycleCloud"
+                                "Molecule",
+                                "Visualization",
+                                "Gromacs",
+                                "VMD"
                             ]
                         },
-                        "name": "Azure_CycleCloud_Deploy"
+                        "name": "Gromacs_VMD_Molecule_Simulation"
                     },
                     {
-                        "file": "resources/catalog/Azure_CycleCloud_Delete.xml",
+                        "file": "resources/catalog/AWS_Create_Nice_DCV_Node.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
                             "tags": [
-                                "Azure",
-                                "Slurm",
-                                "HPC",
-                                "CycleCloud"
+                                "Molecule",
+                                "Visualization",
+                                "DCV",
+                                "AWS"
                             ]
                         },
-                        "name": "Azure_CycleCloud_Delete"
+                        "name": "AWS_Create_Nice_DCV_Node"
                     },
                     {
-                        "file": "resources/catalog/Azure_CycleCloud_Create_Slurm_Cluster.xml",
+                        "file": "resources/catalog/AWS_Connect_Nice_DCV.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
                             "tags": [
-                                "Azure",
-                                "Slurm",
-                                "HPC",
-                                "CycleCloud"
+                                "Molecule",
+                                "Visualization",
+                                "DCV",
+                                "AWS"
                             ]
                         },
-                        "name": "Azure_CycleCloud_Create_Slurm_Cluster"
+                        "name": "AWS_Connect_Nice_DCV"
                     },
                     {
-                        "file": "resources/catalog/Bash_Task_In_Slurm.xml",
+                        "file": "resources/catalog/VNC_Remote_Visualization.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
-                            "kind": "Workflow/standard"
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Molecule",
+                                "Visualization",
+                                "VNC"
+                            ]
                         },
-                        "name": "Bash_Task_In_Slurm"
-                    },
-                    {
-                        "file": "resources/catalog/Python_Task_In_Slurm.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard"
-                        },
-                        "name": "Python_Task_In_Slurm"
+                        "name": "VNC_Remote_Visualization"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -76,8 +72,7 @@
             "dataspace": {
                 "files": [
                     "resources/dataspace/molecule.gro",
-                    "resources/dataspace/molecule_topology.tpr",
-                    "resources/dataspace/Azure_CycleCloud/CycleCloud_ARM.json"
+                    "resources/dataspace/molecule_topology.tpr"
                 ],
                 "target": "global"
             },
@@ -88,10 +83,13 @@
                 "short_description": "HPC workflow examples and associated resources",
                 "slug": "HPC workflow examples",
                 "tags": [
-                    "Azure",
-                    "HPC",
-                    "Slurm",
-                    "CycleCloud"
+                    "Molecule",
+                    "Visualization",
+                    "DCV",
+                    "Gromacs",
+                    "VNC",
+                    "VMD",
+                    "AWS"
                 ],
                 "version": "1.0"
             }
@@ -6737,6 +6735,97 @@
             },
             "test": {
                 "scenarios": "resources/test/scenarios.json"
+            }
+        },
+        "CycleCloud": {
+            "catalog": {
+                "bucket": "hpc-cloud",
+                "objects": [
+                    {
+                        "file": "resources/catalog/Azure_CycleCloud_Deploy.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Azure",
+                                "Slurm",
+                                "HPC",
+                                "CycleCloud"
+                            ]
+                        },
+                        "name": "Azure_CycleCloud_Deploy"
+                    },
+                    {
+                        "file": "resources/catalog/Azure_CycleCloud_Delete.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Azure",
+                                "Slurm",
+                                "HPC",
+                                "CycleCloud"
+                            ]
+                        },
+                        "name": "Azure_CycleCloud_Delete"
+                    },
+                    {
+                        "file": "resources/catalog/Azure_CycleCloud_Create_Slurm_Cluster.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Azure",
+                                "Slurm",
+                                "HPC",
+                                "CycleCloud"
+                            ]
+                        },
+                        "name": "Azure_CycleCloud_Create_Slurm_Cluster"
+                    },
+                    {
+                        "file": "resources/catalog/Bash_Task_In_Slurm.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard"
+                        },
+                        "name": "Bash_Task_In_Slurm"
+                    },
+                    {
+                        "file": "resources/catalog/Python_Task_In_Slurm.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard"
+                        },
+                        "name": "Python_Task_In_Slurm"
+                    }
+                ],
+                "userGroup": "public-objects"
+            },
+            "dataspace": {
+                "files": [
+                    "resources/dataspace/Azure_CycleCloud/CycleCloud_ARM.json"
+                ],
+                "target": "global"
+            },
+            "metadata": {
+                "author": "ActiveEon's Team",
+                "name": "HPC Cloud Workflows",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/CycleCloud",
+                "short_description": "Workflows that interacts with cloud HPC services such as CycleCloud",
+                "slug": "hpc-cloud-workflows",
+                "tags": [
+                    "Azure",
+                    "HPC",
+                    "Slurm",
+                    "CycleCloud"
+                ],
+                "version": "1.0"
             }
         },
         "MySQL": {
