@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-07-07T07:28:53.387"
+        "date": "2023-07-13T15:34:32.694"
     },
     "packages": {
         "HPC": {
@@ -4295,7 +4295,8 @@
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "text/x-groovy",
-                            "kind": "Script/post"
+                            "kind": "Script/post",
+                            "tags": "File"
                         },
                         "name": "update_variables_from_file"
                     },
@@ -4304,7 +4305,8 @@
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "text/x-groovy",
-                            "kind": "Script/pre"
+                            "kind": "Script/pre",
+                            "tags": "Visualization"
                         },
                         "name": "remote_visualization"
                     },
@@ -4323,7 +4325,8 @@
                             "commitMessage": "First commit",
                             "contentType": "text/x-groovy",
                             "kind": "Script/environment",
-                            "projectName": "Fork Environment Scripts"
+                            "projectName": "Fork Environment Scripts",
+                            "tags": "Artificial Intelligence"
                         },
                         "name": "fork_env_ai"
                     },
