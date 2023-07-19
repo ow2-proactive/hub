@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-07-18T17:37:35.974"
+        "date": "2023-07-19T12:17:55.774"
     },
     "packages": {
         "HPC": {
@@ -2409,20 +2409,6 @@
                             ]
                         },
                         "name": "Finish_RabbitMQ"
-                    },
-                    {
-                        "file": "resources/catalog/RabbitMQ_Messaging.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "RabbitMQ",
-                                "REST API",
-                                "Message Broker"
-                            ]
-                        },
-                        "name": "RabbitMQ_Messaging"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -2435,7 +2421,6 @@
                 "slug": "rabbitmq",
                 "tags": [
                     "RabbitMQ",
-                    "REST API",
                     "Service Automation",
                     "AMQP",
                     "Message Broker"
@@ -9564,6 +9549,20 @@
                             ]
                         },
                         "name": "Azure_Send_Message_To_Event_Hub"
+                    },
+                    {
+                        "file": "resources/catalog/RabbitMQ_Messaging.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "RabbitMQ",
+                                "REST API",
+                                "Message Broker"
+                            ]
+                        },
+                        "name": "RabbitMQ_Messaging"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -9595,12 +9594,14 @@
                     "YARN",
                     "Analytics",
                     "HBase",
+                    "RabbitMQ",
                     "Swarm",
                     "REST API",
                     "Hive",
                     "Docker",
                     "Zookeeper",
                     "Event Hub",
+                    "Message Broker",
                     "Spark",
                     "ETL"
                 ],
