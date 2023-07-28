@@ -15,8 +15,7 @@ This json file can be manually generated following this command:
 
 *> groovy src/packageList/Generate_index_json.groovy </path/to/proactive-examples/directory/>*
 
-To update https://hub.activeeon.com/, the index.json file must be pushed to the github repository *https://github.com/ow2-proactive/hub*
-
+To update https://hub.activeeon.com/, the index.json file must be pushed to the github repository *https://github.com/ow2-proactive/hub* into the *src/packageList/* directory.
 
 ### Update the hub website
 

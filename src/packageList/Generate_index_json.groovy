@@ -65,25 +65,29 @@ proactiveExamplesFolder.eachFile(FileType.DIRECTORIES, { packageDir ->
 
                 def catalogObject = indexJsonMap["packages"][packageDir.name]["catalog"]["objects"][i]
                 def workflowFile = new File(packageDirPath, catalogObject.file)
+                def objectTagsSet = new HashSet<>()
 
-                // For each xml workflow get tags
+                // Retrieve the wkw xml tags
                 if (getExtension(workflowFile.name) == "xml") {
                     def tags = xmlParser.parse(workflowFile).'@tags'
 
                     if (tags != null) {
-
-                        // Append the wkw xml tags to the object tags of the metadata json
-                        def objectTagsSet = new HashSet<>()
-                        if (indexJsonMap["packages"][packageDir.name]["catalog"]["objects"][i]["metadata"].containsKey("tags")) {
-                            objectTagsSet += indexJsonMap["packages"][packageDir.name]["catalog"]["objects"][i]["metadata"]["tags"].split(",").toList()
-                        }
                         objectTagsSet += tags.split(",").toList()
-                        indexJsonMap["packages"][packageDir.name]["catalog"]["objects"][i]["metadata"]["tags"] = objectTagsSet.toArray(new String[objectTagsSet.size()])
-                        packageTagsSet += objectTagsSet
+                    }
+                } else {
+
+                    // Retrieve the object tags (script,..) defined at the metadata json level
+                    if (indexJsonMap["packages"][packageDir.name]["catalog"]["objects"][i]["metadata"].containsKey("tags")) {
+                        objectTagsSet += indexJsonMap["packages"][packageDir.name]["catalog"]["objects"][i]["metadata"]["tags"].split(",").toList()
                     }
                 }
 
+                // Store the tags in the metadata object tags
+                indexJsonMap["packages"][packageDir.name]["catalog"]["objects"][i]["metadata"]["tags"] = objectTagsSet.toArray(new String[objectTagsSet.size()])
+                packageTagsSet += objectTagsSet
+
             }
+            // Store the tags in the metadata package tags
             indexJsonMap["packages"][packageDir.name]["metadata"]["tags"] = packageTagsSet.toArray(new String[packageTagsSet.size()])
         }
 
