@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-07-28T15:45:18.596"
+        "date": "2023-08-02T10:19:35.396"
     },
     "packages": {
         "HPC": {
@@ -9664,74 +9664,18 @@
                 "bucket": "data-big-data",
                 "objects": [
                     {
-                        "file": "resources/catalog/Kafka_Start_Or_Bind_Service.xml",
+                        "file": "resources/catalog/Kafka_Messaging.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
                             "tags": [
+                                "Message Broker",
                                 "Big Data",
-                                "Kafka",
-                                "Data Streaming"
+                                "Kafka"
                             ]
                         },
-                        "name": "Kafka_Start_Or_Bind_Service"
-                    },
-                    {
-                        "file": "resources/catalog/Kafka_Create_Topic.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Big Data",
-                                "Kafka",
-                                "Data Streaming"
-                            ]
-                        },
-                        "name": "Kafka_Create_Topic"
-                    },
-                    {
-                        "file": "resources/catalog/Kafka_Write_Message_To_Topic.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Big Data",
-                                "Kafka",
-                                "Data Streaming"
-                            ]
-                        },
-                        "name": "Kafka_Write_Message_To_Topic"
-                    },
-                    {
-                        "file": "resources/catalog/Kafka_Read_From_Topic.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Big Data",
-                                "Kafka",
-                                "Data Streaming"
-                            ]
-                        },
-                        "name": "Kafka_Read_From_Topic"
-                    },
-                    {
-                        "file": "resources/catalog/Kafka_Terminate_Service.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "Big Data",
-                                "Kafka",
-                                "Data Streaming"
-                            ]
-                        },
-                        "name": "Kafka_Terminate_Service"
+                        "name": "Kafka_Messaging"
                     },
                     {
                         "file": "resources/catalog/Azure_HDInsight_Spark_Submit_Application.xml",
