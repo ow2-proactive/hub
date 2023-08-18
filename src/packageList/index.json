@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-08-08T13:27:31.047"
+        "date": "2023-08-18T14:52:52.152"
     },
     "packages": {
         "HPC": {
@@ -11476,6 +11476,54 @@
                             ]
                         },
                         "name": "MLOps_Model_Server_Application_Performance_Analyzer"
+                    },
+                    {
+                        "file": "resources/catalog/Deploy_GPT2_From_HuggingFace.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Samples",
+                                "Big Data",
+                                "Machine Learning",
+                                "Analytics"
+                            ]
+                        },
+                        "name": "Deploy_GPT2_From_HuggingFace"
+                    },
+                    {
+                        "file": "resources/catalog/Train_Deploy_Image_Classification.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Natural Language Processing",
+                                "Classification",
+                                "Text Analysis",
+                                "Computer Vision",
+                                "Image Analysis",
+                                "Machine Learning",
+                                "Deep Learning"
+                            ]
+                        },
+                        "name": "Train_Deploy_Image_Classification"
+                    },
+                    {
+                        "file": "resources/catalog/Train_Deploy_Iris_Flowers_Classification_Model.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Samples",
+                                "Big Data",
+                                "Machine Learning",
+                                "Analytics"
+                            ]
+                        },
+                        "name": "Train_Deploy_Iris_Flowers_Classification_Model"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -11487,14 +11535,24 @@
                 "short_description": "Lifecycle management workflow of Model As a Service for Service Automation",
                 "slug": "mlops_model_server",
                 "tags": [
-                    "MLOps",
                     "Model Inference",
-                    "Model Deployment",
                     "Triton",
+                    "Natural Language Processing",
+                    "Big Data",
+                    "Text Analysis",
                     "Dashboard",
                     "Service",
                     "Model Monitoring",
                     "Service Automation",
+                    "Image Analysis",
+                    "Machine Learning",
+                    "Analytics",
+                    "Deep Learning",
+                    "MLOps",
+                    "Samples",
+                    "Model Deployment",
+                    "Classification",
+                    "Computer Vision",
                     "Model Management"
                 ],
                 "version": "1.0"
