@@ -38577,7 +38577,7 @@ function fetch(input, init) {
 
     xhr.ontimeout = function() {
       setTimeout(function() {
-        reject(new TypeError('Network request failed'))
+        reject(new TypeError('Network request timed out'))
       }, 0)
     }
 
@@ -38653,6 +38653,7 @@ if (!g.fetch) {
   g.Request = Request
   g.Response = Response
 }
+
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(64)))
 
 /***/ }),

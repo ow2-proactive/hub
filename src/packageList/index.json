@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-09-05T13:12:48.326"
+        "date": "2023-09-12T19:23:04.837"
     },
     "packages": {
         "HPC": {
@@ -473,6 +473,18 @@
                             ]
                         },
                         "name": "External_Endpoints_With_Wait_For_Signal"
+                    },
+                    {
+                        "file": "resources/catalog/Hybrid_Simulation_With_Interactive_Control.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "Hybrid_Simulation_With_Interactive_Control"
                     }
                 ],
                 "userGroup": "public-objects"
