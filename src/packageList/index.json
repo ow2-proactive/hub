@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-09-21T06:25:35.139"
+        "date": "2023-09-25T13:05:38.522"
     },
     "packages": {
         "HPC": {
@@ -13751,7 +13751,8 @@
                             "kind": "Workflow/standard",
                             "tags": [
                                 "Data Connectors",
-                                "FTP"
+                                "FTP",
+                                "File"
                             ]
                         },
                         "name": "FTP"
@@ -13765,7 +13766,7 @@
                             "tags": [
                                 "FTPS",
                                 "Data Connectors",
-                                "FTP"
+                                "File"
                             ]
                         },
                         "name": "FTPS"
@@ -13778,8 +13779,8 @@
                             "kind": "Workflow/standard",
                             "tags": [
                                 "Data Connectors",
-                                "FTP",
-                                "SFTP"
+                                "SFTP",
+                                "File"
                             ]
                         },
                         "name": "SFTP"
@@ -13976,29 +13977,30 @@
                 "slug": "dataconnectors",
                 "tags": [
                     "S3",
-                    "Azure",
                     "FTP",
                     "Greenplum",
                     "PostgreSQL",
                     "Cassandra",
                     "Data Warehouse",
-                    "SFTP",
-                    "HTTP",
-                    "SQL Server",
                     "Tableau",
-                    "SQL",
-                    "FTPS",
                     "Cloud Storage",
-                    "HSQLDB",
                     "Data Connectors",
                     "NoSQL",
                     "Elasticsearch",
                     "HTTPS",
                     "MySQL",
                     "Snowflake",
+                    "Oracle",
+                    "Azure",
+                    "SFTP",
+                    "HTTP",
+                    "SQL Server",
+                    "SQL",
+                    "FTPS",
+                    "HSQLDB",
                     "MongoDB",
                     "Data Lake",
-                    "Oracle"
+                    "File"
                 ],
                 "version": "1.0"
             }
