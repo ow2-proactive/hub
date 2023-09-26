@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-09-26T13:08:44.029"
+        "date": "2023-09-26T18:27:20.556"
     },
     "packages": {
         "HPC": {
@@ -13590,6 +13590,79 @@
                             ]
                         },
                         "name": "terraform_aws_ec2_instances.tf"
+                    },
+                    {
+                        "file": "resources/catalog/Create_Kops_User_In_AWS.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "IAM",
+                                "Kops",
+                                "K8S",
+                                "AWS",
+                                "Kubernetes"
+                            ]
+                        },
+                        "name": "Create_Kops_User_In_AWS"
+                    },
+                    {
+                        "file": "resources/catalog/Kops_Install_K8S_In_AWS.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/octet-stream",
+                            "kind": "script/pre",
+                            "projectName": "Terraform files",
+                            "tags": [
+                                "Kops",
+                                "K8S",
+                                "SSH",
+                                "Enterprise-grade",
+                                "AWS",
+                                "Kubernetes"
+                            ]
+                        },
+                        "name": "Kops_Install_K8S_In_AWS"
+                    },
+                    {
+                        "file": "resources/catalog/Create-Kops-User-In-AWS.sh",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "text/x-sh",
+                            "kind": "script/pre",
+                            "projectName": "Kubernetes scripts",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "Create-Kops-User-In-AWS"
+                    },
+                    {
+                        "file": "resources/catalog/Create-Kops-Buckets-In-AWS.sh",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "text/x-sh",
+                            "kind": "script/pre",
+                            "projectName": "Kubernetes scripts",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "Create-Kops-Buckets-In-AWS"
+                    },
+                    {
+                        "file": "resources/catalog/Create-Kubernetes-Cluster-With-Kops.sh",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "text/x-sh",
+                            "kind": "script/pre",
+                            "projectName": "Kubernetes scripts",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "Create-Kubernetes-Cluster-With-Kops"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -13602,11 +13675,17 @@
                 "slug": "infrastructure-as-code",
                 "tags": [
                     "SSH connection",
-                    "Wetty",
                     "Infrastructure as Code",
-                    "Terraform",
+                    "Kops",
+                    "K8S",
+                    "SSH",
                     "IaC",
-                    "AWS"
+                    "Enterprise-grade",
+                    "Wetty",
+                    "Terraform",
+                    "IAM",
+                    "AWS",
+                    "Kubernetes"
                 ],
                 "version": "1.0"
             }
