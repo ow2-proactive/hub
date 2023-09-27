@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-09-26T18:27:20.556"
+        "date": "2023-09-27T08:47:26.904"
     },
     "packages": {
         "HPC": {
@@ -13611,9 +13611,8 @@
                         "file": "resources/catalog/Kops_Install_K8S_In_AWS.xml",
                         "metadata": {
                             "commitMessage": "First commit",
-                            "contentType": "application/octet-stream",
-                            "kind": "script/pre",
-                            "projectName": "Terraform files",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
                             "tags": [
                                 "Kops",
                                 "K8S",
