@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-09-29T13:27:08.659"
+        "date": "2023-10-02T23:47:10.923"
     },
     "packages": {
         "HPC": {
@@ -13630,7 +13630,7 @@
                             "commitMessage": "First commit",
                             "contentType": "text/x-sh",
                             "kind": "script/pre",
-                            "projectName": "Kubernetes files",
+                            "projectName": "Kubernetes scripts",
                             "tags": [
                                 
                             ]
@@ -13643,7 +13643,7 @@
                             "commitMessage": "First commit",
                             "contentType": "text/x-sh",
                             "kind": "script/pre",
-                            "projectName": "Kubernetes files",
+                            "projectName": "Kubernetes scripts",
                             "tags": [
                                 
                             ]
@@ -13656,7 +13656,7 @@
                             "commitMessage": "First commit",
                             "contentType": "text/x-sh",
                             "kind": "script/pre",
-                            "projectName": "Kubernetes files",
+                            "projectName": "Kubernetes scripts",
                             "tags": [
                                 
                             ]
@@ -13664,17 +13664,17 @@
                         "name": "Create-Kubernetes-Cluster-With-Kops"
                     },
                     {
-                        "file": "resources/catalog/kubernetes-dashboard.yaml",
+                        "file": "resources/catalog/Deploy-Kubernetes-Dashboard.sh",
                         "metadata": {
                             "commitMessage": "First commit",
-                            "contentType": "application/octet-stream",
+                            "contentType": "text/x-sh",
                             "kind": "script/pre",
-                            "projectName": "Kubernetes files",
+                            "projectName": "Kubernetes scripts",
                             "tags": [
                                 
                             ]
                         },
-                        "name": "kubernetes-dashboard"
+                        "name": "Deploy-Kubernetes-Dashboard"
                     }
                 ],
                 "userGroup": "public-objects"
