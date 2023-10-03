@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-10-02T23:47:10.923"
+        "date": "2023-10-03T09:52:38.605"
     },
     "packages": {
         "HPC": {
@@ -13592,29 +13592,29 @@
                         "name": "terraform_aws_ec2_instances.tf"
                     },
                     {
-                        "file": "resources/catalog/Create_Kops_User_In_AWS.xml",
+                        "file": "resources/catalog/Create_KOps_User_In_AWS.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
                             "tags": [
                                 "IAM",
-                                "Kops",
+                                "kOps",
                                 "K8S",
                                 "AWS",
                                 "Kubernetes"
                             ]
                         },
-                        "name": "Create_Kops_User_In_AWS"
+                        "name": "Create_KOps_User_In_AWS"
                     },
                     {
-                        "file": "resources/catalog/Kops_Install_K8S_In_AWS.xml",
+                        "file": "resources/catalog/KOps_Install_K8S_In_AWS.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
                             "tags": [
-                                "Kops",
+                                "kOps",
                                 "K8S",
                                 "SSH",
                                 "Enterprise-grade",
@@ -13622,10 +13622,10 @@
                                 "Kubernetes"
                             ]
                         },
-                        "name": "Kops_Install_K8S_In_AWS"
+                        "name": "KOps_Install_K8S_In_AWS"
                     },
                     {
-                        "file": "resources/catalog/Create-Kops-User-In-AWS.sh",
+                        "file": "resources/catalog/Create-kOps-User-In-AWS.sh",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "text/x-sh",
@@ -13635,10 +13635,10 @@
                                 
                             ]
                         },
-                        "name": "Create-Kops-User-In-AWS"
+                        "name": "Create-kOps-User-In-AWS"
                     },
                     {
-                        "file": "resources/catalog/Create-Kops-Buckets-In-AWS.sh",
+                        "file": "resources/catalog/Create-kOps-Buckets-In-AWS.sh",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "text/x-sh",
@@ -13648,10 +13648,10 @@
                                 
                             ]
                         },
-                        "name": "Create-Kops-Buckets-In-AWS"
+                        "name": "Create-kOps-Buckets-In-AWS"
                     },
                     {
-                        "file": "resources/catalog/Create-Kubernetes-Cluster-With-Kops.sh",
+                        "file": "resources/catalog/Create-Kubernetes-Cluster-With-kOps.sh",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "text/x-sh",
@@ -13661,7 +13661,7 @@
                                 
                             ]
                         },
-                        "name": "Create-Kubernetes-Cluster-With-Kops"
+                        "name": "Create-Kubernetes-Cluster-With-kOps"
                     },
                     {
                         "file": "resources/catalog/Deploy-Kubernetes-Dashboard.sh",
@@ -13688,7 +13688,6 @@
                 "tags": [
                     "SSH connection",
                     "Infrastructure as Code",
-                    "Kops",
                     "K8S",
                     "SSH",
                     "IaC",
@@ -13696,6 +13695,7 @@
                     "Wetty",
                     "Terraform",
                     "IAM",
+                    "kOps",
                     "AWS",
                     "Kubernetes"
                 ],
