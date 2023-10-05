@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-10-04T08:23:55.499"
+        "date": "2023-10-05T14:46:49.463"
     },
     "packages": {
         "HPC": {
@@ -601,6 +601,19 @@
                             ]
                         },
                         "name": "Check_Instance_Status_Singularity"
+                    },
+                    {
+                        "file": "resources/catalog/Check_Not_Used_By_Other_Service.groovy",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "text/x-groovy",
+                            "kind": "Script/selection",
+                            "projectName": "9. Scripts",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "Check_Not_Used_By_Other_Service"
                     },
                     {
                         "file": "resources/catalog/Post_Trigger_Action.groovy",
