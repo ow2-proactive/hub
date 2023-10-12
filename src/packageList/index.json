@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-10-11T08:35:13.348"
+        "date": "2023-10-12T19:29:08.836"
     },
     "packages": {
         "HPC": {
@@ -481,7 +481,10 @@
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
                             "tags": [
-                                
+                                "Signal",
+                                "Simulation",
+                                "Endpoint",
+                                "Interactive Control"
                             ]
                         },
                         "name": "Hybrid_Simulation_With_Interactive_Control"
@@ -507,12 +510,16 @@
                 "short_description": "A few samples to get started",
                 "slug": "get-started",
                 "tags": [
+                    "Signal",
                     "Linux",
+                    "Simulation",
+                    "Endpoint",
                     "Samples",
                     "MPI",
                     "Windows",
                     "Get started",
-                    "Building blocks"
+                    "Building blocks",
+                    "Interactive Control"
                 ],
                 "version": "1.0"
             },
