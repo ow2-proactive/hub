@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-10-20T14:42:27.504"
+        "date": "2023-10-20T14:56:34.084"
     },
     "packages": {
         "HPC": {
@@ -488,6 +488,32 @@
                             ]
                         },
                         "name": "Hybrid_Simulation_With_Interactive_Control"
+                    },
+                    {
+                        "file": "resources/catalog/Export_Credentials.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Tools",
+                                "Credentials"
+                            ]
+                        },
+                        "name": "Export_Credentials"
+                    },
+                    {
+                        "file": "resources/catalog/Import_Credentials.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Tools",
+                                "Credentials"
+                            ]
+                        },
+                        "name": "Import_Credentials"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -510,16 +536,18 @@
                 "short_description": "A few samples to get started",
                 "slug": "get-started",
                 "tags": [
+                    "MPI",
+                    "Tools",
+                    "Windows",
+                    "Get started",
+                    "Building blocks",
+                    "Interactive Control",
                     "Signal",
                     "Linux",
                     "Simulation",
                     "Endpoint",
                     "Samples",
-                    "MPI",
-                    "Windows",
-                    "Get started",
-                    "Building blocks",
-                    "Interactive Control"
+                    "Credentials"
                 ],
                 "version": "1.0"
             },
