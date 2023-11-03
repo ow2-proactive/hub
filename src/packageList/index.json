@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-11-03T11:29:57.307"
+        "date": "2023-11-03T18:40:00.018"
     },
     "packages": {
         "HPC": {
@@ -3935,18 +3935,17 @@
                         "name": "Wait_For_Signals"
                     },
                     {
-                        "file": "resources/catalog/Check_For_Signals.xml",
+                        "file": "resources/catalog/Wait_For_Signals_Reactive_With_Variables.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
                             "tags": [
                                 "Controls",
-                                "Get started",
                                 "Building blocks"
                             ]
                         },
-                        "name": "Check_For_Signals"
+                        "name": "Wait_For_Signals_Reactive_With_Variables"
                     },
                     {
                         "file": "resources/catalog/wait_for_signals_with_variables.xml",
