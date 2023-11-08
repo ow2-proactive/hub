@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-11-06T13:09:56.550"
+        "date": "2023-11-08T10:25:05.582"
     },
     "packages": {
         "HPC": {
@@ -3962,18 +3962,17 @@
                         "name": "Wait_For_Signals_With_Variables"
                     },
                     {
-                        "file": "resources/catalog/Send_Signal_To_Job.xml",
+                        "file": "resources/catalog/Send_Signal_To_Another_Job.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
                             "tags": [
                                 "Controls",
-                                "Get started",
                                 "Building blocks"
                             ]
                         },
-                        "name": "Send_Signal_To_Job"
+                        "name": "Send_Signal_To_Another_Job"
                     },
                     {
                         "file": "resources/catalog/Submit_Many_Jobs_And_Wait.xml",
