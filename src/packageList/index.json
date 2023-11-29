@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-11-24T09:19:34.021"
+        "date": "2023-11-29T17:00:49.008"
     },
     "packages": {
         "HPC": {
@@ -514,6 +514,32 @@
                             ]
                         },
                         "name": "Import_Credentials"
+                    },
+                    {
+                        "file": "resources/catalog/Automated_Catalog_Objects_Staging.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Workflow Staging",
+                                "CI-CD"
+                            ]
+                        },
+                        "name": "Automated_Catalog_Objects_Staging"
+                    },
+                    {
+                        "file": "resources/catalog/Single_Workflow_Staging.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Workflow Staging",
+                                "CI-CD"
+                            ]
+                        },
+                        "name": "Single_Workflow_Staging"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -547,6 +573,8 @@
                     "Simulation",
                     "Endpoint",
                     "Samples",
+                    "Workflow Staging",
+                    "CI-CD",
                     "Credentials"
                 ],
                 "version": "1.0"
