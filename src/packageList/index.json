@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-11-29T17:00:49.008"
+        "date": "2023-12-03T20:24:07.565"
     },
     "packages": {
         "HPC": {
@@ -529,7 +529,7 @@
                         "name": "Automated_Catalog_Objects_Staging"
                     },
                     {
-                        "file": "resources/catalog/Single_Workflow_Staging.xml",
+                        "file": "resources/catalog/Single_Catalog_Object_Staging.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
@@ -539,7 +539,7 @@
                                 "CI-CD"
                             ]
                         },
-                        "name": "Single_Workflow_Staging"
+                        "name": "Single_Catalog_Object_Staging"
                     }
                 ],
                 "userGroup": "public-objects"
