@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-12-11T23:11:54.287"
+        "date": "2023-12-18T18:37:47.902"
     },
     "packages": {
         "HPC": {
@@ -65,45 +65,6 @@
                             ]
                         },
                         "name": "VNC_Remote_Visualization"
-                    },
-                    {
-                        "file": "resources/catalog/Molecular_Dynamics_Simulation.xml",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/standard",
-                            "tags": [
-                                "bioscience",
-                                "hpc"
-                            ]
-                        },
-                        "name": "Molecular_Dynamics_Simulation"
-                    },
-                    {
-                        "file": "resources/catalog/Lysozyme_in_Water_Steps_Short",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/octet-stream",
-                            "kind": "Script/pre",
-                            "projectName": "Molecular Dynamics",
-                            "tags": [
-                                
-                            ]
-                        },
-                        "name": "Lysozyme_in_Water_Steps_Short"
-                    },
-                    {
-                        "file": "resources/catalog/Lysozyme_in_Water_Steps",
-                        "metadata": {
-                            "commitMessage": "First commit",
-                            "contentType": "application/octet-stream",
-                            "kind": "Script/pre",
-                            "projectName": "Molecular Dynamics",
-                            "tags": [
-                                
-                            ]
-                        },
-                        "name": "Lysozyme_in_Water_Steps"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -131,10 +92,8 @@
                     "Molecule",
                     "Visualization",
                     "DCV",
-                    "bioscience",
                     "Gromacs",
                     "VNC",
-                    "hpc",
                     "VMD",
                     "AWS"
                 ],
@@ -5128,6 +5087,76 @@
                     "REST",
                     "API",
                     "Web Service"
+                ],
+                "version": "1.0"
+            }
+        },
+        "BioScience": {
+            "catalog": {
+                "bucket": "hpc-remote-visualization",
+                "objects": [
+                    {
+                        "file": "resources/catalog/Molecular_Dynamics_Simulation.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "bioscience",
+                                "hpc"
+                            ]
+                        },
+                        "name": "Molecular_Dynamics_Simulation"
+                    },
+                    {
+                        "file": "resources/catalog/Lysozyme_in_Water_Steps_Short",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/octet-stream",
+                            "kind": "Script/pre",
+                            "projectName": "1. Molecular Dynamics Scripts",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "Lysozyme_in_Water_Steps_Short"
+                    },
+                    {
+                        "file": "resources/catalog/Lysozyme_in_Water_Steps",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/octet-stream",
+                            "kind": "Script/pre",
+                            "projectName": "1. Molecular Dynamics Scripts",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "Lysozyme_in_Water_Steps"
+                    }
+                ],
+                "userGroup": "public-objects"
+            },
+            "dataspace": {
+                "files": [
+                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/molecule-1aki.pdb",
+                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/md.mdp",
+                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/minim.mdp",
+                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/ions.mdp",
+                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/nvt.mdp",
+                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/npt.mdp"
+                ],
+                "target": "global"
+            },
+            "metadata": {
+                "author": "ActiveEon's Team",
+                "name": "BioScience workflow examples",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/BioScience",
+                "short_description": "BioScience workflow examples and associated resources",
+                "slug": "BioScience workflow examples",
+                "tags": [
+                    "bioscience",
+                    "hpc"
                 ],
                 "version": "1.0"
             }
