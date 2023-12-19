@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-12-18T18:37:47.902"
+        "date": "2023-12-19T08:20:52.887"
     },
     "packages": {
         "HPC": {
@@ -72,13 +72,7 @@
             "dataspace": {
                 "files": [
                     "resources/dataspace/molecule.gro",
-                    "resources/dataspace/molecule_topology.tpr",
-                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/molecule-1aki.pdb",
-                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/md.mdp",
-                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/minim.mdp",
-                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/ions.mdp",
-                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/nvt.mdp",
-                    "resources/dataspace/BioScience-Workspace/Lysozyme-in-Water/inputs/npt.mdp"
+                    "resources/dataspace/molecule_topology.tpr"
                 ],
                 "target": "global"
             },
