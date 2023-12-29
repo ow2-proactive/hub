@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2023-12-20T14:46:08.769"
+        "date": "2023-12-29T01:01:55.767"
     },
     "packages": {
         "HPC": {
@@ -11701,6 +11701,21 @@
                             ]
                         },
                         "name": "Train_Deploy_Iris_Flowers_Classification_Model"
+                    },
+                    {
+                        "file": "resources/catalog/MLOps_Drift_Notification_Workflow.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "MLOps",
+                                "Drift Detection",
+                                "Notifications",
+                                "Monitoring"
+                            ]
+                        },
+                        "name": "MLOps_Drift_Notification_Workflow"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -11726,11 +11741,14 @@
                     "Analytics",
                     "Deep Learning",
                     "MLOps",
+                    "Drift Detection",
                     "Samples",
                     "Model Deployment",
                     "Classification",
                     "Computer Vision",
-                    "Model Management"
+                    "Model Management",
+                    "Notifications",
+                    "Monitoring"
                 ],
                 "version": "1.0"
             }
