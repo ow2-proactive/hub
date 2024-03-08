@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2024-03-08T11:32:46.951"
+        "date": "2024-03-08T21:49:34.707"
     },
     "packages": {
         "HPC": {
@@ -3198,6 +3198,9 @@
                     "Detection"
                 ],
                 "version": "1.0"
+            },
+            "test": {
+                "scenarios": "resources/test/scenarios.json"
             }
         },
         "Tensorboard": {
@@ -5027,6 +5030,9 @@
                     "Web Service"
                 ],
                 "version": "1.0"
+            },
+            "test": {
+                "scenarios": "resources/test/scenarios.json"
             }
         },
         "CiCdTools": {
@@ -10218,6 +10224,9 @@
                     "ETL"
                 ],
                 "version": "1.0"
+            },
+            "test": {
+                "scenarios": "resources/test/scenarios.json"
             }
         },
         "Databricks": {
@@ -13169,6 +13178,9 @@
                     "TensorFlow"
                 ],
                 "version": "1.0"
+            },
+            "test": {
+                "scenarios": "resources/test/scenarios.json"
             }
         },
         "Policies": {
