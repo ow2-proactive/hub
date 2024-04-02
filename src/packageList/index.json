@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2024-04-02T10:10:25.029"
+        "date": "2024-04-02T17:05:05.471"
     },
     "packages": {
         "HPC": {
@@ -3201,6 +3201,191 @@
             },
             "test": {
                 "scenarios": "resources/test/scenarios.json"
+            }
+        },
+        "EventFileListener": {
+            "catalog": {
+                "bucket": "event-file-listener",
+                "objects": [
+                    {
+                        "file": "resources/catalog/Post_Action_File_Export_To_DB.xml",
+                        "metadata": {
+                            "commitMessage": "Upload from generic catalog",
+                            "contentType": "application/xml",
+                            "kind": "workflow/standard",
+                            "projectName": "3. Post Action",
+                            "tags": [
+                                "Data Connectors",
+                                "PostgreSQL",
+                                "SQL"
+                            ]
+                        },
+                        "name": "Post_Action_File_Export_To_DB"
+                    },
+                    {
+                        "file": "resources/catalog/Post_Action_File_Transfer.xml",
+                        "metadata": {
+                            "commitMessage": "Upload from generic catalog",
+                            "contentType": "application/xml",
+                            "kind": "workflow/standard",
+                            "projectName": "3. Post Action",
+                            "tags": [
+                                "Memory",
+                                "Triggers"
+                            ]
+                        },
+                        "name": "Post_Action_File_Transfer"
+                    },
+                    {
+                        "file": "resources/catalog/Post_Action_FTP_File_Transfer.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "workflow/standard",
+                            "projectName": "3. Post Action",
+                            "tags": [
+                                "Data Connectors",
+                                "FTP",
+                                "File"
+                            ]
+                        },
+                        "name": "Post_Action_FTP_File_Transfer"
+                    },
+                    {
+                        "file": "resources/catalog/Post_Action_SFTP_File_Transfer.xml",
+                        "metadata": {
+                            "commitMessage": "Upload from generic catalog",
+                            "contentType": "application/xml",
+                            "kind": "workflow/standard",
+                            "projectName": "3. Post Action",
+                            "tags": [
+                                "Data Connectors",
+                                "SFTP",
+                                "File"
+                            ]
+                        },
+                        "name": "Post_Action_SFTP_File_Transfer"
+                    },
+                    {
+                        "file": "resources/catalog/Web_Notification.groovy",
+                        "metadata": {
+                            "commitMessage": "v1",
+                            "contentType": "text/x-groovy",
+                            "kind": "Script",
+                            "projectName": "4. Scripts",
+                            "tags": [
+                                ""
+                            ]
+                        },
+                        "name": "Web_Notification"
+                    },
+                    {
+                        "file": "resources/catalog/File_Listener_Task_Action.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "workflow/standard",
+                            "projectName": "2. File Listeners",
+                            "tags": [
+                                "Post Action",
+                                "Triggers"
+                            ]
+                        },
+                        "name": "File_Listener_Task_Action"
+                    },
+                    {
+                        "file": "resources/catalog/Init_Sub_Folders.xml",
+                        "metadata": {
+                            "commitMessage": "v1",
+                            "contentType": "application/xml",
+                            "kind": "workflow/standard",
+                            "projectName": "1. Initialization Options",
+                            "tags": [
+                                "Memory",
+                                "Triggers"
+                            ]
+                        },
+                        "name": "Init_Sub_Folders"
+                    },
+                    {
+                        "file": "resources/catalog/Init_Frequency.xml",
+                        "metadata": {
+                            "commitMessage": "v1",
+                            "contentType": "application/xml",
+                            "kind": "workflow/standard",
+                            "projectName": "1. Initialization Options",
+                            "tags": [
+                                "Schedule",
+                                "Triggers"
+                            ]
+                        },
+                        "name": "Init_Frequency"
+                    },
+                    {
+                        "file": "resources/catalog/Init_Schedule.xml",
+                        "metadata": {
+                            "commitMessage": "v1",
+                            "contentType": "application/xml",
+                            "kind": "workflow/standard",
+                            "projectName": "1. Initialization Options",
+                            "tags": [
+                                "Schedule",
+                                "Triggers"
+                            ]
+                        },
+                        "name": "Init_Schedule"
+                    },
+                    {
+                        "file": "resources/catalog/Init_Notifications.xml",
+                        "metadata": {
+                            "commitMessage": "v1",
+                            "contentType": "application/xml",
+                            "kind": "workflow/standard",
+                            "projectName": "1. Initialization Options",
+                            "tags": [
+                                "Schedule",
+                                "Triggers"
+                            ]
+                        },
+                        "name": "Init_Notifications"
+                    },
+                    {
+                        "file": "resources/catalog/File_Listener_SubJob_Action.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "workflow/standard",
+                            "projectName": "2. File Listeners",
+                            "tags": [
+                                "Memory",
+                                "Triggers"
+                            ]
+                        },
+                        "name": "File_Listener_SubJob_Action"
+                    }
+                ],
+                "userGroup": ""
+            },
+            "metadata": {
+                "author": "",
+                "name": "event-file-listener",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/EventFileListener",
+                "short_description": "",
+                "slug": "eventFileListener",
+                "tags": [
+                    "",
+                    "Data Connectors",
+                    "FTP",
+                    "PostgreSQL",
+                    "Memory",
+                    "Post Action",
+                    "Schedule",
+                    "SFTP",
+                    "Triggers",
+                    "File",
+                    "SQL"
+                ],
+                "version": "1.0"
             }
         },
         "Tensorboard": {
