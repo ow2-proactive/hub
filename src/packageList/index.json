@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2024-04-05T15:36:04.300"
+        "date": "2024-04-08T14:31:39.408"
     },
     "packages": {
         "HPC": {
@@ -2525,6 +2525,32 @@
                             ]
                         },
                         "name": "Random_Forest_Script"
+                    },
+                    {
+                        "file": "resources/catalog/Kolmogorov_Smirnov_Script.py",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "text/x-python",
+                            "kind": "Script/task",
+                            "projectName": "Scripts",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "Kolmogorov_Smirnov"
+                    },
+                    {
+                        "file": "resources/catalog/Spot_the_Diff_Script.py",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "text/x-python",
+                            "kind": "Script/task",
+                            "projectName": "Scripts",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "Spot_the_Diff"
                     },
                     {
                         "file": "resources/catalog/XGBoost_Script.py",
@@ -11898,6 +11924,21 @@
                             ]
                         },
                         "name": "Train_Deploy_Iris_Flowers_Classification_Model"
+                    },
+                    {
+                        "file": "resources/catalog/Train_Deploy_Drift_Model_For_Iris_Flowers_Classification.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Samples",
+                                "Big Data",
+                                "Machine Learning",
+                                "Analytics"
+                            ]
+                        },
+                        "name": "Train_Deploy_Drift_Model_For_Iris_Flowers_Classification"
                     },
                     {
                         "file": "resources/catalog/MLOps_Drift_Notification_Workflow.xml",
