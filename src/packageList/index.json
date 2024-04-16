@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2024-04-15T22:10:26.751"
+        "date": "2024-04-16T22:04:40.372"
     },
     "packages": {
         "HPC": {
@@ -2527,6 +2527,21 @@
                         "name": "Random_Forest_Script"
                     },
                     {
+                        "file": "resources/catalog/Kolmogorov_Smirnov.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Samples",
+                                "Big Data",
+                                "Machine Learning",
+                                "Analytics"
+                            ]
+                        },
+                        "name": "Kolmogorov_Smirnov"
+                    },
+                    {
                         "file": "resources/catalog/Kolmogorov_Smirnov_Script.py",
                         "metadata": {
                             "commitMessage": "First commit",
@@ -2537,10 +2552,25 @@
                                 
                             ]
                         },
-                        "name": "Kolmogorov_Smirnov"
+                        "name": "Kolmogorov_Smirnov_Script"
                     },
                     {
-                        "file": "resources/catalog/Spot_the_Diff_Script.py",
+                        "file": "resources/catalog/Spot_The_Diff.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Samples",
+                                "Big Data",
+                                "Machine Learning",
+                                "Analytics"
+                            ]
+                        },
+                        "name": "Spot_The_Diff"
+                    },
+                    {
+                        "file": "resources/catalog/Spot_The_Diff_Script.py",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "text/x-python",
@@ -2550,7 +2580,7 @@
                                 
                             ]
                         },
-                        "name": "Spot_the_Diff"
+                        "name": "Spot_The_Diff_Script"
                     },
                     {
                         "file": "resources/catalog/XGBoost_Script.py",
