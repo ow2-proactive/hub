@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2024-09-23T18:01:48.733"
+        "date": "2024-09-24T09:46:02.191"
     },
     "packages": {
         "HPC": {
@@ -11312,7 +11312,7 @@
                         "name": "Train_Deploy_Drift_Model_For_Iris_Flowers_Classification"
                     },
                     {
-                        "file": "resources/catalog/MLOps_Drift_Notification_Workflow.xml",
+                        "file": "resources/catalog/MLOps_Operational_Drift_Notification_Workflow.xml",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "application/xml",
@@ -11324,7 +11324,7 @@
                                 "Monitoring"
                             ]
                         },
-                        "name": "MLOps_Drift_Notification_Workflow"
+                        "name": "MLOps_Operational_Drift_Notification_Workflow"
                     }
                 ],
                 "userGroup": "public-objects"
