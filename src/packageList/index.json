@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2024-10-10T15:07:01.477"
+        "date": "2024-10-11T10:30:05.574"
     },
     "packages": {
         "HPC": {
@@ -439,9 +439,10 @@
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
                             "tags": [
-                                "Samples",
-                                "Get started",
-                                "Building blocks"
+                                "template",
+                                "action",
+                                "communication",
+                                "signal"
                             ]
                         },
                         "name": "Signal_With_Variables_Interactive_Control"
@@ -510,16 +511,20 @@
                 "short_description": "A few samples to get started",
                 "slug": "get-started",
                 "tags": [
+                    "template",
+                    "MPI",
+                    "Windows",
+                    "Get started",
+                    "Building blocks",
+                    "Interactive Control",
                     "Signal",
                     "Linux",
                     "Simulation",
                     "Endpoint",
                     "Samples",
-                    "MPI",
-                    "Windows",
-                    "Get started",
-                    "Building blocks",
-                    "Interactive Control"
+                    "action",
+                    "communication",
+                    "signal"
                 ],
                 "version": "1.0"
             },
