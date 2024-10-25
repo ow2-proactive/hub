@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2024-10-21T09:40:18.645"
+        "date": "2024-10-25T13:03:45.572"
     },
     "packages": {
         "HPC": {
@@ -4297,6 +4297,43 @@
                     "Controls",
                     "Get started",
                     "Building blocks"
+                ],
+                "version": "1.0"
+            }
+        },
+        "Slack": {
+            "catalog": {
+                "bucket": "control-notification",
+                "objects": [
+                    {
+                        "file": "resources/catalog/Slack_Message.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "Message",
+                                "Slack",
+                                "Webhook",
+                                "Notification"
+                            ]
+                        },
+                        "name": "Slack_Message"
+                    }
+                ],
+                "userGroup": "public-objects"
+            },
+            "metadata": {
+                "author": "ActiveEon's Team",
+                "name": "Slack",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/Slack",
+                "short_description": "Workflows to interact with a Slack workspace",
+                "slug": "slack",
+                "tags": [
+                    "Message",
+                    "Slack",
+                    "Webhook",
+                    "Notification"
                 ],
                 "version": "1.0"
             }
