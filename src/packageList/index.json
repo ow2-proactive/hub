@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2024-11-08T22:17:28.195"
+        "date": "2024-11-14T16:17:19.205"
     },
     "packages": {
         "HPC": {
@@ -5743,6 +5743,93 @@
                 "version": "1.0"
             }
         },
+        "MSSQL": {
+            "catalog": {
+                "bucket": "service-automation",
+                "objects": [
+                    {
+                        "file": "resources/catalog/Finish_MSSQL.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/psa",
+                            "projectName": "7. Lifecycle workflows",
+                            "tags": [
+                                "MySQL",
+                                "Service Automation",
+                                "Data Base",
+                                "SQL"
+                            ]
+                        },
+                        "name": "Finish_MSSQL"
+                    },
+                    {
+                        "file": "resources/catalog/MSSQL.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "workflow/psa",
+                            "projectName": "1. Database",
+                            "tags": [
+                                "MSSQL",
+                                "Service Automation",
+                                "Data Base",
+                                "SQL"
+                            ]
+                        },
+                        "name": "MSSQL"
+                    },
+                    {
+                        "file": "resources/catalog/Pause_MSSQL.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "workflow/psa",
+                            "projectName": "7. Lifecycle workflows",
+                            "tags": [
+                                "MSSQL",
+                                "Service Automation",
+                                "Data Base",
+                                "SQL"
+                            ]
+                        },
+                        "name": "Pause_MSSQL"
+                    },
+                    {
+                        "file": "resources/catalog/Resume_MSSQL.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "workflow/psa",
+                            "projectName": "7. Lifecycle workflows",
+                            "tags": [
+                                "MSSQL",
+                                "Service Automation",
+                                "Data Base",
+                                "SQL"
+                            ]
+                        },
+                        "name": "Resume_MSSQL"
+                    }
+                ],
+                "userGroup": ""
+            },
+            "metadata": {
+                "author": "",
+                "name": "service-automation",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/MSSQL",
+                "short_description": "",
+                "slug": "service-automation",
+                "tags": [
+                    "Service Automation",
+                    "MSSQL",
+                    "Data Base",
+                    "MySQL",
+                    "SQL"
+                ],
+                "version": "1.0"
+            }
+        },
         "SelectionScripts": {
             "catalog": {
                 "bucket": "scripts",
@@ -7784,6 +7871,67 @@
                     "Triggers",
                     "File",
                     "Date"
+                ],
+                "version": "1.0"
+            }
+        },
+        "EmailTools": {
+            "catalog": {
+                "bucket": "it-ci-cd",
+                "objects": [
+                    {
+                        "file": "resources/catalog/Imap_Email_Checker.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "projectName": "Emails",
+                            "tags": [
+                                "Imap",
+                                "Checker",
+                                "Email",
+                                "Messaging"
+                            ]
+                        },
+                        "name": "Imap_Email_Checker"
+                    },
+                    {
+                        "file": "resources/catalog/Imap_Email_Fetcher.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "projectName": "Emails",
+                            "tags": [
+                                "Imap",
+                                "Email",
+                                "Fetcher",
+                                "Messaging"
+                            ]
+                        },
+                        "name": "Imap_Email_Fetcher"
+                    }
+                ],
+                "userGroup": ""
+            },
+            "dataspace": {
+                "files": [
+                    "resources/dataspace/mail-1.4.7.jar"
+                ],
+                "target": "global"
+            },
+            "metadata": {
+                "author": "",
+                "name": "it-ci-cd",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/EmailTools",
+                "short_description": "",
+                "slug": "it-ci-cd",
+                "tags": [
+                    "Imap",
+                    "Messaging",
+                    "Fetcher",
+                    "Checker",
+                    "Email"
                 ],
                 "version": "1.0"
             }
