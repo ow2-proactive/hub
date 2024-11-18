@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2024-11-14T16:17:19.205"
+        "date": "2024-11-18T19:25:29.425"
     },
     "packages": {
         "HPC": {
@@ -5743,93 +5743,6 @@
                 "version": "1.0"
             }
         },
-        "MSSQL": {
-            "catalog": {
-                "bucket": "service-automation",
-                "objects": [
-                    {
-                        "file": "resources/catalog/Finish_MSSQL.xml",
-                        "metadata": {
-                            "commitMessage": "",
-                            "contentType": "application/xml",
-                            "kind": "Workflow/psa",
-                            "projectName": "7. Lifecycle workflows",
-                            "tags": [
-                                "MySQL",
-                                "Service Automation",
-                                "Data Base",
-                                "SQL"
-                            ]
-                        },
-                        "name": "Finish_MSSQL"
-                    },
-                    {
-                        "file": "resources/catalog/MSSQL.xml",
-                        "metadata": {
-                            "commitMessage": "",
-                            "contentType": "application/xml",
-                            "kind": "workflow/psa",
-                            "projectName": "1. Database",
-                            "tags": [
-                                "MSSQL",
-                                "Service Automation",
-                                "Data Base",
-                                "SQL"
-                            ]
-                        },
-                        "name": "MSSQL"
-                    },
-                    {
-                        "file": "resources/catalog/Pause_MSSQL.xml",
-                        "metadata": {
-                            "commitMessage": "",
-                            "contentType": "application/xml",
-                            "kind": "workflow/psa",
-                            "projectName": "7. Lifecycle workflows",
-                            "tags": [
-                                "MSSQL",
-                                "Service Automation",
-                                "Data Base",
-                                "SQL"
-                            ]
-                        },
-                        "name": "Pause_MSSQL"
-                    },
-                    {
-                        "file": "resources/catalog/Resume_MSSQL.xml",
-                        "metadata": {
-                            "commitMessage": "",
-                            "contentType": "application/xml",
-                            "kind": "workflow/psa",
-                            "projectName": "7. Lifecycle workflows",
-                            "tags": [
-                                "MSSQL",
-                                "Service Automation",
-                                "Data Base",
-                                "SQL"
-                            ]
-                        },
-                        "name": "Resume_MSSQL"
-                    }
-                ],
-                "userGroup": ""
-            },
-            "metadata": {
-                "author": "",
-                "name": "service-automation",
-                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/MSSQL",
-                "short_description": "",
-                "slug": "service-automation",
-                "tags": [
-                    "Service Automation",
-                    "MSSQL",
-                    "Data Base",
-                    "MySQL",
-                    "SQL"
-                ],
-                "version": "1.0"
-            }
-        },
         "SelectionScripts": {
             "catalog": {
                 "bucket": "scripts",
@@ -9202,6 +9115,92 @@
                 "version": "1.0"
             }
         },
+        "SQLServer": {
+            "catalog": {
+                "bucket": "service-automation",
+                "objects": [
+                    {
+                        "file": "resources/catalog/Finish_SQLServer.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/psa",
+                            "projectName": "7. Lifecycle workflows",
+                            "tags": [
+                                "Service Automation",
+                                "Data Base",
+                                "SQLServer",
+                                "SQL"
+                            ]
+                        },
+                        "name": "Finish_SQLServer"
+                    },
+                    {
+                        "file": "resources/catalog/SQLServer.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "workflow/psa",
+                            "projectName": "1. Database",
+                            "tags": [
+                                "Service Automation",
+                                "Data Base",
+                                "SQLServer",
+                                "SQL"
+                            ]
+                        },
+                        "name": "SQLServer"
+                    },
+                    {
+                        "file": "resources/catalog/Pause_SQLServer.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "workflow/psa",
+                            "projectName": "7. Lifecycle workflows",
+                            "tags": [
+                                "Service Automation",
+                                "Data Base",
+                                "SQLServer",
+                                "SQL"
+                            ]
+                        },
+                        "name": "Pause_SQLServer"
+                    },
+                    {
+                        "file": "resources/catalog/Resume_SQLServer.xml",
+                        "metadata": {
+                            "commitMessage": "",
+                            "contentType": "application/xml",
+                            "kind": "workflow/psa",
+                            "projectName": "7. Lifecycle workflows",
+                            "tags": [
+                                "Service Automation",
+                                "Data Base",
+                                "SQLServer",
+                                "SQL"
+                            ]
+                        },
+                        "name": "Resume_SQLServer"
+                    }
+                ],
+                "userGroup": ""
+            },
+            "metadata": {
+                "author": "",
+                "name": "service-automation",
+                "repo_url": "https://github.com/ow2-proactive/proactive-examples/tree/master/SQLServer",
+                "short_description": "",
+                "slug": "service-automation",
+                "tags": [
+                    "Service Automation",
+                    "Data Base",
+                    "SQLServer",
+                    "SQL"
+                ],
+                "version": "1.0"
+            }
+        },
         "DockerBasics": {
             "catalog": {
                 "bucket": "basic-examples",
@@ -10724,6 +10723,19 @@
                             ]
                         },
                         "name": "SQL_Pooled_Connection_Update_Script"
+                    },
+                    {
+                        "file": "resources/catalog/SQL_Pooled_Connection_Procedure_Script.groovy",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "text/x-groovy",
+                            "kind": "Script/task",
+                            "projectName": "Scripts",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "SQL_Pooled_Connection_Procedure_Script"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -13991,6 +14003,25 @@
                             ]
                         },
                         "name": "SQL_Pooled_Connection_Update"
+                    },
+                    {
+                        "file": "resources/catalog/SQL_Pooled_Connection_Procedure.xml",
+                        "metadata": {
+                            "commitMessage": "Compact version",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "HSQLDB",
+                                "Data Connectors",
+                                "Greenplum",
+                                "PostgreSQL",
+                                "MySQL",
+                                "SQL Server",
+                                "Oracle",
+                                "SQL"
+                            ]
+                        },
+                        "name": "SQL_Pooled_Connection_Procedure"
                     },
                     {
                         "file": "resources/catalog/Process_Rows_Automatically.xml",
