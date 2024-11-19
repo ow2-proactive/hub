@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2024-11-18T19:25:29.425"
+        "date": "2024-11-19T09:43:27.351"
     },
     "packages": {
         "HPC": {
@@ -7798,7 +7798,7 @@
                             "commitMessage": "",
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
-                            "projectName": "Emails",
+                            "projectName": "Emails Tools",
                             "tags": [
                                 "Imap",
                                 "Checker",
@@ -7814,7 +7814,7 @@
                             "commitMessage": "",
                             "contentType": "application/xml",
                             "kind": "Workflow/standard",
-                            "projectName": "Emails",
+                            "projectName": "Emails Tools",
                             "tags": [
                                 "Imap",
                                 "Email",
