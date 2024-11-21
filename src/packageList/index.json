@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2024-11-19T09:43:27.351"
+        "date": "2024-11-21T14:19:42.705"
     },
     "packages": {
         "HPC": {
@@ -10725,7 +10725,7 @@
                         "name": "SQL_Pooled_Connection_Update_Script"
                     },
                     {
-                        "file": "resources/catalog/SQL_Pooled_Connection_Procedure_Script.groovy",
+                        "file": "resources/catalog/SQL_Pooled_Connection_Procedure_Query_Script.groovy",
                         "metadata": {
                             "commitMessage": "First commit",
                             "contentType": "text/x-groovy",
@@ -10735,7 +10735,20 @@
                                 
                             ]
                         },
-                        "name": "SQL_Pooled_Connection_Procedure_Script"
+                        "name": "SQL_Pooled_Connection_Procedure_Query_Script"
+                    },
+                    {
+                        "file": "resources/catalog/SQL_Pooled_Connection_Procedure_Update_Script.groovy",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "text/x-groovy",
+                            "kind": "Script/task",
+                            "projectName": "Scripts",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "SQL_Pooled_Connection_Procedure_Update_Script"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -14005,7 +14018,7 @@
                         "name": "SQL_Pooled_Connection_Update"
                     },
                     {
-                        "file": "resources/catalog/SQL_Pooled_Connection_Procedure.xml",
+                        "file": "resources/catalog/SQL_Pooled_Connection_Procedure_Query.xml",
                         "metadata": {
                             "commitMessage": "Compact version",
                             "contentType": "application/xml",
@@ -14021,7 +14034,26 @@
                                 "SQL"
                             ]
                         },
-                        "name": "SQL_Pooled_Connection_Procedure"
+                        "name": "SQL_Pooled_Connection_Procedure_Query"
+                    },
+                    {
+                        "file": "resources/catalog/SQL_Pooled_Connection_Procedure_Update.xml",
+                        "metadata": {
+                            "commitMessage": "Compact version",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "HSQLDB",
+                                "Data Connectors",
+                                "Greenplum",
+                                "PostgreSQL",
+                                "MySQL",
+                                "SQL Server",
+                                "Oracle",
+                                "SQL"
+                            ]
+                        },
+                        "name": "SQL_Pooled_Connection_Procedure_Update"
                     },
                     {
                         "file": "resources/catalog/Process_Rows_Automatically.xml",
