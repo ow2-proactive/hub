@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "date": "2025-01-31T14:59:43.618"
+        "date": "2025-02-04T17:43:53.269"
     },
     "packages": {
         "HPC": {
@@ -12973,6 +12973,78 @@
                             ]
                         },
                         "name": "PyTorch_Task"
+                    },
+                    {
+                        "file": "resources/catalog/Llama3_VLLM_MultiNode_Inference.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "Llama3_VLLM_MultiNode_Inference"
+                    },
+                    {
+                        "file": "resources/catalog/MLflow_Tracking_Server.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "mlflow"
+                            ]
+                        },
+                        "name": "MLflow_Tracking_Server"
+                    },
+                    {
+                        "file": "resources/catalog/MLflow_Training_Example_On_Slurm.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "mlflow"
+                            ]
+                        },
+                        "name": "MLflow_Training_Example_On_Slurm"
+                    },
+                    {
+                        "file": "resources/catalog/MLflow_Training_Example.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                "mlflow"
+                            ]
+                        },
+                        "name": "MLflow_Training_Example"
+                    },
+                    {
+                        "file": "resources/catalog/ResNet50_MultiGPU_Training_With_AutoML.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "ResNet50_MultiGPU_Training_With_AutoML"
+                    },
+                    {
+                        "file": "resources/catalog/ResNet50_MultiGPU_Training.xml",
+                        "metadata": {
+                            "commitMessage": "First commit",
+                            "contentType": "application/xml",
+                            "kind": "Workflow/standard",
+                            "tags": [
+                                
+                            ]
+                        },
+                        "name": "ResNet50_MultiGPU_Training"
                     }
                 ],
                 "userGroup": "public-objects"
@@ -12992,6 +13064,7 @@
                     "Machine Learning",
                     "Deep Learning",
                     "Cognitive Toolkit",
+                    "mlflow",
                     "Training",
                     "PyTorch",
                     "Slurm",
